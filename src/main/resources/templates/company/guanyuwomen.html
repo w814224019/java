@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们</title>
+     <meta name="Keywords" th:content="${company.ctoname}" />	
+<meta name="description" th:content="${company.ctoname}">
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/guanyuwomen.css">
+    <link rel="stylesheet" href="../css/repe.css">
+</head>
+<body>
+    <!-- 版心问候语 -->
+    <div class="hello">
+        <div class="wrapper">
+            <div class=" fl firm">
+                欢迎光临<span th:text="${company.ctoname}">广州市恒昱物流有限公司</span>官方网站！ 
+            </div>
+            <div class="fr firmMessage">
+                <ul> 
+                    <!-- <li><a href="">设为首页</a></li>
+                    <li><a href="">加入收藏</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">关于我们</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- hede内容 -->
+   <div class="hede">
+        <div class="wrapper">
+            <div class="fl name">
+                <h1><span th:text="${company.ctoname}">广州市恒昱物流有限公司</span></h1>
+                <!-- <h3><span>GUANGZHOU HENG YU LOGISTICS CO., LTD</span></h3> -->
+            </div>
+            <div class="fr tel">
+               <span>全国服务热线：</span>
+               <P th:text="${company.tel}">020-61928652 </P>
+                <P th:text="${company.lianxitel}">131 6880 9828</P>
+            </div>
+            <div class="jieshao">
+                <h3><span>一站式供应链服务平台</span> <span>可信赖的物流方案专家</span> </h3>
+                <h4>信誉保证，尊客爱货、安全快捷</h4>
+            </div>
+        </div>
+   </div>
+
+   
+   <!-- 导航内容 -->
+   <div class="Nav">
+        <div class="wrapper">
+           <ul>
+                  <li><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></li>
+                <!-- <li><a href="">车辆展示</a></li> -->
+                <li><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="carousel">
+        <ul>
+            <li style="display: block;"><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_eklu.jpg" alt="56114物流公司"></li>
+        </ul>
+   </div>
+
+   <div style="background-color: rgb(246, 246, 246);height: 50px;">
+        <div class="wrapper">
+            <div style="height: 50px;background-color: rgba(0,84,157,1);width: 181.8px;text-align: center;font-size: 20px;line-height: 50px;color: white;float: left;">
+                SERVICE
+            </div>
+            <div style="margin-left: 30px;float: left;line-height: 50px; font-size: 14px;">
+               <a href="index.html"  style="color: black;">网站首页</a> ∷ <a href="#" style="color: black;">关于我们</a> 
+            </div>
+        </div>
+   </div>
+   <!-- 下面的主题内容 -->
+   <div class="conten">
+    <div class="wrapper">
+        <div class="item">
+            <div class="itemNav">
+                <dl>
+                    <dt>服务项目</dt>
+                                        <dd><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></dd>
+                    <!-- <dd><a href="">车辆展示</a></dd> -->
+                    <dd><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></dd>
+                </dl>
+                <div class="itemTel">
+                    <p>全国24小时服务热线：</p>
+                    <br>
+                    <div class="itemTEL">
+                         <P th:text="${company.lianxitel}">131 6880 9828</P>
+                        <br>
+                        <P th:text="${company.tel}">020-61928652 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="itemLook">
+             <p>
+             公司专业从事国内各地货物运输配送服务，有着严谨的运输组织，完善的经营管理，是一家供应链一体化专业型物流公司，业务范围涵盖了化工、日用品、机械、电力设备、家具、家电、建材、食品等众多行业。通过全体员工的共同努力和客户支持、信赖下，不断得以发展和完善，凭借多年专业运输管理经验实际操作能力，迅速积累了遍布全国的网络资源，增加整体实力，向客户提供优质的物流服务。
+             </p>
+            <strong>实力雄厚优势明显</strong>
+            <p>公司是一家致力于整合全国物流资源的物流公司。公司注册资金300万，工商、税务、交委的全套证照齐全。很多从业人员都是业内经验丰富的顶尖高手。无论走零担还是发整车，快速、便宜、宽广。</p>
+            <p>目前公司全国各地整车运输 ，天天发车。 根据客户的要求具体车辆有：8.5米，9米，9.6米，11米，12.5米，15米，17米等平板，半挂，集装箱，半封闭车 随时安排，上门提货，准时发车。 另带经营大中城市整车运输业务。 公司与多家同行互补合作形成全国大中城市营运网络平台，为客户提供更完善的服务。</p>
+             <strong>专线网络遍布全国</strong>
+             <p>　公司掌握着发往全国各地的几千家货运专线的资料并与其中多数专线有良好的合作关系，随时可以把任何货物用较低的价格发往中国的任何地方。因为合作专线多，选择余地大，所以能够确保客户的零担货物当天发车，比自已开专线的可能还走得快；因为货量大，专线都很重视跟有限公司的合作关系，所以的发货价格总是很低的；因为合作关系广，全国各地所有城市都有的合作者，在中国，公司几乎没有走不到的地方。</p>
+             <strong>回程运输整合专家</strong>
+            <p>公司掌握着全国各地经常往返的数千台长途货车的详细资料，随时可以找到开往中国任何城市的回头车。无论什么特种车都有，超长、超宽、超高、超重的货都可发。我们的信息部门每天为厂家、物流公司和货运专线调派车辆几十台，在广州的几十个大型停车场都有恒昱的联络员。在货源和车源的信息流量方面，可能是广东第一名，可称为物流行业的资源整合专家。</p>
+          <strong>冷藏货运车源充足</strong>
+          <p>公司掌握着全国各地二十多家冷运公司的数百台冷藏车的资料，无论要求什么温度的货物都可找到车走，整车零担都行，价格也地道。</p>
+            <strong>货车出租省内运输</strong>
+          <p>公司自有0.6T（货箱长2.4米，可装1T、3m3）、1.5T（货箱长4.3米，可装4T、14m3）、3T（货箱长6米，可装8T、35m3）、10T(箱长9.6米，可载20T、60m3) 共6部货车可对外出租，承接整车运输业务，随叫随到，价格优惠。另有几十台长期为源治服务的个体营运车辆也可随时调派。</p>
+             <strong>即时投保货有保障</strong>
+             <p>公司是保险公司的签约公司，无论货值大小都可办理电话和网上投保业务。如有货损，一定有赔偿。</p>
+          
+              　　
+
+            </div>
+        </div>
+       
+    </div>
+   </div>
+
+
+
+
+<div  th:replace="footer :: common_resource"></div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+    <title>聚时物流网</title>
+<meta name="Keywords" content="聚时物流网,查物流,物流网,物流查询,专线查询,快递查询,全国物流查询网,中国物流查询网,货运公司,物流公司,快递公司,配货站,物流快递单号查询" />	
+<meta name="description" content="聚时物流网,是中国专业的物流查询平台,该物流网专注于物流公司，物流专线,货车配货,物流单号,货运信息,快递查询的研发和服务。">
+<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+ <div  th:replace="head :: common_resource"></div>
+        
+        
+    <div class="wrapper">
+        <div class="fahuo">
+            <div class="fahuoya">
+               <div class="leftFa">
+                   <p>在线发货</p>
+                   <div> <em>发啥货？</em><input type="text" placeholder="货物名称" id="goodname" onfocus="this.placeholder =``" onblur="this.placeholder =`货物名称`">      </div>
+                   <div><em></em>从哪里？<input type="text" placeholder="出发地" id="fhaddress" onfocus="this.placeholder =``" onblur="this.placeholder =`出发地`"></div>
+                    <div><em>发到哪？</em><input type="text" placeholder="到达地"  id="shaddress" onfocus="this.placeholder =``" onblur="this.placeholder =`到达地`"></div>
+                    <div id="next">
+                    <a  onclick="next()"  > 下一步 </a>  
+                    </div>
+               </div>
+               <div class="rightFa">
+                <p>在线查询</p>
+              <div class="wuliuName">
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=201271">长通物流</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=319396">天地华宇</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=201271">长通物流</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=410497">鸿泰物流</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=298266">中铁物流</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=319128">盛辉物流</a>
+                        <a target="_blank" href="http://ww.56114.net.cn/show.asp?id=324946">远成物流</a>
+                        <a  target="_blank" href="http://ww.56114.net.cn/">更多>></a>
+                    </div>
+
+               </div>
+            </div>
+            <div class="user"> 
+
+                <div class="carousel">
+ <ul>
+                            <li style="display: block;" th:each="item,status:${zhengche}" th:if="${status.count}<4" >
+                            <a target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'">
+                                <img th:src="'http://static.56114.net.cn'+${item.litpic==''?'/gongsi/mr/1547283536.jpg':item.litpic}" alt="">
+                            </a>
+                            </li>
+                           
+                    </ul>
+                    <div class="num">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+
+                </div>
+
+
+                <div class="user-right">
+                    <div class="user-login">
+                   
+                        <div class="operation">
+                            <a th:if="${session.userId}and${session.userId.type==3||session.userId.type==2}" href="huser"  >用户中心</a>
+                            <a th:if="${session.userId}and${session.userId.type!=3}and${session.userId.type!=2}" href="vipPage"  >用户中心</a>
+                            <a th:unless="${session.userId}" href="login" target="_blank" class="">登录</a>
+                            <a href="zhuce"  target="_blank" class="">注册</a>
+                        </div>
+                        <div class="vip">
+                            <div class="vip-top"> 
+                                <div>会员动态</div>
+                                <div>网站公告</div>
+                             </div>
+                            <ul>
+                                <li><a href="">·2020中国智慧物流企业家年会圆满落幕，物通网再获殊荣！</a></li>
+                                <li><a href="">·荣誉时刻：见证2019中国智慧物流追梦人！</a></li>
+                                <li><a href="">·聚时物流网关于修改服务规则的重要提示!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="user-QR">
+
+                        <div><!-- <img style="width:280px;height:93px" th:src="'http://static.56114.net.cn'+${zhengche[5].litpic==''?'/gongsi/mr/1547283536.jpg':zhengche[5].litpic}"/>  --></div>
+                       
+
+                    </div>
+                 <!-- <div >放二维码的名称</div> -->
+
+                </div>
+                
+            </div>
+        </div>
+
+       <div class="AD">
+             <div class="_zuy3uxg68t8"></div>
+            <script type="text/javascript">
+                (window.slotbydup = window.slotbydup || []).push({
+                    id: "u6103377",
+                    container: "_zuy3uxg68t8",
+                    async: true
+                });
+            </script>
+            <div class="_tc562l8cm2k"></div>
+            <script type="text/javascript">
+                (window.slotbydup = window.slotbydup || []).push({
+                    id: "u6229102",
+                    container: "_tc562l8cm2k",
+                    async: true
+                });
+            </script>
+            
+        </div> 
+
+
+
+
+        <div class="content">
+            <div class="ConNav">
+                <dl>
+                    <dt>发货分类</dt>
+                    <dd id="0"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/1/'+${xian1}+'.html'">行李托运>></a></dd>
+                    <dd id="1"><a  target="_blank"th:href="${yuming}+'/xinglituoyunOne/2/'+${xian1}+'.html'">钢材搬运>></a></dd>
+                    <dd id="2"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/3/'+${xian1}+'.html'">宠物托运>></a></dd>
+                    <dd id="3"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/4/'+${xian1}+'.html'">食品物流>></a></dd>
+                    <dd id="4"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/5/'+${xian1}+'.html'">大件运输>></a></dd>
+                    <dd id="5"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/6/'+${xian1}+'.html'">家具运输>></a></dd>
+                    <dd id="6"><a target="_blank"  th:href="${yuming}+'/xinglituoyunOne/7/'+${xian1}+'.html'">设备搬运>></a></dd>
+                    <dd id="7"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/8/'+${xian1}+'.html'">化工物流>></a></dd>
+                    <dd id="8"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/9/'+${xian1}+'.html'">汽配物流>></a></dd>
+                    <dd id="9"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/10/'+${xian1}+'.html'">材料物流>></a></dd>
+                    <dd id="10"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/11/'+${xian1}+'.html'">蔬菜水果>></a></dd>
+                    <dd id="11"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/12/'+${xian1}+'.html'">粮食运输>></a></dd>
+                    <dd id="12"><a target="_blank" th:href="${yuming}+'/xinglituoyunOne/13/'+${xian1}+'.html'">农产品运输>></a></dd>
+                     <dd id="13"><a target="_blank" id="211"th:href="${yuming}+'/xinglituoyunOne/211/'+${xian1}+'.html'">液体货物>></a></dd>
+                    <dd id="14"><a target="_blank" id="212"th:href="${yuming}+'/xinglituoyunOne/212/'+${xian1}+'.html'">气体货物>></a></dd>
+                    <dd id="15"><a target="_blank" id="213"th:href="${yuming}+'/xinglituoyunOne/213/'+${xian1}+'.html'">固体货物>></a></dd>
+                    <dd id="16"><a target="_blank" id="214" th:href="${yuming}+'/xinglituoyunOne/214/'+${xian1}+'.html'">普通货物>></a></dd>
+                    <dd id="17"><a target="_blank" id="215"th:href="${yuming}+'/xinglituoyunOne/215/'+${xian1}+'.html'">鲜活货物>></a></dd>
+                    <dd id="18"><a target="_blank" id="216"th:href="${yuming}+'/xinglituoyunOne/216/'+${xian1}+'.html'">木材运输>></a></dd>
+                    <dd id="19"><a target="_blank" id="217" th:href="${yuming}+'/xinglituoyunOne/217/'+${xian1}+'.html'">花卉物流>></a></dd>
+                        <dd id="20"><a target="_blank" id="326" th:href="${yuming}+'/xinglituoyunOne/326/'+${xian1}+'.html'">绿植物流>></a></dd>
+                    <dd id="21"><a target="_blank" id="327" th:href="${yuming}+'/xinglituoyunOne/327/'+${xian1}+'.html'">石雕物流>></a></dd>
+                    <dd id="22"><a  target="_blank" id="328" th:href="${yuming}+'/xinglituoyunOne/328/'+${xian1}+'.html'">装修物流>></a></dd>
+                    <dd id="23"><a target="_blank" id="329" th:href="${yuming}+'/xinglituoyunOne/329/'+${xian1}+'.html'">电器物流>></a></dd>
+                    <dd id="24"><a target="_blank" id="330" th:href="${yuming}+'/xinglituoyunOne/330/'+${xian1}+'.html'">灯具运输>></a></dd>
+                    <dd id="25"><a target="_blank" id="331" th:href="${yuming}+'/xinglituoyunOne/331/'+${xian1}+'.html'">安防安护>></a></dd>
+                    
+                </dl>
+                <div class="kind" style="display:none">
+                    <ul>
+                        <li><a href="">萝卜</a></li>
+                    </ul>
+                </div>
+
+            </div>  
+            <div class="ConCen">
+                <div class="one"> <span>零担物流专线</span><strong><a  target="_blank" th:href="${yuming}+'/lingdan/'+${xian1}+'/1/1.html'">更多>></a> </strong></div>
+                    <div class="CTWH" >
+                        <div class="changtong" th:each="item:${zhengche}">
+                            <div class ="changtong1">
+                                <a target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">长通物流有限公司</a>
+                            </div>
+                            <div  class ="changtongtow">
+                                <ul  >                              
+                               <li th:if="${status.index==0}" th:each="name,status :${#strings.arraySplit(item.xianlustr,',')}"><a target="_blank" th:href="${yuming}+'/complist/'+${sta.id}+'/1/'+${#strings.arraySplit(name,'_')[1]}+'/1092.html'" th:if="${abc.count==1}" th:each="first,abc :${#strings.arraySplit(name,'_')}" th:text="${sta.xname}+'->'+${first}">北京->郑州</a></li> 
+                               <li th:if="${status.index==1}" th:each="name,status :${#strings.arraySplit(item.xianlustr,',')}"><a target="_blank" th:href="${yuming}+'/complist/'+${sta.id}+'/1/'+${#strings.arraySplit(name,'_')[1]}+'/1092.html'" th:if="${abc.count==1}" th:each="first,abc :${#strings.arraySplit(name,'_')}" th:text="${sta.xname}+'->'+${first}">北京->郑州</a></li> 
+                               <li th:if="${status.index==2}" th:each="name,status :${#strings.arraySplit(item.xianlustr,',')}"><a target="_blank" th:href="${yuming}+'/complist/'+${sta.id}+'/1/'+${#strings.arraySplit(name,'_')[1]}+'/1092.html'" th:if="${abc.count==1}" th:each="first,abc :${#strings.arraySplit(name,'_')}" th:text="${sta.xname}+'->'+${first}">北京->郑州</a></li> 
+                                </ul>
+                                <p th:text="${item.xxaddress}"></p>
+                                <span> <a th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" class="iconfont"> 更多&#xe600; </a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="huoyuan">
+                    <div class="one"> <span>货源信息</span><strong><a target="_blank" th:href="'hyfabuxinxi?xian1='+${xian1}">免费发布>></a></strong></div>
+                    <ul > 
+                        <li th:each="item:${huoyuan}"><a target="_blank" th:href="${yuming}+'/huoinfo/'+${xian1}+'/'+${item.id}+'.html'" th:text="${item.fhaddress}+'-->'+${item.shaddress}+'|货物:'+${item.goodsname}+'|'+${item.chetype}">郑州-->北京 | 长通物流 | </a></li>
+                    </ul>
+                    <p><a target="_blank" th:href="${yuming}+'/huoyuan/'+${xian1}+'/1.html'">更多...  </a> </p>
+                </div>
+
+                <div class="ConAD">
+                    <div class="_nlwlg76qla"></div>
+                    <script type="text/javascript">
+                        (window.slotbydup = window.slotbydup || []).push({
+                            id: "u6232455",
+                            container: "_nlwlg76qla",
+                            async: true
+                        });
+                    </script>
+                </div>
+            </div>
+
+
+            <div class="ConRig">
+                <div class="one"> <span>三方货运代理</span><strong><a target="_blank" th:href="${yuming}+'/lingdan/'+${xian1}+'/1/2.html'"> 更多>></a></strong></div>
+               
+               <div class="cardFa">
+               <div class="card" th:each="item:${sanfang}">
+                                        <div class="carditem">
+                                            <a  target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">物流物流公司</a> 
+                                        </div>
+                                        <div  class="carditem2">
+                                            <p ><text th:text="${item.content==''?item.xxaddress:item.content}"></text>
+                                                <span> <a th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" class="iconfont"> 更多&#xe600; </a></span>
+                                            </p>
+                                        </div>
+                                    </div>                                   
+
+               </div>
+               
+                <div class="cheyuan">
+                    <div class=""> <span>车源信息</span><strong><a target="_blank" th:href="'cyfabuxinxi?xian1='+${xian1}">免费发布>></a> </strong></div>
+                    <ul>
+                        <li th:each="item:${cheyuan}"><a  th:href="${yuming}+'/cheinfo/'+${xian1}+'/'+${item.id}+'.html'"  target="_blank" th:text="${item.city}+'-->'+${item.destination}+'|类型:'+${item.type}+'|车牌:'+${item.carLicense}">郑州-->北京  豫A786  本车长25米本车</a></li>
+                    </ul>
+                    <p><a target="_blank" th:href="${yuming}+'/cheyuan/'+${xian1}+'/1.html'">更多...  </a> </p>
+                </div>
+                <div class="rigAD">
+                    <div class="_nlwlg76qla"></div>
+                    <script type="text/javascript">
+                        (window.slotbydup = window.slotbydup || []).push({
+                            id: "u6232455",
+                            container: "_nlwlg76qla",
+                            async: true
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+            <div class="blogrol">
+                <p>友情链接</p>
+                <ul>
+                    <li><a href="http://www.56114.net.cn/index.html">56114物流查询网</a></li>
+                    <li><a href="http://www.56114.cn/">商流网</a></li>
+                    <li><a href="http://www.56110.com/">物流导航网</a></li>
+                    <li><a href="https://www.56114.net/">物流管家</a></li>
+                   <li><a target="_blank" href="http://jiekou.56114.com">代理后台</a></li>
+                </ul>
+            </div>
+    </div>
+     <div  th:replace="footer :: common_resource"></div>
+
+
+
+
+</body>
+<!-- 搜狐获得当前的省   和126   我用的是126    在index中修改-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+    <script src="http://ip.ws.126.net/ipquery"></script>  
+    <script src="./js/index.js"></script>
+</html>
+

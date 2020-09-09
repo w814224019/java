@@ -1,0 +1,108 @@
+.mingxi{
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #5f9dea;
+    border: 1px solid #e8e8e8;
+    display: flex;
+}
+.mingxi span{
+    padding: 0 15px;
+    border-right: 1px solid #e8e8e8;
+    border-top: 2px solid white;
+    display: block;
+    line-height: 40px;
+}
+.mingxi span.action{
+    border-top: 2px solid #f6ac1f;
+}
+.mingxi span:hover{
+    border-top: 2px solid #f6ac1f;
+}
+.mingxi span a{
+    display: block;
+}
+
+
+.boxmessage table{
+    border: none;
+    text-decoration: none;
+    border-collapse:collapse;
+}
+.boxmessage table th{
+    height: 40px;
+    background-color: #f5f5f5;
+}
+.boxmessage table tr.white{
+    height: 15px;
+}
+.boxmessage table tr.hh{
+    background-color: #e8e8e8;
+}
+.boxmessage table tr td.hhh{
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 1em;
+}
+.boxmessage table tr td strong{
+    font-size: 14px;
+}
+.boxmessage table tr td{    
+    font-size: 13px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.boxmessage table tr td p{
+    text-align: left;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+}
+.boxmessage table tr td span{
+    display: block;
+    padding: 0 10px;
+    color: white;
+    height: 30px;
+    width: 60px;
+    margin: 10px auto;
+    line-height: 30px;
+    background-color: #f6ac1f;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boxmessage table tr td span:nth-child(2){
+    background-color: white;
+    border: 1px solid #f6ac1f;
+    color: #f6ac1f;
+}
+
+.boxmessage table tr td:nth-child(1){
+    border-left: 1px solid #e8e8e8;
+    font-weight: 600;
+}
+.boxmessage table tr td:nth-child(7){
+    border-right: 1px solid #e8e8e8;
+}
+.boxmessage table tr td:nth-child(2){
+    color: #5f9dea;
+}
+.boxmessage table tr td:nth-child(3){
+    color: red;
+}
+.boxmessage table tr td:nth-child(6){
+    color: red;
+}
+
+/* 下面的记录 */
+.num{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 60px;
+    background-color:#e8e8e8;
+    font-size: 16px;
+}

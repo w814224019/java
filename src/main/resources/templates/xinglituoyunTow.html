@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+     <title th:text="${sta.xname}+'到'+${end.xname}+${gs.name}">行李托运</title>
+    <meta name="Keywords" th:content="${sta.xname}+'到'+${end.xname}+${gs.name}" />	
+<meta name="description" th:content="${sta.xname}+'到'+${end.xname}+${gs.name}">
+    <link rel="stylesheet" href="./css/xinglituoyunTow.css">
+    
+</head>
+<body>
+   <div  th:replace="header :: common_resource"></div>
+    <div class="wrapper">
+        <h1 th:text="${sta.xname}+'到'+${end.xname}+${gs.name}">郑州到浙江行李托运</h1>
+        <div class="BOXBOX">
+            <div class="boxXLTY">
+               <dl th:each="sheng:${v}">
+                    <dt><a th:href="'xinglituoyunthree/'+${sta.id}+'/'+${sheng.id}+'/'+${gs.id}+'.html'" th:text="${sta.xname}+'到'+${sheng.xname}+${gs.name}">郑州到北京行李托运</a> </dt>
+                 <dd th:each="items,index:${sheng.lia}"  th:id="${index.count-1}%3==0 and ${index.count-1}!=0?you:''">
+                <a th:href="'xinglituoyunthree/'+${sta.id}+'/'+${items.id}+'/'+${gs.id}+'.html'" th:text="${sta.xname}+'到'+${items.xname}+${gs.name}">郑州到北京房山区行李托运</a>
+                </dd> 
+                </dl> 
+                
+            </div>
+            <div class="boxAD"> 
+                <p>本地优质企业</p>
+               <ul th:each="item:${yzcomps}">
+                   <li><a target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">郑州富海物流有限公司</a></li>
+                   <li th:text="${item.xxaddress}">地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                   <li th:text="${item.lianxiren}">联系人：范经理</li>
+               </ul>
+               <!-- <ul>
+                <li><a href="">郑州富海物流有限公司</a></li>
+                <li>地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                <li>联系人：范经理</li>
+            </ul> -->
+
+
+            </div>
+
+        </div>
+        
+
+
+
+
+    </div>
+
+       <div style="margin: 0 auto; width: 1200px;">
+        <script type="text/javascript" src="//a.56114.net.cn/wrzztooq.js"></script>
+    </div>
+     <div  th:replace="footer :: common_resource"></div>
+</body>
+
+<script src="./js/citys.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!-- 搜狐获得当前的省   和126   我用的是126-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+<script src="http://ip.ws.126.net/ipquery"></script>  
+
+<script>
+/*   setTimeout(() => {
+    $(document).ready(function(){
+      $("#header").load("head.html")
+      $("#footer").load("footer.html")
+});
+  }, 0);
+  let city = cityData.filter(function(item,index){
+            return item.code==window.location.href.split("id=")[1]
+  })
+    console.log(city[0])
+    // console .log(city[0])
+let wrapper = document.getElementsByClassName("wrapper")[0];
+
+let h1 = wrapper.getElementsByTagName("h1")[0]
+let boxXLTY = wrapper.getElementsByClassName("boxXLTY")[0];
+    h1.innerHTML = `<h1>郑州到${city[0].name}行李托运</h1>`;
+    let str = "";
+    for(let j =0;j<city[0].sub.length;j++){
+                str += "<dl>";
+                for(let i=0;i<city[0].sub[j].sub.length;i++){
+                        if(i==0){
+                        str +=  `<dt>郑州到${city[0].sub[j].name}行李托运</dt>
+                         <dd><a href="xinglituoyunthree.html?id=${city[0].sub[0].sub[i].code}">郑州到${city[0].sub[j].name}${city[0].sub[j].sub[i].name}行李托运</a></dd>`
+                        }else if(i!=0&&i%4==0){  
+                            str +=`<dt></dt><dd><a href="xinglituoyunthree.html?id=${city[0].sub[j].sub[i].code}">郑州到${city[0].sub[j].name}${city[0].sub[j].sub[i].name}行李托运</a></dd>`
+                        }else{  
+                            str+=`<dd><a href="xinglituoyunthree.html?id=${city[0].sub[j].sub[i].code}">郑州到${city[0].sub[j].name}${city[0].sub[j].sub[i].name}行李托运</a></dd>`
+                        }
+                }
+                str+=`</dl>`;
+    }
+    boxXLTY.innerHTML = str
+ */
+    
+    // decodeURI(window.location.href.split("id=")[1])
+    // xinglituoyunthree.html?id=${city[0].sub[0].sub[i].code}
+
+
+
+
+
+
+
+
+//   console.log( window.location.href.split("id=")[1])
+//   console.log(window.location.search.split("id=")[1])*/
+ 
+</script>
+</html>

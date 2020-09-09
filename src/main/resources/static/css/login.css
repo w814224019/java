@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrapper{
+    width: 1000px;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 10px auto 0;
+}
+.wrapper .logo{
+    width: 270px;
+    height: 100%;
+}
+
+.wrapper .logo a img{
+    width: 75%;
+    height: 100%;
+}
+.wrapper .logo span{
+    font-size: 24px;
+    color: #5e5e5e;
+    font-family: "微软雅黑";
+    line-height: 50px;
+    padding-top: 5px;
+}
+
+
+
+.wrapper .help{
+    margin-top: 30px;  
+}
+.wrapper .help a{
+    color: black;
+}
+.wrapper .help a:hover{
+    color: #0f93d5;
+}
+
+.Daimg{
+    width: 100%;
+    height: 500px;
+    background: url(https://www.56114.net//img/fristpage1.jpg) no-repeat;
+    background-size: 100% 100%;
+    /* src="" */
+}
+.Daimg form{
+    margin-top: 60px;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    float: right;
+    padding: 30px 15px 0;
+    background-color: white;
+    /* background-color: red; */
+}
+.Daimg form p{
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #3c3c3c;
+    margin-bottom: 16px;
+}
+.Daimg form label{
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+}
+.Daimg form input{
+    height: 35px;
+    width: 220px;
+}
+.Daimg .wrapper form .call{
+  display: flex;
+  margin: 0;
+  background-color: white;
+   border: none;
+   color: black;
+   width: 100%;
+   font-size: 14px;
+   justify-content: space-between;
+   padding: 0 20px;
+   flex-direction: row-reverse;
+   box-sizing: border-box;
+}
+.Daimg .wrapper form .call em{
+    font-style: normal;
+}
+
+
+.Daimg form em:hover{
+    color: #0f93d5;
+}
+.Daimg .wrapper div{
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #0f93d5;
+    border: 1px solid #0f93d5;
+    color: white;
+    border-radius: 10px;
+    margin: 10px auto 20px;
+}
+.Daimg .wrapper a{
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+    color: #0f93d5;
+    border: 1px solid #0f93d5;
+    border-radius: 10px;
+    margin: 10px auto 10px;
+}
+
+
+
+
+
+#footer1{
+	margin-top:-10px;
+       height: 282px;
+    background: #183650;
+    padding-top: 30px;
+}
+
+
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚时物流网后台管理</title>
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/vipdingdanPage.css">
+</head>
+<body>
+   
+    <div style="display: flex;height: 100vh;">
+        <div class="leftNav">
+         <input id="companyid" type="hidden" th:value="${company.id}" />
+            <div class="logo">这是个logo</div>
+            <div class="guanli">企业信息管理</div>
+            <dl>
+                <dt>基本信息管理</dt>
+                <dd><a href="">修改密码</a></dd>
+                <dd><a href="#">货物订单</a></dd>
+                <!-- <dd>企业简介</dd>
+                <dd>企业文化</dd>
+                <dd>部门电话</dd>
+                <dd>运营网点</dd>
+                <dd>线路及运价</dd>
+                <dd>发布信息</dd>
+                <dd>发布车源货源</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd> -->
+            </dl>
+        </div>
+
+       
+        <div class="wrapper">
+            <div class="absolute">
+                <div class="navtel">
+                    <span style="float: right; margin-right: 200px;margin-top: 10px;font-size: 14px;color: white;">帮助热线：0371-67856114    在线QQ：48012625</span>
+                    <ul>    
+                        <li>刷新首页</li>
+                        <li>我的网站</li>
+                        <li>进入聚时物流网</li>
+                           <li><a href="logout">安全退出</a></li>
+                    </ul>
+                </div>
+                <div class="vipmess">
+                     <p> 用户名: <span th:text="${u.name}">zzjiali </span>     客户编号: <span th:text="${company.id}">181</span>  会员类型：<span >诚信通会员 </span></p>
+                </div>
+            </div>
+            
+           
+            <div class="vipContent">
+                <p>订单信息</p>
+                <div class="boxmessage">
+                    <table style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <th width="30%">货物</th>
+                                <th width="30%">订单信息</th>
+                                <th width="20%">订单状态</th>
+                                <th width="20%">交易操作</th>
+                            </tr>
+                                <!-- 第一个内容 -->
+                                <tr class="white"></tr>
+                                <tr class="hh">
+                                    <td colspan="4" class="hhh">
+                                       <strong>订单号：362875 </strong> 下单时间: 2020-08-31 11:21:30
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>  
+                                        <!-- <strong>郑州大洋物流</strong>  -->
+                                        <p>货物名称：<em style="color: red;font-style: normal;font-size: 18px  ;">苹果</em></p>
+                                        <p>货物重量：<em style="color: red;font-style: normal;font-size: 18px  ;">1吨</em></p>
+                                        <p>货物体积：<em style="color: red;font-style: normal;font-size: 18px  ;">3立方</em></p>
+                                    </td>
+                                    <td>
+                                        <p>线路：河南省郑州市 ~ 山东省临沂市</p>
+                                        <p>联系人：13253480579</p>
+                                        <p>预约时间：2020-08-31</p>
+                                    </td>
+                                    <td>已受理</td>
+                                    <td>
+                                        <span>评价</span>
+                                        <span>查看详细</span>
+                                    </td>
+                                </tr>
+                             <!-- 第2个内容 -->
+                                <tr class="white"></tr>
+                                <tr class="hh">
+                                    <td colspan="4" class="hhh">
+                                       <strong>订单号：362875 </strong> 下单时间: 2020-08-31 11:21:30
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>  <strong>郑州大洋物流郑州大洋物流郑州大洋物流郑州大洋物流郑州大洋物流</strong> </td>
+                                    <td>
+                                        <p>线路：河南省郑州市 ~ 山东省临沂市</p>
+                                        <p>联系人：13253480579</p>
+                                        <p>预约时间：2020-08-31</p>
+                                    </td>
+                                    <td>已受理</td>
+                                    <td>
+                                        <span>评价</span>
+                                        <span>查看详细</span>
+                                    </td>
+                                </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+              
+               
+                <div class="num">共 1 条记录</div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./js/jquery.min.js"></script>
+
+<script>
+var companyid=$("#companyid").val();
+ $.ajax({
+                async:false,
+                url:"/comporderlist", 
+                type:"get",
+                data:{
+                    "companyid":companyid,
+                },
+                dataType:"json",
+              
+                success:function(data){
+                    console.log(data.data.comporderlist);
+                    let arr = data.data.comporderlist;
+                    let str = ` <tr>
+                                    <th width="350">货物</th>
+                                    <th width="350">订单信息</th>
+                                    <th width="250">订单状态</th>
+                                    <th width="250">交易操作</th>
+                                </tr>`;
+                    let tbody = document.getElementsByClassName("boxmessage")[0].getElementsByTagName("tbody")[0];
+                    let num = document.getElementsByClassName("num")[0]
+                    num.innerHTML = `共 ${arr.length} 条记录`
+
+                    for(let i=0;i<arr.length;i++){
+                        str +=`
+                                <tr class="white"></tr>
+                                    <tr class="hh">
+                                        <td colspan="4" class="hhh">
+                                        <strong>订单号：362875 </strong> 下单时间: ${[...arr[i].time].filter(function(item,index){return index<10}).join("")}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  
+                                            <p>货物名称：<em style="color: red;font-style: normal;font-size: 18px  ;">${arr[i].goodsname}</em></p>
+                                            <p>货物重量：<em style="color: red;font-style: normal;font-size: 18px  ;">${arr[i].weight}吨</em></p>
+                                            <p>货物体积：<em style="color: red;font-style: normal;font-size: 18px  ;">${arr[i].volume}立方</em></p>
+                                        </td>
+                                        <td>
+                                            <p>线路：${arr[i].fhaddress} ~ ${arr[i].shaddress}</p>
+                                            <p>联系人：${arr[i].fhphone}</p>
+                                            <p>预约时间：${[...arr[i].time].filter(function(item,index){return index<10}).join("")}</p>
+                                        </td>
+                                        <td>${arr[i].status}</td>
+                                        <td>
+                                            <span>评价</span>
+                                            <span>查看详细</span>
+                                        </td>
+                                    </tr>
+                        `
+                    }
+                    tbody.innerHTML = str
+
+
+
+                }
+            })
+
+</script>
+</html>

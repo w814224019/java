@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${sta.xname}+'到全国各地'+${gs.name}">行李托运</title>
+    <meta name="Keywords" th:content="${sta.xname}+'到全国各地'+${gs.name}" />	
+<meta name="description" th:content="${sta.xname}+'到全国各地'+${gs.name}">
+    <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/xinglituoyun.css">
+</head>
+<body>
+    <div  th:replace="header :: common_resource"></div>
+    <div class="wrapper">
+        <h1 th:text="${sta.xname}+'到全国各地'+${gs.name}">郑州行李托运</h1>
+        <div class="BOXBOX">
+            <div class="boxXLTY" >
+          <dl th:each="sheng:${v}" >  
+                    <dt ><a th:href="'xinglituoyunTow/'+${gs.id}+'/'+${sta.id}+'/'+${sheng.id}+'.html'" th:text="${sta.xname}+'到'+${sheng.xname}+${gs.name}"></a></dt>
+                    <dd th:each="items,statu:${sheng.lia}" th:if="${statu.count}<=4"><a th:href="'xinglituoyunthree/'+${sta.id}+'/'+${items.id}+'/'+${gs.id}+'.html'" th:text="${sta.xname}+'到'+${items.xname}+${gs.name}"> 郑州到北京大兴区行李托运</a><span th:if="${statu.count}==4">&nbsp;&nbsp;&nbsp;<a th:href="'xinglituoyunTow/'+${gs.id}+'/'+${sta.id}+'/'+${sheng.id}+'.html'" >更多>></a></span></dd>
+                </dl>
+            </div>
+            <div class="boxAD"> 
+                <p>本地优质企业</p>
+               <ul th:each="item:${yzcomps}">
+                   <li><a  target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">郑州富海物流有限公司</a></li>
+                   <li th:text="${item.xxaddress}">地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                   <li th:text="${item.lianxiren}">联系人：范经理</li>
+               </ul>
+               <!-- <ul>
+                <li><a href="">郑州富海物流有限公司</a></li>
+                <li>地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                <li>联系人：范经理</li>
+            </ul> -->
+            </div>
+        </div>
+
+    </div>
+       <div style="margin: 0 auto; width: 1200px;">
+        <script type="text/javascript" src="//a.56114.net.cn/wrzztooq.js"></script>
+    </div>
+    <div  th:replace="footer :: common_resource"></div>
+</body>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!-- 搜狐获得当前的省   和126   我用的是126-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+<script src="http://ip.ws.126.net/ipquery"></script>  
+</html>

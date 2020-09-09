@@ -1,0 +1,1303 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 1996077 */
+  src: url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.eot');
+  src: url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1996077_hf3w7o7d1sn.svg#iconfont') format('svg');
+  }
+  .iconfont{
+      font-family: iconfont;
+      /* font-size: 35px; */
+      color: #534c42;
+  }
+  .fl{
+    float: left;
+    margin-right: 5px;
+    font-size: 35px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #f6f6f6;
+    font-size: 16px;
+}
+.wrapper{
+    /* position: relative; */
+    width: 1200px;
+    margin:  0 auto;
+    /* height: 1000px; */
+    margin-top: 10px;
+
+}
+
+.wrapper .head{
+    width: 100%;
+    height: 100px;
+    /* background-color: wheat; */
+}
+
+.wrapper .head .headLeft{
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 100px;
+    overflow: hidden;
+    width: 200px;
+    height: 100%;
+    /* background-color: violet; */
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596709843649&di=ff344feff22b6ad1a4838c64fa5cecfb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58578347a6924.jpg);
+    background-size: 100% 100%;
+    /* border-right: 1px solid black; */
+}
+.wrapper .head .toggle{
+    float: left;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 58px;
+}
+.wrapper .head .toggle:hover{
+    color: white;
+    background-color:  #ff6000;;
+}
+
+
+
+
+.wrapper .head .headRight{
+    float: right;
+    width: 250px;
+    height: 100%;
+    box-sizing: border-box;
+     /* border:1px solid black; */
+}
+.wrapper .head .headRight .contact{
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.wrapper .head .headRight .contact div:nth-child(1)::after{
+    clear: both;
+}
+
+
+.wrapper .head .headRight .contact div:nth-child(1) p{
+    /* color: red; */
+    overflow: auto;
+    /* color: #666; */
+    /* margin: 0; */
+}
+.wrapper .head .headRight .contact .imgContact {
+   margin-top: 10px;
+}
+.wrapper .head .headRight .contact .imgContact img{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper .head .headCenter{
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.wrapper .head .headCenter div{
+    height: 50px;
+}
+.wrapper .head .headCenter div ul{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.wrapper .head .headCenter ul li{
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    margin: 0 5px;
+}
+.wrapper .head .headCenter ul li a{
+    height: 100%;
+    color: #555;
+    font-size: 14px;
+    vertical-align: bottom;
+    padding: 0 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrapper .head .headCenter ul li a::after{
+    content: "|";
+}
+.wrapper .head .headCenter ul li a:hover{
+    color: #ff6000;
+}
+.wrapper .head .headCenter::after{
+    content: "";
+    clear: both;
+}
+
+.wrapper .head .headCenter .input{
+    height: 50px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+form.input{
+        display: flex;
+}
+form.input div{
+    width: 35%;
+}
+form.input span{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    height: 35px;
+    font-weight: 900;
+    line-height: 35px;
+    /* border: 1px solid red; */
+}
+form.input div input{
+    width: 100%;
+}
+form.input div:nth-child(4){
+    width: 20%;
+}
+.wrapper .head .headCenter .input1{
+    height: 50px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+.wrapper .head .headCenter .input1 input{
+    width: 384px;
+    height: 40px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #004b97;
+    outline:none;
+}
+.wrapper .head .headCenter .input1 div{
+    width: 16%;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background-color:#004b97;
+}
+.wrapper .head .headCenter .input1 div:nth-child(3):hover{
+    background-color: #06c;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 瀵艰埅鏉� */
+ .Nav{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #004b97;
+}
+ .Nav .NavTop{
+    /* overflow: auto; */
+    height: 44px;
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+ .Nav .NavTop ul{
+    margin: 0 auto;
+    /* height: 100%; */
+}
+ .Nav .NavTop ul li{
+    float: left;
+    height: 44px;
+    box-sizing: border-box;
+}
+ .Nav .NavTop ul li a{
+    text-decoration: none ;
+    display: block;
+    padding: 0 20px;
+    color: #ccc;
+    line-height: 42px;
+}
+ .Nav .NavTop ul li a:hover{
+    background-color: #06c;
+    color: white;
+}
+ .Nav .NavTop::after{
+    content: "";
+    clear: both;
+}
+
+
+
+
+
+
+ .yunshuhidden {
+    width: 100%;
+    /* overflow: auto; */
+    height: 44px;
+    background-color: #004b97;
+    box-sizing: border-box;
+    /* padding-left: 210px; */
+}
+.yunshuhidden ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+ .yunshuhidden  li{
+    float: left;
+    height: 44px;
+    box-sizing: border-box;
+}
+ .yunshuhidden  li a{
+    text-decoration: none ;
+    display: block;
+    padding: 0 20px;
+    color: #ccc;
+    line-height: 42px;
+}
+ .yunshuhidden  li a:hover{
+    background-color: #06c;
+    color: white;
+}
+ .yunshuhidden::after{
+    content: "";
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .Nav .Navbotton{
+     /* overflow: auto; */
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+}
+ .Nav .Navbotton ul{
+    /* width: 80%; */
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+ .Nav .Navbotton ul li{
+    float: left;
+    height: 28px;
+    line-height: 30px;
+    box-sizing: content-box;
+}
+
+ .Nav .Navbotton ul li a{
+    text-decoration: none ;
+    display: block;
+    color:#666;
+    padding: 0px 9px;
+}
+.Nav .Navbotton ul li::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+ .Nav::after{
+    clear: both;
+    display: block;
+}
+ .Nav .Navbotton ul li a:hover{
+    color: #ff500a;
+}
+
+.overhidden{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    clear: both;
+    /* padding-left: 216px; */
+}
+
+.overhidden ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+.overhidden li{
+    float: left;
+    height: 28px;
+    line-height: 30px;
+    padding-left: 5px;
+    box-sizing: content-box;
+}
+
+.overhidden li a{
+    text-decoration: none ;
+    display: block;
+    color:#666;
+    padding: 0px 9px;
+}
+.overhidden li a:hover{
+    color: #ff500a;
+}
+
+
+
+
+/* 鏄庡ぉ鏀硅繖 */
+/* 鍦ㄧ嚎鍙戣揣鏌ヨ */
+.wrapper .fahuo{
+    overflow: auto;
+    /* margin-top: 5px; */
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.wrapper .fahuo .fahuoya{
+    float: left;
+    height: 100%;
+    width: 40%;
+    border: 2px solid #004b97;
+    box-sizing: content-box;
+    box-sizing: border-box;
+}
+.wrapper .fahuo .fahuoya p{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid black;
+}
+.wrapper .fahuo .fahuoya .leftFa{
+    height: 100%;
+    width:50%;
+    float: left;
+    /* border: 1px solid #004b97; */
+    box-sizing: border-box;
+  
+}
+.wrapper .fahuo .fahuoya .leftFa div{
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px auto;
+}
+#next {
+   width: 80px;
+   height: 30px;
+   line-height: 30px;
+    background-color: #004b97;
+     margin-top: 20px; 
+     border-radius: 10px;
+     cursor: pointer;
+     color: white;
+}
+#next a{
+	color: white;
+}
+#next:hover{
+    background-color: #0066cc;
+}
+.wrapper .fahuo .fahuoya .leftFa em{
+    font-style: normal;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: bottom;
+}
+.wrapper .fahuo .fahuoya .leftFa input{
+    width: 101px;
+    height: 30px;
+    border: none;
+    box-sizing: border-box;
+    outline:none;
+    border-bottom: 2px solid black;
+}
+
+
+
+.wrapper .fahuo .fahuoya .rightFa{
+    overflow: auto;
+    height: 100%;
+    width:50%;
+    /* background-color: white; */
+    border-left: 1px solid #004b97;
+    box-sizing: border-box;
+}
+/* 涓€鍫嗙墿娴佸悕瀛� */
+.rightFa .wuliuName{
+    width: 100%;
+    height: 210px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content:space-around;
+}
+.rightFa .wuliuName a{
+    display: block;
+    width: 45%;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: red; */
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+}
+.rightFa .wuliuName a:hover{
+    color: blue;
+}
+
+
+
+/* 鐧诲綍 */
+.wrapper .fahuo .user{
+    float: right;
+    box-sizing: border-box;
+    height: 100%;
+    width: 60%;
+    border-left:none ;
+    /* background-color: teal; */
+    display: flex;
+    /* justify-content: center; */
+}
+
+.wrapper .fahuo .user .user-right,.carousel{
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 10px;
+    border: 2px solid #004b97;
+}
+/* 杞挱鍥� */
+.wrapper .fahuo .user .carousel{
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    /* border: none; */
+}
+.wrapper .fahuo .user .carousel ul{
+    position: absolute;
+    height: 100%;
+    width: 100000px;
+    left: 0px;
+}
+.wrapper .fahuo .user .carousel ul li{
+    float: left;
+    height: 100%;
+    width: 411px;
+    cursor: pointer;
+}
+.wrapper .fahuo .user .carousel ul li img{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .fahuo .user .carousel ul li.active{
+    display: block;
+ }
+.wrapper .fahuo .user .user-right{
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+}
+.carousel .num{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel .num span{
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+    height: 20px;
+    background-color: #069;
+}
+
+
+
+/* 鐧诲綍鐨勫唴瀹� */
+.wrapper .fahuo .user .user-right .user-login{
+    height: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: red; */
+    /* align-items: flex-start; */
+    /* align-content: flex-start; */
+}
+
+
+.wrapper .fahuo .user .user-right .user-login .userHeader{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    
+}
+.wrapper .fahuo .user .user-right .user-login .operation{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper .fahuo .user .user-right .user-login .operation a{
+    display: block;
+    width: 85px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #004b97;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.wrapper .fahuo .user .user-right .user-login .operation a:hover{
+    background-color: #0066cc;
+}
+.wrapper .fahuo .user .user-right .user-login .vip{
+    width: 96%;
+    height: 90px;
+    margin: 5px auto 0;
+    /* background-color: pink; */
+    box-sizing: border-box;
+}
+.wrapper .fahuo .user .user-right .user-login .vip .vip-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color:  #666;
+    font-size: 14px;
+}
+.wrapper .fahuo .user .user-right .user-login .vip .vip-top div:hover{
+    color: #f90;
+    cursor: pointer;
+}
+.wrapper .fahuo .user .user-right .user-login .vip ul{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper .fahuo .user .user-right .user-login .vip ul li{
+    width: 100%;
+    font-size: 14px;
+}
+.wrapper .fahuo .user .user-right .user-login .vip ul li a{
+    color:  #666;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.wrapper .fahuo .user .user-right .user-login .vip ul li a:hover{
+    text-decoration: underline;
+    color: #f90;
+}
+
+.wrapper .fahuo .user .user-right .user-QR{
+    height: 30%;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: royalblue; */
+    display: flex;
+    margin-top: -20px;
+}
+.wrapper .fahuo .user .user-right .user-QR div{
+    width: 100%; /* 鐢�100涓昏鏄浠栧钩鍒�  娌℃湁鍒殑鎰忔€�  鐢ㄧ殑鏄痜lex甯冨眬*/
+    height: 100%;
+    /* border: 1px solid red   ; */
+    background-size:  100% 100% ;
+    /* background-position: 10px 0px; */
+    background-repeat: no-repeat;
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596709843649&di=ff344feff22b6ad1a4838c64fa5cecfb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58578347a6924.jpg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 广告 */
+.wrapper .AD{
+    margin-top: 10px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    /* background-color: pink; */
+}
+.wrapper .AD ._zuy3uxg68t8{
+    width: 1024px;
+}
+.wrapper .AD ._tc562l8cm2k{
+    width: 176px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 鍙戣揣鍒嗙被 */
+.wrapper .content{
+    margin-top: 10px;
+    /* height: 1500px; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .content .ConNav{
+    position: relative;
+    width: 14%;
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 5px;
+}
+.wrapper .content .ConNav dl{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .content .ConNav dl dt{
+    width: 100%;
+    height: 40px;
+    background-color: #004b97;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ccc;
+    text-align: center;
+    border-bottom: 2px solid #0066cc;
+}
+.wrapper .content .ConNav dl dd{
+    /* margin-top: 5px ; */
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-bottom: 1px solid #0066cc;
+    background-color: #004b97;
+}
+.wrapper .content .ConNav dl dd a{
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+}
+.wrapper .content .ConNav dl dd a:hover{
+    background-color: #06c;
+    color: white;
+}
+
+
+.kind{
+    position:absolute;
+    top: 940px;
+    width: 350px;
+    height: 200px;
+    border: 1px solid #06c;
+    background-color: #df8d8d;
+}
+.kind ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.kind ul li{
+    width: 18%;
+    text-align: center;
+   
+}
+.kind ul li a{
+    display: block;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.kind ul li a:hover{
+    /* background-color: black; */
+    text-decoration: underline;
+    color: blue;
+}
+
+
+/* 闆舵媴鐗╂祦涓撶嚎 */
+.wrapper .content .ConCen{
+    width: 42%;
+    box-sizing: border-box;
+    height: 100%;
+    float: left;
+    box-sizing: content-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.wrapper .content .ConCen .one{
+    height: 40px;
+    box-sizing: content-box;
+    background-color: #df8d8d;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+.wrapper .content .ConCen .one span{
+    font-size: 18px;
+    /* font-weight: 600; */
+}
+
+.wrapper .content .ConCen .one strong{
+    float: right;
+    cursor: pointer;
+   
+}
+.wrapper .content .ConCen .one  strong a{
+    color: #5f3b3b;
+}
+.wrapper .content .ConCen .CTWH{
+    height: 368px;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid #ff500a;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .content .ConCen .CTWH .changtong{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtong1{
+    width: 23%;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+.wrapper .content .ConCen .CTWH .changtong .changtong1 a{
+    color: #533434;
+    padding-left: 1px;
+  
+}
+.wrapper .content .ConCen .CTWH .changtong .changtong1 a:hover{
+    color: blue;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtongtow{
+    width: 77%;
+    background-color: #f6f6f6;
+    margin-left: 5px;
+}
+
+
+.wrapper .content .ConCen .CTWH .changtong .changtongtow ul{ 
+    width: 100%;
+    height: 50%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtongtow ul li{
+    width: 100%;
+    width: 32%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    text-align: center;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtongtow ul li a{
+    color: black;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtongtow ul li a:hover{
+    color: blue;
+}
+
+.wrapper .content .ConCen .CTWH .changtong .changtongtow p{
+    line-height: 25px;
+    height: 50%;
+    width: 335px;
+    display: inline-block;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    background-color: white;
+    margin: 0;
+}
+.wrapper .content .ConCen .CTWH .changtong .changtongtow span{
+    float: right;
+    height: 50%;
+    line-height: 29px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 璐ф簮淇℃伅 */
+.wrapper .content .ConCen .huoyuan{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 5px black;
+}
+.wrapper .content .ConCen .huoyuan .one strong{
+    cursor: pointer;
+}
+.wrapper .content .ConCen .huoyuan  p {
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+.wrapper .content .ConCen .huoyuan ul{
+    overflow: hidden;
+    height: 80%;
+    box-sizing: border-box;
+}
+.wrapper .content .ConCen .huoyuan ul li{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed #ccc;
+    
+}
+.wrapper .content .ConCen .huoyuan ul li a{
+    text-decoration: none;
+    display: block;
+    font-size:16px ;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.wrapper .content .ConCen .huoyuan ul li a:hover{
+    text-decoration: underline;
+    color: coral;
+}
+.wrapper .content .ConCen .ConAD{
+    height: 200px;
+    width: 100%;
+    margin-top: 5px;
+}
+.wrapper .content .ConCen .ConAD ul{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .content .ConCen .ConAD ul li{
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+}
+.wrapper .content .ConCen .ConAD ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596709843649&di=ff344feff22b6ad1a4838c64fa5cecfb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58578347a6924.jpg);
+}
+
+
+
+/* 涓夋柟璐ц繍浠ｇ悊 */
+.wrapper .content .ConRig{
+    width: 42%;
+    box-sizing: border-box;
+    height: 100%;
+    float: left;
+    padding-left:5px ;
+    
+}
+.wrapper .content .ConRig .one{
+    height: 40px;
+    box-sizing: content-box;
+    background-color: #df8d8d;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+.wrapper .content .ConRig .one span{
+    font-size: 18px;
+}
+.wrapper .content .ConRig .one strong{
+    float: right;
+    cursor: pointer;
+   
+}
+.wrapper .content .ConRig .one strong a{
+    color: #5f3b3b;
+}
+.wrapper .content .ConRig .cardFa{
+    display: flex;
+    height: 368px;
+    flex-direction: column;
+    margin-top: 5px;
+      border: 1px solid #ff500a;
+}
+.wrapper .content .ConRig .card{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    overflow: hidden;
+    margin-top: 5px;
+    border-bottom: 2px solid white;
+
+}
+
+.wrapper .content .ConRig .card  .carditem{
+    width: 30%;
+    text-align: center;
+     background-color: white;
+    
+}
+.wrapper .content .ConRig .card  .carditem a{
+   line-height: 60px;
+   color: #533434;
+   overflow: hidden;
+}
+
+.wrapper .content .ConRig .card  .carditem a:hover{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+.wrapper .content .ConRig .card  .carditem2{
+    width: 100%;
+    height: 100%;
+    margin-left: 5px;
+     background-color: white;
+}
+.wrapper .content .ConRig .card .carditem2 p{
+    line-height: 1.8em;
+}
+/* .wrapper .content .ConRig .card div a{
+    color: #2a2723;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+.wrapper .content .ConRig .card div strong a{
+    color:#534c42;
+    font-weight: normal;
+}
+
+.wrapper .content .ConRig .card div strong a:hover{
+    /* color:coral; */
+
+
+
+
+
+
+
+
+
+/* 杞︽簮淇℃伅 */
+.wrapper .content .ConRig .cheyuan{
+    width: 100%;
+    height: 300px ;
+    box-shadow: 0 0 5px black;
+    padding-bottom: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.wrapper .content .ConRig .cheyuan p{
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+.wrapper .content .ConRig .cheyuan div{
+        text-align: center;
+        background-color: #df8d8d;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+}
+.wrapper .content .ConRig .cheyuan div strong{
+    float: right;
+    cursor: pointer;
+}
+.wrapper .content .ConRig .cheyuan div strong a{
+    color: #5f3b3b;
+}
+
+.wrapper .content .ConRig .cheyuan ul  {
+   /* border: 1px solid black; */
+   overflow: hidden;
+   height: 80%;
+   box-sizing: border-box;
+}
+.wrapper .content .ConRig .cheyuan ul li{
+    padding-left: 10px;
+    height: 30px;
+    border-bottom: 1px dashed #ccc;
+    line-height: 30px;
+    box-sizing: border-box;
+
+}
+.wrapper .content .ConRig .cheyuan ul a{
+    display: block;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.wrapper .content .ConRig .cheyuan ul a:hover{
+    text-decoration: underline;
+    color: coral;
+    /* background-color: crimson; */
+}
+
+
+
+
+
+    /* 骞垮憡    CONRIG*/
+.wrapper .content .ConRig .rigAD{
+        height: 200px;
+        width: 100%;
+      /*   background-color: green; */
+        margin-top: 5px;
+    }
+.wrapper .content .ConRig .rigAD ul{
+        width: 100%;
+        height: 100%;
+    }
+.wrapper .content .ConRig .rigAD ul li{
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        border: 1px solid black;
+    }
+.wrapper .content .ConRig .rigAD ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596709843649&di=ff344feff22b6ad1a4838c64fa5cecfb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F58578347a6924.jpg);
+    }
+    
+/* .wrapper .content::after{
+        content: " ni ";
+       opacity: 0;
+        clear: both;
+    } */
+
+
+
+
+
+
+
+
+/* 涓棿鏈変釜娌℃湁鍐� */
+
+
+
+
+
+.wrapper .blogrol{
+    /* margin-top: 20px; */
+    padding: 18px 0px 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px black;
+    overflow: hidden;
+    margin-top:10px;
+}
+.wrapper .blogrol p{
+    margin-bottom: 10px;
+}
+.wrapper .blogrol ul li{
+    float: left;
+    padding: 0px 20px;
+    margin-left: 20px;
+    margin-bottom:20px;
+    font-size: 14px;
+}
+.wrapper .blogrol ul li a{
+    text-decoration: none;
+    color: #666;
+}
+.wrapper .blogrol ul li a:hover{
+    text-decoration: underline;
+    color: #0080ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 鑴氶儴 */
+.footer {
+    margin-top: 10px;
+    height: 230px;
+    background: #183650;
+    padding-top: 30px;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.footer .contact-wrap {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #496279;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 160px;
+}
+.pull-left {
+    float: left;
+}
+.footer .contact-wrap dt {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.footer .contact-wrap h6 {
+    margin-bottom: 15px;
+    color: #bdcedd;
+    font-size: 16px;
+}
+.footer .contact-wrap dt p {
+    font-size: 18px;
+    color: #96acc0;
+}
+.footer .contact-wrap p {
+    line-height: 16px;
+}
+.footer .contact-wrap dd {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 20px;
+}
+.footer .contact-wrap p, .footer .contact-wrap p a {
+    color: #96acc0;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer .copyr {
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    color: #96acc0;
+    font-size: 12px;
+    width: 90%;
+    min-width: 1000px;
+    margin: 16px auto 0;
+    position: relative;
+}
+.footer .copyr a {
+    color: #96acc0;
+    padding: 0 15px;
+}
+.footer .copyr a.last {
+    padding: 0 1px;
+}

@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+.leftNav{
+    /* border: 1px solid red; */
+    width: 170px;
+    overflow-y: scroll;
+}
+.leftNav .logo{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid pink; */
+}
+.leftNav .guanli{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    color: white;
+    background-color: #52afe6;
+}
+.leftNav dl{
+    background-color: #fafcff;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted black;
+}
+.leftNav dt{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    color: #0f5499;
+}
+.leftNav dd{
+    padding-left: 20px;
+    text-align: left;
+    line-height: 27px;
+    color: #666699;
+    cursor: pointer;
+}
+.leftNav dd a{
+    display: block;
+    text-decoration: none;
+    color: #666699;
+}
+.leftNav dd:hover{
+    background-color: blue;
+}
+.leftNav dd:hover a{
+    color: white;
+}
+/* 中间的 */
+.wrapper{
+    width: 100%;
+    height: 100%;
+    /* margin: 0 auto; */
+    /* border: 1px solid green; */
+    overflow-y: auto;
+}
+.absolute{
+    /* height: 70px; */
+    width: 100%;
+    position: fixed;
+}
+.absolute .navtel{
+    height: 40px;
+    background-image: linear-gradient(#0d64c5, #44a2e5);
+}
+.absolute .navtel ul{
+    height: 100%;
+    width: 50%;
+}
+.absolute .navtel li{
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-right:1px solid white ;
+    color: white;
+}
+
+
+
+.wrapper .vipmess{
+    height: 20px;
+    border-bottom: 1px solid pink;
+    margin-bottom: 15px;
+    box-shadow: 0 5px  10px #333333 ;
+}
+.wrapper .vipmess p {
+    height: 30px;
+    padding-left: 10px;
+
+    line-height: 30px;
+    background-color: #eef8fd;
+}
+.wrapper .vipmess p span{
+    color: red;
+}
+
+.vipContent{
+    margin-top: 80px;
+    padding: 0 15px;
+}
+.vipContent>p{
+    padding-left:30px ;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    background-color: #e6e6e6;
+    border-left: 5px solid red;
+    margin-bottom: 10px;
+}
+
+
+/* 。。。。。。。。。。。 */
+.boxmessage table{
+    border: none;
+    text-decoration: none;
+    border-collapse:collapse;
+}
+.boxmessage table th{
+    height: 40px;
+    /* background-color: #f5f5f5; */
+    /* background-color: #f6ac1f; */
+    color: white;
+    background-image: linear-gradient(#0d64c5, #44a2e5);
+}
+.boxmessage table tr.white{
+    height: 15px;
+}
+.boxmessage table tr.hh{
+    background-color: #e8e8e8;
+}
+.boxmessage table tr td.hhh{
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 1em;
+}
+.boxmessage table tr td strong{
+    font-size: 14px;
+}
+.boxmessage table tr td{    
+    font-size: 13px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.boxmessage table tr td p{
+    text-align: left;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+}
+.boxmessage table tr td span{
+    display: block;
+    padding: 0 10px;
+    color: white;
+    height: 30px;
+    width: 60px;
+    margin: 10px auto;
+    line-height: 30px;
+    background-color: #f6ac1f;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boxmessage table tr td span:nth-child(2){
+    background-color: white;
+    border: 1px solid #f6ac1f;
+    color: #f6ac1f;
+}
+
+.boxmessage table tr td:nth-child(1){
+    border-left: 1px solid #e8e8e8;
+    font-weight: 600;
+}
+.boxmessage table tr td:nth-child(7){
+    border-right: 1px solid #e8e8e8;
+}
+.boxmessage table tr td:nth-child(2){
+    color: #5f9dea;
+}
+.boxmessage table tr td:nth-child(3){
+    color: red;
+}
+.boxmessage table tr td:nth-child(6){
+    color: red;
+}
+
+/* 下面的记录 */
+.num{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 60px;
+    background-color:#e8e8e8;
+    font-size: 16px;
+}

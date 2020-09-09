@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.xianluMapper">
+	<!--List<company> findBykey(String keywrods);-->
+	<select id="findBykey" resultType="com.wuliu.fa.entity.company">
+	SELECT 
+      *FROM 
+	company c join xianlu x on c.id=x.sid where x.keywords=#{keywords} 
+	</select>
+		<!--Page<company> findBycd(@Param("cfd")Integer cfd,@Param("ddd")Integer ddd);-->
+	<select id="findBycd" resultType="com.wuliu.fa.entity.company">
+	SELECT 
+      c.id,c.ctoname,c.xxaddress,c.lianxitel,c.tel,c.lianxiren,c.litpic,c.qianming,c.xiancn,c.xian1,c.content,
+	  c.ywms,c.xianlustr,c.hylx,c.zhengche
+      FROM 
+	company c join xianlu x on c.id=x.sid where x.cfd=#{cfd} and x.ddd=#{ddd}  
+	 order by c.shuaxin desc  LIMIT #{page},#{pageSize}
+	</select>
+</mapper>
+
+
+
+
+

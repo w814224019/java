@@ -1,0 +1,182 @@
+
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+        <title th:text="${sta.xname}+${gs.name}">行李托运</title>
+    <meta name="Keywords" th:content="${sta.xname}+'物流，'+${sta.xname}+${gs.name}+'，'+${sta.xname}+'物流公司，货运公司，运输公司。'" />	
+<meta name="description" th:content="${sta.xname}+'物流，'+${sta.xname}+${gs.name}+'，'+${sta.xname}+'物流公司，货运公司，运输公司。'">
+    <link rel="stylesheet" href="./css/more.css">
+</head>
+<body>
+  <div  th:replace="header :: common_resource"></div>
+
+  <div class = "wrapper">
+    <!-- 零担物流专线 的更多 -->
+    <div class="more">
+     <input  id="chuid" type="hidden" th:value="${sta.id}"  />
+    <input  id="chufa" type="hidden" th:value="${sta.xname}"  />
+        <div class="moreLeft">
+          <dl>
+            <dt>
+           
+              <div class="dt-name"><h1 th:text="${sta.xname}+${gs.name}">郑州货运物流</h1>  <span><!-- <a href=""> 店铺排行版</a> --></span></div>
+              <div class="dt-default"> <a href=""> 默认样式</a> <a href="" class="iconfont">&#xe601;只看认证</a></div>
+            </dt>
+            
+           <dd th:each="item:${companylist}">
+            <div class="moreLogo"><img th:src="'http://static.56114.net.cn'+${item.litpic==''?'/gongsi/mr/1547283536.jpg':item.litpic}" alt=""></div>
+            <div class="moreContent">
+                <div class="title-big">	<a th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}"></a></div>
+                <div class="title-small" th:text="${item.content}"></div>
+                <div class="location-name" th:text="${item.xxaddress}"></div>
+                <div class="Tab">
+                    <span>空车配货</span>
+                    <span>大件运输</span>
+                     <span>会员6年</span>
+                  </div>
+            </div>
+           <div class="moreTel"> 
+              <div class="shangjia" ><a href="javascripr:(0)" th:tel="${item.tel}">联系商家</a></div>
+              <div class="yuyue"    style="background-color: royalblue;" th:data-tel="${item.tel}" th:companyid="${item.id}"
+              th:gstitle="${sta.xname}+${gs.name}"  th:data-name="${item.qianming}" th:if="${session.userId}" th:rid="${session.userId.rid}"><a href="javascripr:(0)">免费预约</a></div>
+               <div class="yuyue"    style="background-color: royalblue;" th:data-tel="${item.tel}" th:companyid="${item.id}"
+              th:gstitle="${sta.xname}+${gs.name}"  th:data-name="${item.qianming}" th:unless="${session.userId}" ><a href="javascripr:(0)">免费预约</a></div>
+            </div>
+           </dd>
+
+    
+          </dl>
+          <div class="pageFenye">
+            <span><a th:href="'dajian/'+${xian1}+'/'+${pageNum-1}+'/'+${gs.id}+'.html'">上一页</a></span>
+            <ul>
+                <li th:class="${pageNum==1}?'action':'' "><a th:href="'dajian/'+${xian1}+'/1/'+${gs.id}+'.html'">1</a></li>
+                <li th:class="${pageNum==2}?'action':'' "><a th:href="'dajian/'+${xian1}+'/2/'+${gs.id}+'.html'">2</a></li>
+                <li th:class="${pageNum==3}?'action':'' "><a th:href="'dajian/'+${xian1}+'/3/'+${gs.id}+'.html'">3</a></li>
+                <li th:class="${pageNum==4}?'action':'' "><a th:href="'dajian/'+${xian1}+'/4/'+${gs.id}+'.html'">4</a></li>
+                <li th:class="${pageNum==5}?'action':'' "><a th:href="'dajian/'+${xian1}+'/5/'+${gs.id}+'.html'">5</a></li>
+                <li th:class="${pageNum==6}?'action':'' "><a th:href="'dajian/'+${xian1}+'/6/'+${gs.id}+'.html'">6</a></li>
+                <li th:class="${pageNum==7}?'action':'' "><a th:href="'dajian/'+${xian1}+'/7/'+${gs.id}+'.html'">7</a></li>
+                <li th:class="${pageNum==8}?'action':'' "><a th:href="'dajian/'+${xian1}+'/8/'+${gs.id}+'.html'">8</a></li>
+                <li th:class="${pageNum==9}?'action':'' "><a th:href="'dajian/'+${xian1}+'/9/'+${gs.id}+'.html'">9</a></li>
+                <li th:class="${pageNum==10}?'action':'' "><a th:href="'dajian/'+${xian1}+'/10/'+${gs.id}+'.html'">10</a></li>
+            </ul>
+            <span><a th:href="'dajian/'+${xian1}+'/'+${pageNum+1}+'/'+${gs.id}+'.html'">下一页</a></span>
+          </div>
+        </div>
+      
+        <div class="moreRight">
+          
+
+          <dl>
+            <dt>热门搜索</dt>
+            <dd th:each="item:${xianguan}"><a target="_blank" th:href="${yuming}+'/complist/'+${item.cfd}+'/1/'+${item.ddd}+'/483.html'" th:text="${item.chufadi}+'到'+${item.daodadi}+'物流专线'" >北京到上海物流专线</a></dd>
+          </dl>
+
+          <!-- <dl>
+            <dt>热门搜索</dt>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+            <dd><a href="">北京到上海物流专线</a></dd>
+          </dl> -->
+
+         <!--  <dl>
+            <dt>周边专线</dt>
+
+            <dd><a href=""> .小店区到河南</a></dd>
+            <dd><a href=""> ·迎泽区到河南</a></dd>
+            <dd><a href=""> ·吕梁到河南</a></dd>
+            <dd><a href=""> ·临汾到河南</a></dd>
+            <dd><a href=""> ·忻州到河南</a></dd>
+            <dd><a href=""> ·运城到河南</a></dd>
+            <dd><a href="">·晋中到河南 </a></dd>
+            <dd><a href=""> ·朔州到河南</a></dd>
+            <dd><a href=""> ·晋城到河南</a></dd>
+            <dd><a href=""> ·长治到河南</a></dd>
+          </dl> -->
+        </div>
+    </div>
+  </div>
+   
+
+
+    <!-- 免费预约 -->
+   
+     <div class="Order " style="display: none;">
+      <div class="xinxi">
+        免费预约发货，可以发表评价、在线投诉
+        <span>X</span>
+      </div>
+      <div class="message">
+        <h3>深圳市金亿合物流有限公司</h3>
+        <h4>河南省郑州市 - 广东省深圳市</h4>
+        <p>线路经理电话：13523401223</p>
+        <hr>
+        <label for="data">
+          <!-- 这个时间下面有个js 他需要需要 -->
+          预约时间：<input type="date" id="data">
+          <em id="dianji">添加货物信息</em> 
+        </label>
+        <div class="hide" style="display: none;">
+          <p>
+            货物名称：<input type="text" name="name" id="name" style="width: 90px;">
+            总件数：<input type="text" name="zongshu" id="zongshu">
+          </p>  
+          <p>
+              货物总重量：<input type="text" name="gomgjin" id="weight">吨
+              货物总体积：<input type="text" name="lifang" id="volume">方
+          </p>
+        </div>
+        <label for="tel">
+          手机号：<input type="text" placeholder="请输入手机号" id="tel">
+        </label>
+        <label for="duanxin0">
+          短信验证码：<input type="text" placeholder="请输入验证码" id="duanxin"><span>获取短信验证码</span>
+        </label>
+      </div>
+      <div class="queren">
+        <div>确认</div>
+      </div>
+    </div>
+    <!-- 免费预约  确认按钮点击后出现的弹窗-->
+          <div class="Order2" style="display: none;">
+          </div>
+          <!-- Order3 目的让他不继承 opacity Order2 -->
+          <div class="Order3" style="display: none;">
+            <p>
+              预约成功
+              <span class="fr guanbi">X</span>
+            </p>
+           <em>预约订单已生成订单状态可在[我的订单]中查看</em> 
+              <a href="javascript:" class="fr guanbi" style="background-color: #f6f6f6;">关闭</a>
+              <a href="huser" class="fr" style=" background-color:#3434dc;color: white;">查看订单</a>
+          </div>
+    
+
+    <div  th:replace="footer :: common_resource"></div>
+  
+</body>
+<script src="./js/qrcode.js"></script>
+<script src="./js/yuyue.js"></script> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!-- 搜狐获得当前的省   和126   我用的是126-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+<script src="http://ip.ws.126.net/ipquery"></script>  
+<script>
+var xian1=$("#chuid").val();
+var chufa=$("#chufa").val();
+var daoda='';
+$("#cfd").val(chufa);
+
+</script>
+
+</html>

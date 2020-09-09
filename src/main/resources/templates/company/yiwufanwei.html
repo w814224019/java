@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${company.ctoname}+'轿车托运'"></title>
+ <meta name="Keywords" th:content="${company.ctoname}+'轿车托运'" />	
+<meta name="description" th:content="${company.ctoname}+'轿车托运'">
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/yewufanwei.css">
+    <link rel="stylesheet" href="../css/repe.css">
+</head>
+<body>
+    <!-- 版心问候语 -->
+    <div class="hello">
+        <div class="wrapper">
+            <div class=" fl firm">
+                欢迎光临<span th:text="${company.ctoname}">广州市恒昱物流有限公司</span>官方网站！ 
+            </div>
+            <div class="fr firmMessage">
+                <ul> 
+                    <!-- <li><a href="">设为首页</a></li>
+                    <li><a href="">加入收藏</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">关于我们</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- hede内容 -->
+   <div class="hede">
+        <div class="wrapper">
+            <div class="fl name">
+                <h1><span th:text="${company.qianming}+'轿车托运'">广州市恒昱物流有限公司</span></h1>
+               <!--  <h3><span>GUANGZHOU HENG YU LOGISTICS CO., LTD</span></h3> -->
+            </div>
+            <div class="fr tel">
+               <span>全国服务热线：</span>
+                <P th:text="${company.tel}">020-61928652 </P>
+                <P th:text="${company.lianxitel}">131 6880 9828</P>
+            </div>
+            <div class="jieshao">
+                <h3><span>一站式供应链服务平台</span> <span>可信赖的物流方案专家</span> </h3>
+                <h4>信誉保证，尊客爱货、安全快捷</h4>
+            </div>
+        </div>
+   </div>
+
+   
+   <!-- 导航内容 -->
+   <div class="Nav">
+        <div class="wrapper">
+           <ul>
+                <li><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></li>
+                <!-- <li><a href="">车辆展示</a></li> -->
+                <li><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="carousel">
+        <ul>
+            <li style="display: block;"><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_eklu.jpg" alt="56114物流公司"></li>
+        </ul>
+   </div>
+
+   <div style="background-color: rgb(246, 246, 246);height: 50px;">
+        <div class="wrapper">
+            <div style="height: 50px;background-color: rgba(0,84,157,1);width: 181.8px;text-align: center;font-size: 20px;line-height: 50px;color: white;float: left;">
+                SERVICE
+            </div>
+            <div style="margin-left: 30px;float: left;line-height: 50px; font-size: 14px;">
+               <a href=""  style="color: black;">网站首页</a> ∷ <a href="" style="color: black;">轿车托运</a> 
+            </div>
+        </div>
+   </div>
+   <!-- 下面的主题内容 -->
+   <div class="conten">
+    <div class="wrapper">
+        <div class="item">
+            <div class="itemNav">
+                <dl>
+                    <dt>服务项目</dt>
+                                       <dd><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></dd>
+                    <!-- <dd><a href="">车辆展示</a></dd> -->
+                    <dd><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></dd>
+                </dl>
+                <div class="itemTel">
+                    <p>全国24小时服务热线：</p>
+                    <br>
+                    <div class="itemTEL">
+                         <P th:text="${company.lianxitel}">131 6880 9828</P>
+                        <br>
+                        <P th:text="${company.tel}">020-61928652 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="itemLook">
+                   
+
+
+                <p>轿车托运</p>
+                <br>
+                <hr>
+                <p>轿车托运详细解答，让您对您的爱车托运流程彻底放心！</p>
+                <p><span>专业承运各类轿车、商品车、报废车，运输车辆全国往返</span></p>
+                <p><span>帮助您出行方便，价格合理，采用车辆均为商品车轿车运输专用车笼，以确保车辆安全高</span></p>
+                <p><span>为您优选车龄均在5年以内的运输车辆承运</span></p>
+                <p><span>运输全程由保险公司责任担保，七天快速出理赔结果</span></p>
+                <h3>下单咨询</h3>
+
+                <p><span>一对一物流顾问电话沟通</span></p>
+                <p><span>全方位解决您的需求</span></p>
+                <p><span>确认交车地点 - 确认车型 - 报价</span></p>
+                <p><span>100%安全|100%便捷|100%实惠</span></p>
+
+                <br>
+                <h3>检查外观</h3>
+                <p><span>专业工作人员会当场检查您的车辆外观，双方确认后，确保运输中无损伤</span></p>
+                <h3>签订运输协议</h3>
+                <p><span>认真填写委托人信息，以及收货人信息，随同车辆合法证件行驶证、钥匙等移交给承运商</span></p>
+                <p><span>为了保障您的权益，您的爱车出发前不需要支付何费用，当车辆抵达目的地并检查无任何问题后</span></p>
+                <p><span>提车时付款即可</span></p>
+
+
+                <h3>提交保险单据</h3>
+                <p><span>保险对于车辆运输的保障</span></p>
+                <p><span>我公司轿车托运全程保险有限公司责任担保</span></p>
+                <p><span>7天快速出理赔结果</span></p>
+                <br>
+
+                <h3>足额投保</h3>
+                <p><span>在这个竞争激烈的物流行业中，很多公司为了抢夺订单，压低价格</span></p>
+                <p><span>甚至客户要求购买保险，收了保费，却都没有投保</span></p>
+                <p><span>然而把保险费留入自己囊中，这种欺骗行为给消费者带来的是巨大的隐患</span></p>
+                <p><span>我公司承诺，如投保查不到保单，本公司运费，分文不收！</span></p>
+
+
+                <h3>装入板车</h3>
+                <p><span>运输单据，保险单，都交到了客户手中后，专业技师开始进行装车工作</span></p>
+                <p><span>板车全国各地往返，安全、及时、便捷</span></p>
+                <p><span>然而把保险费留入自己囊中，这种欺骗行为给消费者带来的是巨大的隐患</span></p>
+                <p><span>让物流更有温度的综合物流商 </span></p>
+
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/a62ca3e37e0a5212e.png" alt="">
+
+
+                <h3>交车签收</h3>
+                <p><span>我们会按照合同约定，在规定时间将车子运送至目的地</span></p>
+                <p><span>通知收货人持身份证取车，验车无问题后付款提车</span></p>
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/ac185ba99331e0ec8.jpg" alt="">
+
+
+            </div>
+        </div>
+       
+    </div>
+   </div>
+
+
+
+
+<div  th:replace="footer :: common_resource"></div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

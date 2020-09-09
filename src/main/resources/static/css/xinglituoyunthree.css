@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrapper .xinglituoyun{
+float: left;
+width: 1000px;
+}
+.wrapper .xinglituoyunAD{
+    width: 200px;
+    box-sizing: border-box;
+    float: right;
+    height: 500px;
+    /* border: 1px solid  red; */
+}
+.wrapper .xinglituoyun h1{
+    font-size: 20px;
+}
+.wrapper .xinglituoyun p{
+    margin-top: 15px;
+}
+.wrapper .xinglituoyun h4{
+    margin-top: 15px;
+}
+.wrapper .xinglituoyun div{
+    /* width: 800px; */
+    background-color: #ffe2e2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+.wrapper .xinglituoyun div dl{
+    display: flex;
+    width: 100%;
+    /* padding-left: 15px; */
+    margin-bottom: 5px;
+}
+.wrapper .xinglituoyun div dd{
+    width: 100%;
+    margin-bottom: 5px;
+    align-self:flex-start;
+    flex-grow:1;
+    font-family:"FangSong",Georgia,Serif;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.wrapper .xinglituoyun div dd a{
+    color: #000000;
+    display: block;
+
+}
+
+/* 广告 */
+.wrapper  .boxAD{
+    width:200px;
+    /* height: 500px; */
+    /* border: 1px solid green; */
+    background-color: white;
+}
+.wrapper  .boxAD p{
+    height: 30px;
+    line-height: 30px;
+    padding-left:8px ;
+    border-bottom:  1px solid #cdcdcd;
+}
+.wrapper .boxAD ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  
+    align-items: flex-start;
+    padding: 10px 0 10px 20px;
+    justify-content: flex-start;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.wrapper .boxAD ul li{
+    color: #878787;
+    padding-top: 5px;
+}
+.wrapper .boxAD ul li a{
+    color: #333;
+}
+.xiangguan{
+	display:row;
+}
+
+
+
+
+

@@ -1,0 +1,63 @@
+.box{
+    margin-top: 20px;
+    height: 40px;
+    border: 1px solid #8f8f8f;
+    display: flex;
+}
+.box div{
+    height: 40px;
+    padding: 0 10px;
+    border-right: 1px solid #8f8f8f;
+    border-top: 2px solid white;
+}
+.box div a{
+    line-height: 40px;
+    display: block;
+}
+.box div:hover{
+    border-top: 2px solid #f6ac1f;
+}
+.box div.action{
+    border-top: 2px solid #f6ac1f;
+}
+
+.jibenxinxi{
+    margin-top: 20px;
+}
+.jibenxinxi dl{
+    margin: 0px 0px 0px 80px;
+    /* border: 1px solid red; */
+    width: 270px;
+}
+.jibenxinxi dl dd{
+    width: 100%;
+    margin-top:10px;
+}
+.jibenxinxi dl dd span:nth-child(1){
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+    color: #333333;
+    font-size: 14px;
+}
+.jibenxinxi dl dd span:nth-child(2){
+    text-align: left;
+    display: block;
+    width: 160px;
+    color: #999999;
+    font-size: 14px;
+    line-height: 20px;
+    white-space:pre-wrap;
+    word-wrap : break-word ;
+}
+.jibenxinxi dl div{
+    width: 125px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #f6ac1f;
+}

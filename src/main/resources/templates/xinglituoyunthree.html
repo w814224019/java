@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+        <title th:text="${sta.xname}+'到'+${end.xname}+${gs.name}">行李托运</title>
+    <meta name="Keywords" th:content="${sta.xname}+'到'+${end.xname}+${gs.name}" />	
+<meta name="description" th:content="${sta.xname}+'到'+${end.xname}+${gs.name}">
+    <link rel="stylesheet" href="./css/xinglituoyunthree.css">
+</head>
+
+<body>
+    
+
+   <div  th:replace="header :: common_resource"></div>
+
+
+    <div class="wrapper">
+
+      <div class="xinglituoyun">
+        <h1 th:text="${sta.xname}+'到'+${end.xname}+${gs.name}">郑州到杭州桐庐行李托运公司</h1>
+          <p th:text="'从事'+${sta.xname}+'到'+${end.xname}+${gs.name}+'业务物流公司有很多家，在这里展示出来的有8家物流公司或货运信息部:'"></p>
+          <div>
+            <dl th:each="item:${companylist}">
+              <dd ><a target="_blank" th:text="${item.qianming}" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'"></a></dd>
+              <dd th:text="'电话：'+${item.tel}">13945945389</dd>
+               <dd th:text="${item.lianxitel}">电话：13945945389</dd> 
+              <dd th:text="'微信号：'+${item.tel}">百里守约</dd>
+              <dd th:text="'联系人：'+${item.lianxiren}">李四</dd>
+            </dl>
+          
+          </div>
+          <p th:text="'以上这8家物流公司有的是经营'+${sta.xname}+'到'+${end.xname}+${gs.name}+'零担物流公司，有的是整车运输公司，也有的是提供'+${sta.xname}+'到'+${end.xname}+${gs.name}+'信息服务部，仅作参考。在使用之前一定要咨询一下'+${sta.xname}+'到'+${end.xname}+${gs.name}+'价格，以及'+${sta.xname}+'到'+${end.xname}+'物流时间，几天能到？也可以咨询发货网点和提货地址电话及联系人，最好是签订货物运输协议，多比较几家再做决定，
+            也可以看看下面这些物流专线，有没有是你需要的：'">
+         </p>
+          
+               <div >
+               <th th:each="item,status:${xianguan}">
+        <p th:remove="tag" th:utext="${(status.index+1)%4==1 ? '<dl>':''}"/>
+        <dd><a target="_blank" th:href="${yuming}+'/complist/'+${item.cfd}+'/1/'+${item.ddd}+'/'+${gs.id}+'.html'" th:text="${item.chufadi}+'到'+${item.daodadi}+${gs.name}"></a> </dd>
+        <p th:remove="tag" th:utext="${(status.index+1)%4==0 ? '</dl>':''}"/> 
+        </th>
+           </div>
+  
+          <h4 th:text="'同时'+${sta.xname}+'附近从事'+${gs.name}+'的物流公司也可以参考一下：'"></h4>
+                    <div >
+               <th th:each="item,status:${fujin}">
+        <p th:remove="tag" th:utext="${(status.index+1)%4==1 ? '<dl>':''}"/>
+        <dd><a target="_blank" th:href="${yuming}+'/complist/'+${item.cfd}+'/1/'+${item.ddd}+'/'+${gs.id}+'.html'" th:text="${item.chufadi}+'到'+${item.daodadi}+${gs.name}"></a> </dd>
+        <p th:remove="tag" th:utext="${(status.index+1)%4==0 ? '</dl>':''}"/> 
+        </th>
+           </div>
+          <h4>还有郑州周边城市从事行李托运业务的：</h4>
+                        <div >
+               <th th:each="item,status:${zhoubian}">
+        <p th:remove="tag" th:utext="${(status.index+1)%4==1 ? '<dl>':''}"/>
+        <dd><a target="_blank" th:href="${yuming}+'/complist/'+${item.cfd}+'/1/'+${item.ddd}+'/'+${gs.id}+'.html'" th:text="${item.chufadi}+'到'+${item.daodadi}+${gs.name}"></a> </dd>
+        <p th:remove="tag" th:utext="${(status.index+1)%4==0 ? '</dl>':''}"/> 
+        </th>
+           </div>
+      </div>
+      <!-- 广告 -->
+     <div class="xinglituoyunAD">
+          <div class="boxAD"> 
+            <p>本地优质企业</p>
+           <ul th:each="item:${yzcomps}">
+                   <li><a target="_blank"  th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">郑州富海物流有限公司</a></li>
+                   <li th:text="${item.xxaddress}">地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                   <li th:text="${item.lianxiren}">联系人：范经理</li>
+               </ul>
+         <!--  <ul>
+            <li><a href="">郑州富海物流有限公司</a></li>
+            <li>地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+            <li>联系人：范经理</li>
+          </ul>
+          <ul>
+            <li><a href="">郑州富海物流有限公司</a></li>
+            <li>地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+            <li>联系人：范经理</li>
+          </ul> -->
+        </div>
+    </div>
+    <p style="clear: both;"></p>
+    </div>
+
+     <div style="margin: 0 auto; width: 1200px;">
+        <script type="text/javascript" src="//a.56114.net.cn/wrzztooq.js"></script>
+    </div>
+     <div  th:replace="footer :: common_resource"></div>
+</body>
+
+<script src="./js/citys.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!-- 搜狐获得当前的省   和126   我用的是126-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+<script src="http://ip.ws.126.net/ipquery"></script>  
+<script>
+  /* setTimeout(() => {
+    $(document).ready(function(){
+      $("#header").load("head.html")
+      $("#footer").load("footer.html")
+});
+  }, 0);
+
+  // 找到需要写入的元素
+   let xinglituoyun = document.getElementsByClassName("xinglituoyun")[0];
+   let divs = xinglituoyun.getElementsByTagName("div")
+  // 三级页面 请求 区的id号 返回数据写入页面
+  $.ajax({
+            async:false,
+            url:"http://localhost:10002/fa/cdlist", 
+            data:{
+              "cfd":6,
+              "ddd":2385
+            },
+            type:"get",
+            dataType:"json",
+            success:function(data){
+                console.log(data)
+              // 写入公司库
+              // console.log(data.data.companylist)
+                let gongsiku =  data.data.companylist;
+                let str = ""
+              for(let i=0;i<gongsiku.length;i++){
+                str +=`
+                 <dl>
+                    <dd> <a href="gongsiye.html?id=${gongsiku[i].id}"> ${gongsiku[i].ctoname}</a></dd>
+                    <dd>电话：${gongsiku[i].tel}</dd>
+                    <dd>电话：${gongsiku[i].lianxitel}</dd>
+                    <dd>微信号：${gongsiku[i].tel}</dd>
+                    <dd>联系人：${gongsiku[i].lianxiren}</dd>
+                </dl>`
+              }
+              divs[0].innerHTML = str;
+
+              // 相关
+              let xiangguan = data.data.xianguan;
+              let len =  Math.ceil(xiangguan.length/4); 
+              let str1 = "";
+              for(let i=0;i<len;i++){
+                  str1 +=`
+                  <dl>
+                    <dd><a href="xinglituoyun.html?cfd=${xiangguan[i*4+0]==undefined?"6":xiangguan[i*4+0].cfd}&ddd=${xiangguan[i*4+0]==undefined?"266":xiangguan[i*4+0].ddd}">${xiangguan[i*4+0]==undefined?"郑州":xiangguan[i*4+0].chufadi}到${xiangguan[i*4+0]==undefined?"北京":xiangguan[i*4+0].daodadi}行李托运</a> </dd>
+                    <dd><a href="xinglituoyun.html?cfd=${xiangguan[i*4+1]==undefined?"6":xiangguan[i*4+1].cfd}&ddd=${xiangguan[i*4+1]==undefined?"266":xiangguan[i*4+1].ddd}">${xiangguan[i*4+1]==undefined?"郑州":xiangguan[i*4+1].chufadi}到${xiangguan[i*4+1]==undefined?"北京":xiangguan[i*4+1].daodadi}行李托运</a> </dd>
+                    <dd><a href="xinglituoyun.html?cfd=${xiangguan[i*4+2]==undefined?"6":xiangguan[i*4+2].cfd}&ddd=${xiangguan[i*4+2]==undefined?"266":xiangguan[i*4+2].ddd}">${xiangguan[i*4+2]==undefined?"郑州":xiangguan[i*4+2].chufadi}到${xiangguan[i*4+2]==undefined?"北京":xiangguan[i*4+2].daodadi}行李托运</a> </dd>
+                    <dd><a href="xinglituoyun.html?cfd=${xiangguan[i*4+3]==undefined?"6":xiangguan[i*4+3].cfd}&ddd=${xiangguan[i*4+3]==undefined?"266":xiangguan[i*4+3].ddd}">${xiangguan[i*4+3]==undefined?"郑州":xiangguan[i*4+3].chufadi}到${xiangguan[i*4+3]==undefined?"北京":xiangguan[i*4+3].daodadi}行李托运</a> </dd>
+                  </dl>`
+                  }
+                  divs[1].innerHTML = str1;
+
+                  // 附近
+              let fujin =  data.data.fujin;
+              let len2 = Math.ceil(fujin.length/4)
+              let str2 = ""
+              for(let i=0;i<len2;i++){
+                str2 +=`
+                <dl>
+                  <dd><a href="xinglituoyunTow.html?id=${fujin[i*4+0].ddd}">${fujin[i*4+0].chufadi}到${fujin[i*4+0].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${fujin[i*4+0].ddd}">${fujin[i*4+1].chufadi}到${fujin[i*4+1].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${fujin[i*4+0].ddd}">${fujin[i*4+2].chufadi}到${fujin[i*4+2].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${fujin[i*4+0].ddd}">${fujin[i*4+3].chufadi}到${fujin[i*4+3].daodadi}行李托运</a> </dd>
+               </dl>`
+              }
+              divs[2].innerHTML = str2;
+
+              // 周边
+              console.log(data.data.zhoubian);
+              let zhoubian =  data.data.zhoubian;
+              let len3 = Math.ceil(zhoubian.length/4)
+              let str3 = ""
+              for(let i=0;i<len3;i++){
+                str3 +=`
+                <dl>
+                  <dd><a href="xinglituoyunTow.html?id=${zhoubian[i*4+0].ddd}">${zhoubian[i*4+0].chufadi}到${zhoubian[i*4+0].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${zhoubian[i*4+0].ddd}">${zhoubian[i*4+1].chufadi}到${zhoubian[i*4+1].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${zhoubian[i*4+0].ddd}">${zhoubian[i*4+2].chufadi}到${zhoubian[i*4+2].daodadi}行李托运</a> </dd>
+                  <dd><a href="xinglituoyunTow.html?id=${zhoubian[i*4+0].ddd}">${zhoubian[i*4+3].chufadi}到${zhoubian[i*4+3].daodadi}行李托运</a> </dd>
+               </dl>`
+              }
+              divs[3].innerHTML = str3;
+            }
+        })
+ */
+        
+</script>
+</html>

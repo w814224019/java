@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+    <title th:text="${company.ctoname}"></title>
+ <meta name="Keywords" th:content="${company.ctoname}" />	
+<meta name="description" th:content="${company.ctoname}">
+    <link rel="stylesheet" href="./css/gonsimoban.css">
+    <link rel="stylesheet" href="../css/repe.css">
+</head>
+<body>
+    <!-- 版心问候语 -->
+    <div class="hello">
+        <div class="wrapper">
+            <div class=" fl firm">
+                欢迎光临<span th:text="${company.ctoname}">广州市恒昱物流有限公司</span>官方网站！ 
+            </div>
+            <div class="fr firmMessage">
+                <ul> 
+                    <!-- <li><a href="">设为首页</a></li>
+                    <li><a href="">加入收藏</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">关于我们</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- hede内容 -->
+   <div class="hede">
+        <div class="wrapper">
+            <div class="fl name">
+                <h1><span th:text="${company.ctoname}">广州市恒昱物流有限公司</span></h1>
+                <!-- <h3><span>GUANGZHOU HENG YU LOGISTICS CO., LTD</span></h3> -->
+            </div>
+            <div class="fr tel">
+               <span>全国服务热线：</span>
+               <P th:text="${company.tel}">020-61928652 </P>
+                <P th:text="${company.lianxitel}">131 6880 9828</P>
+            </div>
+            <div class="jieshao">
+                <h3><span>一站式供应链服务平台</span> <span>可信赖的物流方案专家</span> </h3>
+                <h4>信誉保证，尊客爱货、安全快捷</h4>
+            </div>
+        </div>
+   </div>
+
+
+
+
+
+
+
+
+
+   
+   <!-- 导航内容 -->
+   <div class="Nav">
+        <div class="wrapper">
+            <ul>
+                <li><a href='/'>网站首页</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></li>
+                <!-- <li><a href="">车辆展示</a></li> -->
+                <li><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="carousel">
+        <ul>
+            <li style="display: block;"><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_eklu.jpg" alt="56114物流公司"></li>
+            <li><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_k5gp.jpg" alt=""></li>
+            <li ><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_np3u.jpg" alt=""></li>
+            <li ><img src="http://pmo619b53.pic47.websiteonline.cn/upload/z8v7.jpg" alt=""></li>
+        </ul>
+        <div class="num">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+   </div>
+
+   <!-- 下面的主题内容 -->
+   <div class="conten">
+    <div class="wrapper">
+        <div class="fuwu" th:text="${company.qianming}">服务项目</div>
+        <!-- <div class="fuwu"><span>THE SERVICE PROJECT</span></div> -->
+        <div class="item">
+            <div class="itemNav">
+                <dl>
+                    <dt>服务项目</dt>
+                    <dd><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></dd>
+                    <!-- <dd><a href="">车辆展示</a></dd> -->
+                    <dd><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></dd>
+                </dl>
+                <div class="itemTel">
+                    <p>全国24小时服务热线：</p>
+                    <br>
+                    <div class="itemTEL">
+                        <P th:text="${company.lianxitel}">131 6880 9828</P>
+                        <br>
+                        <P th:text="${company.tel}">020-61928652 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="itemLook">
+                <div class="zhanshi">服务项目</div>
+                
+                <div class="itemitem">  
+                    <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr/1490166698.jpg" alt="">
+                        </div>
+                        <p><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输 </a></p>
+                    </div>
+                    <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr/1530526416.jpg" alt="">
+                        </div>
+                        <p><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'">大件运输</a></p>
+                    </div>
+                    <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr/1490166755.jpg" alt="">
+                        </div>
+                        <p><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车运输</a></p>
+                    </div>
+                    <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr//1490164269.jpg" alt="">
+                        </div>
+                        <p><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></p>
+                    </div> <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr/1550799764.jpg" alt="">
+                        </div>
+                        <p><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></p>
+                    </div> 
+                    <div class="itemOEN">
+                        <div>
+                            <img src="http://static.56114.net.cn/gongsi/mr/1490166701.jpg" alt="">
+                        </div>
+                        <p><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 车辆展示轮播图 -->
+        <div class="chelun" th:if="${xings.size()}>0">
+                <div class="chezhan">形象展示</div>
+                    <div class="tupian">
+                        <ul style="left: 0;">
+                            <li th:each="item:${xings}">
+                                <div >
+                                <img th:src="'http://static.56114.net.cn/'+${item.pic}" alt="">
+                                </div>
+                               <!--  <p>大件运输</p> -->
+                            </li>
+                        </ul>
+                </div>
+        </div>
+    </div>
+   </div>
+
+   <!-- 下面的大图片 -->
+   <div class="bigOne">
+        <div class="wrapper">
+            <!-- 第一个 -->
+            <h2>一流的服务和卓越的信誉为您的进出口事业保驾护航</h2>
+            <h3>为客户提供最优质、最贴心的全方位服务</h3>
+            <h4>TO LAY THE CORNERSTONE OF SAFETY WITH QUALITY</h4>
+            <div class="chetuzi">
+                <div class="chetuziLeft">
+                    <img src="http://pmo619b53.pic47.websiteonline.cn/upload/timg1.jpg" alt="">
+                </div>
+                <div class="chetuziRight">
+                    <div class="kk">
+                        <div>
+                            <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/ysno1.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4>专线覆盖全国</h4>
+                            <h5>为您的项目保驾护航</h5>
+                        </div>
+                    </div>
+                    <div>公司与多家同行互补合作形成全国大中城市营运网络平台，为客户提供更完善的服务。</div>
+                    <div>大幅降低物流成本，助力电商卖家资金快速流转</div>
+                    <div><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">立即咨询</a></div>
+                </div>
+            </div>
+        </div>
+   </div>
+   <!-- 第二个 -->
+   <div class="bigOne" style="background-color: rgb(246, 246, 246);">
+    <div class="wrapper">
+        <div class="chetuzi">
+            <div class="chetuziRight">
+                <div class="kk">
+                    <div>
+                        <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/ysno4.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>全程高效服务</h4>
+                        <h5>效率创造价值</h5>
+                    </div>
+                </div>
+                <div>响应客户快，竭力为客户节约时间，创造价值</div>
+                <div>操作流程简洁，中美联合专业团队，快速清关与派送</div>
+                <div><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">立即咨询</a></div>
+            </div>
+            <div class="chetuziLeft">
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/hc02.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 第三个 -->
+
+<div class="bigOne">
+    <div class="wrapper">
+       
+        <div class="chetuzi">
+            <div class="chetuziLeft">
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/timg.jpg" alt="">
+            </div>
+            <div class="chetuziRight">
+                <div class="kk">
+                    <div>
+                        <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/ysno3.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>多年服务有口皆碑</h4>
+                        <h5>合作无忧</h5>
+                    </div>
+                </div>
+                <div>始终快一步服务客户，急客户之所需，想客户之所想</div>
+                <div>及时处理异常，用心服务客户，共同见证良好口碑</div>
+                <div><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">立即咨询</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 您只负责发货、提货，其他疑难杂症都交由我们处理 -->
+<div style="height: 570px; background: url(http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/slider_3.jpg) 100% 100% ;background-position-x: center; overflow: hidden;">
+
+    <div style="color:#ffffff;font-size: 32px;text-align: center;margin-bottom:15px;margin-top:45px;">您只负责发货、提货，其他疑难杂症都交由我们处理</div>
+    <div style="color:#D9D9D9;font-size: 24px;text-align: center;margin-bottom:15px;">一站式服务流程，您只需专心处理核心事务</div>
+    <div style="color:#D9D9D9;font-size: 16px;text-align: center;margin-bottom:50px;">China's first product quality insurance unit over 3 years long </div>
+<div>
+    <div class="wrapper" style="display: flex;justify-content: space-between;"> 
+        <div class="hover">
+            <div>
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/services-1-1.png" alt="">
+            </div>
+            <br>
+            <p>客户经理一对一跟进</p>
+            <br>
+            <p>每个客户都由</p>
+            <p>专属客户经理一对一沟通</p>
+        </div>
+        <div class="hover">
+            <div>
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/services-2-2.png" alt="">
+            </div>
+            <br>
+            <p>物流入仓</p>
+            <br>
+            <p>将你的货物运</p>
+            <p>送至国内仓库</p>
+        </div>
+        <div class="hover">
+            <div>
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/services-3-3.png" alt="">
+            </div>
+            <br>
+            <p>物流出货</p>
+            <br>
+            <p>收到货物后</p>
+            <p>与客人确认货物后，当天安排出货</p>
+        </div>
+        <div class="hover">
+            <div>
+                <img src="http://pmo619b53.pic47.websiteonline.cn/upload/templatefiles/services-4-4.png" alt="">
+            </div>
+            <br>
+            <p>目的地提货或派送</p>
+            <br>
+            <p>您的货物到达目的地后</p>
+            <p>可到仓库自提或派送到您手中</p>
+        </div>
+    </div>
+</div>
+
+</div>
+    
+<!-- /* 鼠标移上显示文字 */ -->
+<div class="yishang">
+    <div class="yishangItem">关于我们</div>
+    <p class="yishangP">始终以专业服务,用心树立国际物流行业标杆为己任。</p>
+    <br>
+    <div class="yishangFlex wrapper">
+       <div>
+           <img src="http://pmo619b53.pic47.websiteonline.cn/upload/timg.jpg" alt="">
+           <div>
+                <p>关于我们</p>
+                <p>ABOUT US</p>
+           </div>
+           <a href=""></a>
+       </div>
+       <div>
+           <img src="http://pmo619b53.pic47.websiteonline.cn/upload/timg.jpg" alt="">
+           <div>
+                <p>资质荣誉</p>
+                <p>QUALIFICATION</p>
+            </div>
+            <a href=""></a>
+       </div>
+       <div>
+           <img src="http://pmo619b53.pic47.websiteonline.cn/upload/timg.jpg" alt="">
+            <div>
+                <p>联系我们</p>
+                <p>CONTACT US</p>
+            </div>
+            <a href=""></a>
+       </div>
+    </div>
+
+    <p class="yishangP wrapper" style="font-size: 14px; color: #000000;text-indent: 2em;margin-top: 40px;line-height: 24px;"
+    th:text="${company.ctoname}+'（简称“'+${company.qianming}+'”）专业从事国内各地货物运输配送服务，有
+        着严谨的运输组织，完善的经营管理，是一家供应链一体化专业型物流公司，业务范围
+        涵盖了化工、日用品、机械、电力设备、家具、家电、建材、食品等众多行业。'+${company.qianming}+'通过全体员工的共同努力和客户支持、信赖下，不断得以发展和完善，凭借多年专业运
+        输管理经验实际操作能力，迅速积累了遍布全国的网络资源，增加整体实力，向客户提供优质的物流服务。'" >
+    </p>
+
+
+</div>
+
+
+
+
+
+ <div  th:replace="footer :: common_resource"></div>
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+var carousel = document.getElementsByClassName("carousel")[0];
+var lis = carousel.getElementsByTagName("li");
+var num = document.getElementsByClassName("num")[0];
+var spans = num.getElementsByTagName("span");
+var count = 0;
+function chang(){
+    for (var i = 0; i < lis.length; i++) {//遍历所有图片
+        lis[i].style.display = 'none';//先让所有图片隐藏
+        spans[i].style.background  ="";
+                 }
+            lis[count].style.display = 'block';//让当前下标的图片显示
+            spans[count].style.background = "#000"
+            count++;//每次加1
+                 if (count == lis.length) {
+                         count = 0;
+                 }
+             }
+for (var i = 0; i < lis.length; i++) {//遍历所有图片
+    (function(i){
+        spans[i].onclick=function(){
+             count = i
+             chang()
+        }
+     })(i)
+ }
+
+var timer = setInterval(chang,1500)  
+carousel.onmouseover = function () {
+      clearInterval(timer);
+         }
+carousel.onmouseout = function () {
+     timer = setInterval(chang, 1500);
+}
+
+
+//中间的轮播图
+
+var tupian = document.getElementsByClassName("tupian")[0];
+var tupianUl = tupian.getElementsByTagName("ul")[0];
+var timer1 = null;
+timer1 = setInterval(() => {
+    if(parseInt(tupianUl.style.left)==-960){
+        tupianUl.style.left=0
+    }
+    tupianUl.style.left = parseInt(tupianUl.style.left)-240+"px";
+}, 1500);
+
+tupian.onmouseenter = function(){
+    clearInterval(timer1)
+    this.onmouseleave =function(){
+        timer1 = setInterval(() => {
+            if(parseInt(tupianUl.style.left)==-960){
+                tupianUl.style.left=0
+            }
+            tupianUl.style.left = parseInt(tupianUl.style.left)-240+"px";
+        }, 1500);
+    }
+}
+
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

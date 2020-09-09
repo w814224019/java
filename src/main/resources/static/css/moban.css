@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    
+}
+body{
+    font-size: 14px;
+    color: #666666;
+}
+a{
+    color: #666666;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.wra{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 头部内容 */
+.heade{
+  height: 80px;
+  border-bottom: 1px solid #d3d3d3;
+    box-shadow: 0px 5px 5px #d3d3d3
+}
+.heade .logo{
+    width: 180px;
+    height: 100%;
+    /* background-color: red; */
+}
+.heade .logo a{
+    display: block;
+    height: 100%;
+}
+.heade .logo a img{
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    border-right: 1px solid #d3d3d3;
+    background-color: rosybrown;
+}
+.heade .login{
+    width: 250px;
+    height: 100%;
+    line-height: 80px;
+}
+.heade nav{
+    margin-left: 190px;
+    height: 100%;
+    width: 715px;
+    /* background-color: red; */
+}
+.heade nav ul{
+    margin-left: 20px;
+    height: 80px;
+}
+.heade nav ul li{
+    display: inline-block;
+}
+.heade nav ul li a{
+    line-height: 80px;
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.heade nav ul li a:hover{
+    background-color: #f6ac1f;
+    color: white;
+}
+
+
+/* 中间内容 */
+.content{
+    margin-top: 30px;
+    height: 500px;
+}
+/* 中间左边的 */
+.content .nav{
+    width: 200px;
+    /* background-color: #f6ac1f; */
+}
+.content .nav ul li p{
+    height: 50px;
+    line-height: 50px;
+    text-indent: 2em;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #f6ac1f;
+    cursor: pointer;
+}
+
+.content .nav ul li dt{
+    height: 43px;
+    line-height: 43px;
+    font-weight: 600;
+    text-indent: 3em;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eeeeee;
+}
+.content .nav ul li dd{
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.content .nav ul li dd a{
+    display: block;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    border-left: 4px solid #f9f9f9;
+}
+.content .nav ul li dd a.action{
+    border-left: 4px solid #f6ac1f;
+}
+.content .nav ul li dd a:hover{
+    border-left: 4px solid #f6ac1f;
+}
+
+/* 中间右边的的 */
+.content .center {
+    width: 970px;
+    /* background-color:green; */
+}
+.content .center .userinfo{
+    height: 130px;
+    background-color: #f9f9f9;
+    display: flex;
+}
+.content .center .userinfo>div{
+    width: 100%;
+    height: 110px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.content .center .userinfo div:nth-child(2){
+    border-left: 1px solid #e8e8e8;
+    border-right:1px solid #e8e8e8;
+}
+.content .center .userinfo div div.user{
+    width: 110px;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.content .center .userinfo div div.user img{
+    background-color: green;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content .center .userinfo div div.Info{
+    border: none;
+    width: 60%;
+    height: 100%;
+}
+.content .center .userinfo div div.Info p{
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    line-height: 30px;
+}
+.content .center .userinfo div div.Info strong{
+    color: #e4393c;
+    font-size: 12px;
+    font-weight: 500;
+}
+.content .center .userinfo div div.Info a{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+/* 组合样式  位置在 中间的 提现 充值 */
+.strong{
+    font-weight: bold;
+    color: #666;
+    line-height: 45px;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.a{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #e4393c;
+    font-weight: 600;
+    display: block;
+    margin-left: 15px;
+}
+.weizhi{
+    margin: 30px 30px 0 0 ;
+    border: none !important;
+}
+.weizhi a{
+    padding: 3px 5px;
+    color: white;
+    margin: 0 5px;
+    background-color: #f59f00;
+    border-radius: 3px;
+}
+.location{
+    border: 1px solid #e8e8e8;
+    margin-top: 14px;
+    text-indent: 14px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.location span{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+

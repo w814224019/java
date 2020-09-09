@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.UserMapper">
+	<!-- User findByphone(String  phone); -->
+		<select id="findByphone" resultType="com.wuliu.fa.entity.User">
+	SELECT 
+		*
+		FROM 
+			userinfo
+			WHERE 
+			mobile=#{mobile}
+	       and del_flag=0
+	
+	</select>
+<!-- Integer addNew(User user); -->
+<insert id="addNewUser" parameterType="com.wuliu.fa.entity.User"
+       useGeneratedKeys="true" keyProperty="rid">
+	insert into userinfo
+	(name,companyid,branchid,mobile,permissionid
+	,company,password,city,address,del_flag
+	,headimgurl,type,add_time
+	)
+	values
+	(#{name},#{companyid},#{branchid},#{mobile},#{permissionid}
+	,#{company},#{password},#{city},#{address},#{delFlag}
+	,#{headimgurl},#{type},now()
+     )
+	</insert>
+<!-- 更新修改信息	Integer updateUser(@Param("rid")Integer rid,@Param("name")String name,@Param("companyid")Integer companyid,
+			@Param("mobile")String mobile,@Param("permissionid")String permissionid,@Param("password")String password,
+			@Param("address")String address,@Param("headimgurl")String headimgurl,@Param("del_flag")Integer delFlag
+		
+			); -->
+	<update id="updateUser">
+	update userinfo
+	set
+
+	<if test="name!=null">
+	name=#{name},
+	</if>
+	<if test="companyid!=null">
+	companyid=#{companyid},
+	</if>
+	<if test="mobile!=null">
+	mobile=#{mobile},
+	</if>
+	<if test="permissionid!=null">
+	permissionid=#{permissionid},
+	</if>
+	<if test="password!=null">
+	password=#{password},
+	</if>
+	<if test="address!=null">
+	address=#{address},
+	</if>
+	<if test="headimgurl!=null">
+	headimgurl=#{headimgurl}
+	</if>
+
+	where 
+	 rid=#{rid}
+	</update>
+	
+	<!-- User findById(Integer rid); -->
+		<select id="findById" resultType="com.wuliu.fa.entity.User">
+	SELECT 
+		*
+		FROM 
+			userinfo
+			WHERE 
+			rid=#{rid}
+	       and del_flag=0
+	
+	</select>
+	<!-- User findByUserName(String username); -->
+		<select id="findByUserName" resultType="com.wuliu.fa.entity.User">
+	SELECT 
+		rid, name, password,mobile,company,permissionid,headimgurl,companyid,type,address
+			
+		FROM 
+			userinfo
+			WHERE 
+			name=#{name}
+	       and del_flag=0
+	
+	</select>
+	<!-- 批量添加 	Integer addPathers(List<User> pa); -->
+	<insert id ="addPathers" parameterType="java.util.List" >
+      insert into userinfo
+      (mobile,name,companyid,branchid,permissionid,company,password,city,address,headimgurl,
+	type
+	
+	)
+      values
+       <foreach collection ="list" item="User" index= "index" separator =",">
+           (
+           #{User.mobile}, #{User.name},
+           #{User.companyid},#{User.branchid},#{User.permissionid},#{User.company},
+           #{User.password},#{User.city},#{User.address},#{User.headimgurl},
+           #{User.type}
+          
+           
+           )
+       </foreach >
+</insert >
+	
+</mapper>
+
+
+
+
+

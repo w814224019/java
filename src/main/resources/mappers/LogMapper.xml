@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.LogMapper">
+ <resultMap id="Loger" type="com.wuliu.fa.entity.Texts">
+    <id column="id"  property="id" />
+    <result column="creater"  property="creater" />
+    <result column="modified_user"  property="modifiedUser" />
+    <result column="modified_time"  property="modifiedTime" />
+    <result column="companyName"  property="companyName" />
+    <result column="functions"  property="functions" />
+    <result column="contents"  property="contents" />
+    <result column="company_id"  property="companyId" />
+  </resultMap>
+	<!-- Integer SaveLoger(Texts text); -->
+<insert id="SaveLoger" parameterType="com.wuliu.fa.entity.Texts"  useGeneratedKeys="true" keyProperty="id" >
+	insert into logger_copy
+	(creater,modified_user,modified_time,functions,contents,companyName,company_id)
+	values
+	(#{creater},#{modifiedUser},#{modifiedTime},#{functions},#{contents},#{companyName},#{companyId} )
+	</insert>
+	<!-- 分页查询所有日志  Page<Texts> findalllogs(); -->
+	<select id="findalllogs" resultType="com.wuliu.fa.entity.Texts">
+	   select    
+	   creater,modified_user as modifiedUser,modified_time as modifiedTime,functions,contents,
+	   companyName,company_id as companyId
+	   
+	   from  	logger_copy order by modified_time desc
+	</select>
+	
+	
+	
+</mapper>
+
+
+
+
+

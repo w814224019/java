@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚时物流网后台管理</title>
+    <link rel="stylesheet" href="./css/vipPage.css">
+</head>
+<body>
+   
+    <div style="display: flex;height: 100vh;">
+        <div class="leftNav">
+           <input id="companyid" type="hidden" th:value="${company.id}" />
+            <!-- <div class="logo">这是个logo</div> -->
+            <div class="guanli">企业信息管理</div>
+            <dl>
+                <dt>基本信息管理</dt>
+                <dd><a href="vipPage/vipdingdanPage">货物订单</a></dd>
+                <dd><a href="vipPage/xiugaimima">修改密码</a></dd>
+                <!-- <dd>企业简介</dd>
+                <dd>企业文化</dd>
+                <dd>部门电话</dd>
+                <dd>运营网点</dd>
+                <dd>线路及运价</dd>
+                <dd>发布信息</dd>
+                <dd>发布车源货源</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd> -->
+            </dl>
+        </div>
+
+       
+        <div class="wrapper">
+            <div class="absolute">
+                <div class="navtel">
+                    <span style="float: right; margin-right: 200px;margin-top: 10px;font-size: 14px;color: white;">帮助热线：0371-67856114    在线QQ：48012625</span>
+                    <ul>    
+                        <li><a href="/">首页</a></li>
+                        <li>我的网站</li>
+                        <!-- <li>发布网站</li> -->
+                        <li><a href="logout">安全退出</a></li>
+                    </ul>
+                </div>
+                <div class="vipmess">
+                    <p> 用户名: <span th:text="${u.name}">zzjiali </span>     客户编号: <span th:text="${company.id}">181</span>  会员类型：<span >诚信通会员 </span></p>
+                </div>
+            </div>
+            
+           
+            <div class="vipContent">
+                <p>会员使用情况</p>
+                <div class="vipcont">
+                    <div class="vipLeft">
+                        <p> 您好,欢迎使用56114物流查询网 <span>诚信通会员 </span> 服务 </p>
+                        <p>服务时间为: <span> 2019/5/20 </span> 到 <span>2019/12/12</span>   已过期247天,请您即时续费,以免影响您的业务 <a href="">续费充值</a> </p>
+                        <p>客服电话:4006056114 业务员电话:15538256114</p>
+                    </div>
+                    <div class="vipRight">
+                        <h4>业务联系信息</h4>
+                        <p>业务电话:4006056114</p>
+                        <p>业务QQ:200956114</p>
+                    </div>
+                </div>
+           
+             <div class="shuaxin" style="display:block">
+                    <p th:text="'用户ID'+${company.id}+'地区:'+${company.xiancn}+'公司名称:'+${company.ctoname}">181 郑州 郑州加力达快运</p>
+                   <div><div>刷新</div>  <div onclick="wlbiup()"  style="cursor:pointer">刷新排名</div> <div>查看排名</div> </div>
+                   <div><div>刷新</div> <div th:text="'当前余'+${company.wlbi}+'次'"> 当前余50016次</div> </div>
+                   <div><div>刷新</div> <div>自动刷新</div> </div>
+                   <div> <a href="javascript:">物流币冲值</a>   <a href="javascript:">网站会员充值</a> <a href="javascript:">运单管理系统</a> </div>
+                </div>
+     
+                    <!-- 物流币充值 -->
+                <div class="wuliubi" style="display:none">
+                    <div class="ziyouchongzhi">
+                        <span>自由充值</span>
+                        <span id="fanhuiOne">返回</span>
+                    </div>
+                    <div class="chongzhijine">
+                        <label for="qian" style="display:  block;">
+                            <span>充值金额：￥</span>
+                        <input type="number" id="qian" onblur="this.value = Math.ceil(Math.abs(this.value))">
+                        </label>
+                    </div>
+                    <div class="btn">
+                       <div>充值</div>
+                    </div>
+                        <!-- 套餐充值 -->
+                    <div class="taocan">
+                       <span>套餐充值(点击以下按钮可直接充值)</span> 
+                    </div>
+                    <div class="youhui">
+                        <div>充1000送300=1300</div>
+                        <div>充3000送1500=4500</div>
+                        <div>充5000送4000=9000</div>
+                        <div>充10000送10000=20000</div>
+                    </div>
+                     <!-- 充值规则 -->
+                    <div class="guize">
+                        充值规则
+                    </div>
+                    <div class="guize">
+                        <span>充值1000送300 是在线冲1000元RMB 送300刷新次数，一共得到1300次刷新</span>
+                    </div>
+                    <div class="guize">
+                        <span> 56114物流查询网 充值问题/建议请联系 15638856114</span>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- 网站会员充值 -->
+
+                <div class="huiyuanchongzhi" style="display: none;">
+                    <div class="ziyouchongzhi  ">
+                        <span>选择会员类型可直接充值，充值后会员自动开通
+                        </span>
+                        <span id="fanhuiTow">返回</span>
+                    </div>
+                    <div class="VipType">
+                        <div>诚信会员</div>
+                        <div>金牌会员</div>
+                        <div>银牌会员</div>
+                        <div>铜牌会员</div>
+                    </div>
+
+                    <!-- 费用说明 -->
+                    <div class="money2">
+                        <dl>
+                            <dt>费用说明</dt>
+                            <dd>诚信会员：3860元/年</dd>
+                            <dd>金牌会员：2860元/年</dd>
+                            <dd>银牌会员：1860元/年</dd>
+                            <dd>铜牌会员：860元/年</dd>
+                        </dl>
+                        <p>56114物流查询网 充值问题/建议请联系 15638856114</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+    
+                </div>
+              <!-- 显示充值页面 -->
+               
+              <div class="chongzhiMoney" style="display:none">
+                <div class="ziyouchongzhi">
+                    <span>微信充值</span>
+                    <span id="bianhuichongzhi">返回</span>
+                    <input th:if="${code_url}" type="hidden" th:value="${code_url}"/>
+                </div>
+                
+                <!-- 这两个东西生成 -->
+                <!-- <div id="tutu"></div> -->
+                <!-- <p id="p">微信扫一扫充值</p> -->
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/vipPage.js"></script>
+<script src="./js/qrcode.js"></script>
+<script>
+
+
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title th:text="${company.ctoname}+'公路运输'"></title>
+ <meta name="Keywords" th:content="${company.ctoname}+'公路运输'" />	
+<meta name="description" th:content="${company.ctoname}+'公路运输'">
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/gongluyunshu.css">
+    <link rel="stylesheet" href="../css/repe.css">
+</head>
+<body>
+    <!-- 版心问候语 -->
+    <div class="hello">
+        <div class="wrapper">
+            <div class=" fl firm">
+                欢迎光临<span th:text="${company.ctoname}">广州市恒昱物流有限公司</span>官方网站！ 
+            </div>
+            <div class="fr firmMessage">
+                <ul> 
+                    <!-- <li><a href="">设为首页</a></li>
+                    <li><a href="">加入收藏</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">关于我们</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- hede内容 -->
+   <div class="hede">
+        <div class="wrapper">
+            <div class="fl name">
+                <h1><span th:text="${company.qianming}+'公路运输'">广州市恒昱物流有限公司</span></h1>
+                <!-- <h3><span>GUANGZHOU HENG YU LOGISTICS CO., LTD</span></h3> -->
+            </div>
+            <div class="fr tel">
+               <span>全国服务热线：</span>
+              <P th:text="${company.tel}">020-61928652 </P>
+                <P th:text="${company.lianxitel}">131 6880 9828</P>
+            </div>
+            <div class="jieshao">
+                <h3><span>一站式供应链服务平台</span> <span>可信赖的物流方案专家</span> </h3>
+                <h4>信誉保证，尊客爱货、安全快捷</h4>
+            </div>
+        </div>
+   </div>
+
+   
+   <!-- 导航内容 -->
+   <div class="Nav">
+        <div class="wrapper">
+           <ul>
+                <li><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></li>
+                <!-- <li><a href="">车辆展示</a></li> -->
+                <li><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="carousel">
+        <ul>
+            <li style="display: block;"><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_eklu.jpg" alt="56114物流公司"></li>
+        </ul>
+   </div>
+
+   <div style="background-color: rgb(246, 246, 246);height: 50px;">
+        <div class="wrapper">
+            <div style="height: 50px;background-color: rgba(0,84,157,1);width: 181.8px;text-align: center;font-size: 20px;line-height: 50px;color: white;float: left;">
+                SERVICE
+            </div>
+            <div style="margin-left: 30px;float: left;line-height: 50px; font-size: 14px;">
+               <a href="index.html"  style="color: black;">网站首页</a> ∷ <a href="" style="color: black;">公路运输</a> 
+            </div>
+        </div>
+   </div>
+   <!-- 下面的主题内容 -->
+   <div class="conten">
+    <div class="wrapper">
+        <div class="item">
+            <div class="itemNav">
+                <dl>
+                    <dt>服务项目</dt>
+                    <dd><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></dd>
+                    <!-- <dd><a href="">车辆展示</a></dd> -->
+                    <dd><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></dd>
+                </dl>
+                <div class="itemTel">
+                    <p>全国24小时服务热线：</p>
+                    <br>
+                    <div class="itemTEL">
+                        <P th:text="${company.lianxitel}">131 6880 9828</P>
+                        <br>
+                        <P th:text="${company.tel}">020-61928652 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="itemLook">
+                <br>   <br>
+               <h3>公路运输</h3>
+               <br>
+                <p style="text-indent: 0em;">我们公路运输主营国内货运，国内物流，货物运输，专线运输，整车零担运输，物流配送，笼车运输，小轿车运输，轿车托运，货物长短途运输及仓储、中转配送等，网络遍及全国。</p>
+                <p>公路货运往返全国，主要有普通货物整车、零担货运，超限货物运输，特殊车辆货运。所有线路一律实行整车零担、当日发车、专线直达、从门到门，信息反馈、专人负责、全程联保、诚信价平。 同时,我公司还提供大、中、小型机器设备吊装、移位，长途搬家迁厂，搬运打包运输一条龙服务，使您倍感省心。</p>
+                    <br>
+                <p>目前，我公司已开通的品牌线路有:</p>
+                <p>北京线：北京 天津 石家庄 保定 沧州 唐山 秦皇岛 邯郸 郑州 南阳  武汉 宜昌 襄樊 荆州  长沙 株洲 湘潭 益阳 岳阳 常德</p>
+                <p>上海线：上海 昆山 南京 苏州 无锡 江阴 张家港 淮安 盐城 邳州 徐州 扬州 泰州 常州 常熟 杭州 萧山 绍兴 宁波 温州 温岭 嘉兴 义乌 金华 永康 南昌 赣州  合肥 阜阳 亳州 济南 青岛 临沂 淄博 滨州 烟台 威海</p>
+                <p>西南线：昆明 大理 玉溪 南宁 柳州 桂林 玉林 梧州 北海 百色  贵阳 遵义 重庆 成都 绵阳 宜宾 眉山</p>
+                <p>东北线：哈尔滨 沈阳 锦州 辽阳 大连 丹东 营口 长春 吉林 延吉 佳木斯  大庆</p>
+                <p>西北线：西安 太原 兰州 西宁 德令哈  银川 乌鲁木齐 库尔勒 石河子 塔城 伊宁 拉萨 呼市 包头</p>
+                <p>临海线：海口 三亚 汕头  梅州 漳州 厦门 福州 晋江 泉州 莆田 龙岩 宁波 温州</p>
+                <p></p>
+                <p></p>
+
+
+                
+
+            </div>
+        </div>
+       
+    </div>
+   </div>
+
+
+
+
+<div  th:replace="footer :: common_resource"></div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

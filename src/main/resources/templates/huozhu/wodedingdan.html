@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/moban.css">
+    <link rel="stylesheet" href="./css/wodedingdan.css">
+</head>
+<body>
+    <div class="heade">
+        <div class="wra  clear">
+            <div class="logo fl">
+                <a href="">
+                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3323791702,320789907&fm=26&gp=0.jpg" alt="">
+                </a>
+            </div>
+            <div class="login fr">
+                <p>
+                    15238484509_U7P97
+                    <a href="">用户中心</a> |
+                     <a href="logout">退出</a>
+                </p>
+            </div>
+            <nav >
+                <ul>
+                    <li><a href="">聚时物流网</a></li>
+                    <li><a href="">服务公示</a></li>
+                    <li><a href="">货车货物定位</a></li>
+                    <li><a href="">物流咨询</a></li>
+                    <li><a href="">客户心声</a></li>
+                    <li><a href="">物流营销</a></li>
+                    <li><a href="">物流圈</a></li>
+                    <li><a href="">金币商城</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content wra clear">
+        <div class="nav fl">
+            <ul>
+                <li>
+                    <p>个人中心</p>
+                    <dl style="display: none;">
+                        <dt>帐户设置</dt>
+                        <dd><a href="./index.html" > 基本资料</a></dd>
+                        <dd><a href="./zhanghaoanquan.html"> 账号安全</a></dd>
+                        <dt>资产管理</dt>
+                        <dd><a href="./jinbiguanli.html"> 金币管理</a></dd>
+                        <dd><a href="./zhongjiangguanli.html"> 中奖管理</a></dd>
+                        <dd><a href="./caiwuguanli.html"> 财务管理</a></dd>
+                        <dt>站内通知</dt>
+                        <dd><a href="./"> 我的站内信</a></dd>
+                        <dt>我的邀请</dt>
+                        <dd><a href="./"> 我的邀请</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <p>货主中心</p>
+                    <dl >
+                        <dd><a href="./wodedingdan.html" class="action"> 我的订单</a></dd>
+                        <dd><a href="./wodepingjia.html"> 我的评价</a></dd>
+                        <dd><a href="./wodetousu.html"> 我的投诉</a></dd>
+                        <dd><a href="./wuliuquan.html"> 物流网</a></dd>
+                        <dd><a href="./changyonghuowu.html"> 常用货物</a></dd>
+                    </dl>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <!-- 右边的内容 -->
+        <div class="center fr" >
+            <div class="userinfo">
+                <div>
+                    <div class="fl user">
+                     <img src="http://www.56cheng.com/Public/images/default_avatar_128_128.jpg" alt="">
+                    </div>
+                    <div class="fr Info">
+                    <input id="rid" type="hidden" th:value="${u.rid}" />
+                        <p th:text="${u.name}" >15238484509_U7P97</p>
+                        
+                        <strong>您目前是货主用户，如果您是物流用户，请认证申请：</strong>
+                        <a href="">认证物流企业</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="fl">
+                        <strong class="strong">帐户余额</strong>
+                        <a href="" class="a">0.00元</a>
+                    </div>
+                    <div class="fr weizhi ">
+                        <a href="">充值</a>
+                        <a href="">提现</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="fl">
+                        <strong class="strong">金币数量</strong>
+                        <a href="" class="a">5</a>
+                    </div>
+                    <div class="fr weizhi ">
+                        <a href="">充值</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 前面都是相同的  下面都不同  以上都引入moban.css-->
+            <!-- 关于下面的css 引入自己的特有css -->
+            <div class="location">
+               <p>
+                货主中心>我的订单><span>我的订单</span>
+               </p>
+            </div>
+            <p class="mingxi"> 
+                <span class="action"><a href="">全部</a></span>
+                <span><a href="">待受理</a></span>
+                <span><a href="">待评价</a></span>
+                <span><a href="">已结束</a></span>
+            </p>
+            
+
+            <!-- 有四个选项里面的效果都一样  静态生成 -->
+            <div class="boxmessage">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th width="350">货物</th>
+                            <th width="350">订单信息</th>
+                            <th width="250">订单状态</th>
+                            <th width="250">交易操作</th>
+                        </tr>
+                            <!-- 第一个内容 -->
+                            <!-- <tr class="white"></tr>
+                            <tr class="hh">
+                                <td colspan="4" class="hhh">
+                                   <strong>订单号：362875 </strong> 下单时间: 2020-08-31 11:21:30
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>  <strong>郑州大洋物流</strong> </td>
+                                <td>
+                                    <p>线路：河南省郑州市 ~ 山东省临沂市</p>
+                                    <p>专线经理：13253480579</p>
+                                    <p>预约时间：2020-08-31</p>
+                                </td>
+                                <td>已受理</td>
+                                <td>
+                                    <span>评价</span>
+                                    <span>查看详细</span>
+                                </td>
+                            </tr> -->
+                         <!-- 第2个内容 -->
+                            <tr class="white"></tr>
+                            <tr class="hh">
+                                <td colspan="4" class="hhh">
+                                   <strong>订单号：362875 </strong> 下单时间: 2020-08-31 11:21:30
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>  <strong>郑州大洋物流</strong> </td>
+                                <td>
+                                    <p>线路：河南省郑州市 ~ 山东省临沂市</p>
+                                    <p>专线经理：13253480579</p>
+                                    <p>预约时间：2020-08-31</p>
+                                </td>
+                                <td>已受理</td>
+                                <td>
+                                    <span>评价</span>
+                                    <span>查看详细</span>
+                                </td>
+                            </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+            <div class="num">共 1 条记录</div>
+
+
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+
+    <script>
+    var rid=$("#rid").val();
+            $.ajax({
+                async:false,
+                url:"/myorderlist", 
+                type:"get",
+                data:{
+                    "rid":rid,
+                },
+                dataType:"json",
+                success:function(data){
+                    console.log(data.data.myorderlist);
+                    let arr = data.data.myorderlist;
+                    let str = ` <tr>
+                                    <th width="350">货物</th>
+                                    <th width="350">订单信息</th>
+                                    <th width="250">订单状态</th>
+                                    <th width="250">交易操作</th>
+                                </tr>`;
+                    let tbody = document.getElementsByClassName("boxmessage")[0].getElementsByTagName("tbody")[0];
+
+                    for(let i=0;i<arr.length;i++){
+                        str +=`
+                                <tr class="white"></tr>
+                                    <tr class="hh">
+                                        <td colspan="4" class="hhh">
+                                        <strong>订单号：362875 </strong> 下单时间: ${[...arr[i].time].filter(function(item,index){return index<10}).join("")}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <strong>${arr[i].compname}</strong> </td>
+                                        <td>
+                                            <p>线路：${arr[i].fhaddress} ~ ${arr[i].shaddress}</p>
+                                            <p>专线经理：${arr[i].shphone}</p>
+                                            <p>预约时间：${[...arr[i].time].filter(function(item,index){return index<10}).join("")}</p>
+                                        </td>
+                                        <td>${arr[i].status}</td>
+                                        <td>
+                                            <span>评价</span>
+                                            <span>查看详细</span>
+                                        </td>
+                                    </tr>
+                        `
+                    }
+                    tbody.innerHTML = str
+
+                }
+            })
+    </script>
+
+
+<script src="./js/more.js"></script>
+</body>
+</html>

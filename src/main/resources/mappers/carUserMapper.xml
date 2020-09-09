@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.carUserMapper">
+
+    <!--添加车源信息  Integer add(carUser carr);-->
+    <insert id="add" parameterType="com.wuliu.fa.entity.carUser"   useGeneratedKeys="true" keyProperty="id">
+
+    INSERT INTO car_info
+    (userid,city,destination,type,chang,car_license,remark,status,picturePath,phone,xian1,lianxiren,addtime)
+    VALUES
+    (#{userid},#{city},#{destination},#{type},#{chang},#{carLicense},#{remark},#{status},#{picturePath},
+    #{phone},#{xian1},#{lianxiren},now())
+
+
+  </insert>
+<!-- 分页查询所有车辆信息Page<carUser> findcarusers();-->
+	<select id="findcarusers" resultType="com.wuliu.fa.entity.carUser">
+	SELECT 
+	id,userid,type,chang,city,destination,car_license as carLicense,remark,status,picturePath,phone,xian1
+	,lianxiren,addtime
+		FROM 
+	car_info order by addtime desc
+	</select>
+	
+	<!-- 根据车主id查询车辆信息carUser findAcarUserByi(Integer id);-->
+		<select id="findAcarUserByi" resultType="com.wuliu.fa.entity.carUser">
+	SELECT 
+	id,userid,type,chang,city,destination,car_license as carLicense,remark,status,picturePath,phone,xian1,
+	lianxiren,addtime
+		FROM 
+			car_info
+			WHERE 
+			id=#{id}
+	</select>
+	
+</mapper>
+
+
+
+
+

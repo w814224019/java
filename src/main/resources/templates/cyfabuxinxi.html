@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车源发布</title>
+    <link rel="stylesheet" href="./css/fabuxinxi.css">
+      <link rel="stylesheet" href="./css/repe.css">
+</head>
+<body>
+<div class="wrapper" style="margin-top: 70px;">
+    <div class="header">
+        <!-- <img src="http://www.chinawutong.com/img/top_03.gif" alt=""> -->
+        <span>车源发布</span>
+        <p><a href="/" style="color:black;padding-right:15px;">首页</a><a target="_blank" th:href="'/cheyuan/'+${xian1}+'/1.html'" style="color:black;padding-right:15px;">车源列表</a>如发布遇到问题，请拨打客服热线： <em>156-388-56114</em>   
+        </p>
+        
+    </div>
+    <form action="" >
+        
+        <label for="chufa">
+        <input th:value="${xian1}" type="hidden"   id="xian1" >
+          <span>出发地:</span>
+          <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off"  name="gongiscity" id="ddd"  placeholder="请选择出发地" th:value="${fhaddress}"  />
+          <!--  <input type="text" placeholder="请输入出发地" id="chufa" name="chufa" required> -->
+        </label>
+        <label for="shouhuo">
+            <span>到达地:</span><input type="text" placeholder="请输入到达地" id="shouhuo" name="shouhuo" required>
+        </label>
+        <label for="fahuoren">
+            <span>联系人:</span><input type="text" placeholder="请输入联系人" id="lianxiren" name="fahuoren" required>
+        </label>
+        <label for="shouhouren">
+          <span>车辆类型:</span>
+          <select name="type"  id="type">
+                 <option value ="小型货车">小型货车</option>
+                 <option value ="中型货车">中型货车</option>
+                 <option value="大型货车">大型货车</option>
+                 <option value="平板车">平板车</option>
+            </select><br>
+         <!--  <input type="text" placeholder="请输入车辆类型" id="shouhouren" name="shouhouren" required> -->
+        </label>
+        <label for="fahourenTel">
+           <span>司机手机:</span><input type="text" placeholder="请输入司机手机" id="phone" name="fahourenTel" required>
+        </label>
+        <label for="shouhuorenTel">
+            <span>车长:</span>
+            <!-- <input type="text" placeholder="请输入车长" id="shouhuorenTel" name="shouhuorenTel" required> -->
+            <select name="chang" id="chang">
+                 <option value ="5.6米">5.6米</option>
+                 <option value ="7.8米">7.8米</option>
+                 <option value="13.6米">13.6米</option>
+                 <option value="4.6米">4.6米</option>
+            </select><br>
+         </label>
+        <!--  <label for="huoName">
+            <span>货物名称:</span><input type="text" placeholder="请输入货物名称" id="huoName" name="huoName" required>
+         </label> -->
+         <label for="huoWeight">
+            <span>车牌号:</span><input type="text" placeholder="请输入车牌号" id="carLicense" name="huoWeight" required>
+         </label>
+         <label for="huoVolume">
+            <span>备注:</span><input type="text" placeholder="请输入备注" id="remark" name="huoVolume" required>
+         </label>
+         <div>
+            <input type="button" value="提交" onclick="addcar()">
+         </div>
+    </form>
+
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<div style="margin-top:193px;"></div>
+<div  th:replace="footer :: common_resource"></div>
+
+</body>
+<script src="./js/cheyuan.js"></script> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+ 
+   
+
+  </script>
+</html>

@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  /*   box-sizing: border-box; */
+}
+.red{
+    color: red;
+}
+.white{
+    background-color: white;
+}
+a{
+    color: black;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.wrapper{
+    width: 950px;
+    margin: 0 auto;
+    background-color: #e3f3ff;
+    /* height: 8000px; */
+}
+/* <!-- 最上面的内容 --> */
+.top{
+    height: 75px;
+    width: 100%;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top img{
+    width: 200px;
+    height: 75px;
+}
+.top span{
+    font-size: 35px;
+    vertical-align: 30px;
+}
+.top ul{
+    padding-top: 25px;
+}
+.top li{
+    padding: 0 5px;
+    font-size: 14px;
+    text-align: right;
+}
+.top li a:hover{
+    color: red;
+}
+
+/* <!-- 选择类型 --> */
+.type{
+    padding: 15px 10px;
+
+}
+.type .one{
+    height: 33px;
+    padding-left: 15px;
+}
+.type .one span{
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 15px;
+}
+.type .one span.action{
+    background-color: #1d88c9;
+    color: white;
+    font-weight: 600;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:0em;
+    border-bottom-left-radius:0em;
+}
+
+/* <!-- 选择种类 --> */
+.tow{
+    border: 2px solid #1d88c9;
+    border-top: 4px solid #1d88c9;
+    /* height: 3000px; */
+    padding: 5px;
+}
+.tow p{
+    margin-top: 5px;
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 25px;
+    line-height: 25px;
+}
+.tow strong{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom:1px dashed #d5b9b9;
+}
+
+#table{
+    margin-top: 15px;
+    width: 100%;
+}
+#table tr{
+    height: 40px;
+}
+#table tr td{
+    font-size: 16px;
+    font-weight: 600;
+}
+#table tr td input{
+    height: 27px;
+    font-size: 18px;
+}
+.w400{
+    width: 300px;
+    text-align: right;
+}
+#duanxi{
+    padding: 3px 15px;
+    background-color: #f6ac1f;
+    margin-left: 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+#duanxi.ban{
+    background-color: silver;
+    cursor:no-drop  
+
+}
+#submit{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px auto;
+    background-color: #289edf;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+/* 获取验证码 */

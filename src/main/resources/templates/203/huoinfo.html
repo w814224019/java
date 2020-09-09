@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>货源的详细信息</title>
+      <base th:href="${yuming}">
+    <link rel="stylesheet" href="../css/cheinfo.css"> 
+</head>
+<body>
+    <div  th:replace="header :: common_resource"></div>
+    <div class="wrapper">
+      <div class="box">
+        <div class="tableLeft">
+          <table >
+            <th colspan="6" th:text="${huoinfo.fhaddress}+'--'+ ${huoinfo.shaddress}">山东省-德州市-市辖区  海南省-海南直辖县-保亭县</th>
+            <tr>
+              <td class="tabColor">出发地</td>
+              <td colspan="2" th:text="${huoinfo.fhaddress}" >山东省-德州市-市辖区</td>
+              <td class="tabColor"> 到达地	</td>
+              <td colspan="2" th:text="${huoinfo.shaddress}">地	海南省-海南直辖县-保亭县222</td>
+            </tr>
+            <tr>
+              <td class="tabColor">货物名称</td>
+              <td colspan="2" th:text="${huoinfo.goodsname}" >	建材</td>
+              <td class="tabColor">重量</td>
+              <td colspan="2">重量	1吨</td>
+            </tr>
+            <tr>
+              <td class="tabColor">货物类型</td>
+              <td colspan="2" th:text="${huoinfo.chetype}">		货</td>
+              <td class="tabColor">体积</td>
+              <td colspan="2">体积	不详</td>
+            </tr>
+            <tr>
+              <td class="tabColor">运输类型</td>
+              <td colspan="2">				整车配货</td>
+              <td class="tabColor">联系人	</td>
+              <td colspan="2" th:text="${huoinfo.fhuser}">小刘</td>
+            </tr>
+            <tr>
+              <td class="tabColor">信息发布时间</td>
+              <td colspan="2" th:text="${#dates.format(huoinfo.time,'yyyy-MM-dd HH:mm:ss')}">			长期货源</td>
+              <td class="tabColor">联系电话	</td>
+              <td colspan="2" th:text="${huoinfo.fhphone}">100</td>
+            </tr>
+            <tr>
+              <td class="tabColor">说明备注</td>
+              <td colspan="5">	需求：13米 半挂车</td>
+            </tr>
+               
+          </table>
+        </div>
+            <div class="Rightmessage">
+          <p>本地优质企业</p>
+           <ul th:each="item:${yzcomps}">
+                   <li><a target="_blank" th:href="${yuming}+'/gonsimoban/'+${item.id}+'.html'" th:text="${item.qianming}">郑州富海物流有限公司</a></li>
+                   <li th:text="${item.xxaddress}">地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+                   <li th:text="${item.lianxiren}">联系人：范经理</li>
+               </ul>
+          <!-- <ul>
+           <li><a href="">郑州富海物流有限公司</a></li>
+           <li>地址：郑州新郑市郭店镇芦家桥东南侧富海物流港</li>
+           <li>联系人：范经理</li>
+       </ul> -->
+
+
+        </div>
+      </div>
+    </div>
+<br>
+ <div  th:replace="footer :: common_resource"></div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<!-- 搜狐获得当前的省   和126   我用的是126    在index中修改-->
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+<script src="http://ip.ws.126.net/ipquery"></script> 
+<script>
+
+//  详细货源请求
+var table = document.getElementsByTagName("table")[0]
+console.log(table)
+    $(document).ready(function(){
+/*         $.ajax({
+            async:false,
+            url:"http://localhost:10002/fa/huinfo", 
+            data:{"id": window.location.search.split("id=")[1]},
+            type:"get",
+            dataType:"json",
+            success:function(data){
+              console.log(data.data.huoinfo)
+              let hy= data.data.huoinfo;
+               let str = `
+               <th colspan="6">${hy.fhaddress} -- ${hy.shaddress}</th>
+            <tr>
+              <td class="tabColor">出发地</td>
+              <td colspan="2">${hy.fhaddress}</td>
+              <td class="tabColor"> 到达地	</td>
+              <td colspan="2">${hy.shaddress}</td>
+            </tr>
+            <tr>
+              <td class="tabColor">货物名称</td>
+              <td colspan="2">${hy.chetype}</td>
+              <td class="tabColor">重量</td>
+              <td colspan="2">未知</td>
+            </tr>
+            <tr>
+              <td class="tabColor">货物类型</td>
+              <td colspan="2">${hy.chetype}</td>
+              <td class="tabColor">体积</td>
+              <td colspan="2">体积	不详</td>
+            </tr>
+            <tr>
+              <td class="tabColor">运输类型</td>
+              <td colspan="2">零担配货</td>
+              <td class="tabColor">联系人	</td>
+              <td colspan="2">${hy.fhuser}</td>
+            </tr>
+            <tr>
+              <td class="tabColor">信息有效期</td>
+              <td colspan="2">			长期货源</td>
+              <td class="tabColor">联系电话	</td>
+              <td colspan="2">${hy.fhphone}</td>
+            </tr>
+            <tr>
+              <td class="tabColor">说明备注</td>
+              <td colspan="5">${hy.goodsname}</td>
+            </tr>
+               `
+               console.log(str)
+               table.innerHTML =str
+            }
+        }) */
+    })
+</script>
+</html>

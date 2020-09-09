@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.CompanyMapper2">
+<!-- 公司刷新-->
+    <update id="Upcomorder">
+        update company set shuaxin = #{shuaxin},wlbi = #{wlbi} where id = #{id}
+    </update>
+	<!-- 判断用户名唯一	company findbyname(String name); -->
+	<select id="findbyname" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		*
+		FROM
+		company where name=#{name}
+	</select>
+<!-- 添加 Integer addCompany(company c); -->
+	<insert id="addCompany"  parameterType="com.wuliu.fa.entity.company"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into company
+		(ctoname,xxaddress,lianxitel,tel,lianxiren,litpic,qianming,xiancn,xian1,content,
+		ywms,xianlustr,hylx,zhengche,sheng1,wx,shengm,name,gslx,shuaxin
+
+		)
+		values
+		
+			(
+			 #{ctoname},#{xxaddress},
+			#{lianxitel},#{tel},#{lianxiren},#{litpic},
+			#{qianming},#{xiancn},#{xian1},#{content},
+			#{ywms}, #{xianlustr}, #{hylx}, #{zhengche}
+			,#{sheng1},#{wx},#{shengm},#{name},#{gslx},#{shuaxin}
+
+			)
+		
+	</insert>
+<!--公司轮播图  List<compxingx> findxings(Integer sid);  -->
+	<select id="findxings" resultType="com.wuliu.fa.entity.compxingx">
+		SELECT
+		id,sid,pic
+		FROM
+		ctouser_xingxiang where sid=#{sid}
+	</select>
+<!--Page<company> findBycname(@Param("name")String name); -->
+	<select id="findBycname" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		id,ctoname,xxaddress,lianxitel,tel,lianxiren,litpic,qianming,xiancn,xian1,content,
+		ywms,xianlustr,hylx,zhengche
+		FROM
+		company where (
+			ctoname LIKE '%${name}%' or
+	        qianming LIKE '%${name}%')
+	</select>
+	<!--company findByid(Integer companyid); -->
+	<select id="findByid" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		*
+		FROM
+		company where id=#{id}
+	</select>
+		<!--Page<company> findBycnz(@Param("xian1")Integer xian1); -->
+	<select id="findBycnz" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		id,ctoname,xxaddress,lianxitel,tel,lianxiren,litpic,qianming,xiancn,xian1,content,
+		ywms,xianlustr,hylx,zhengche,ggw1
+		FROM
+		company where xian1=#{xian1} and zhengche &gt; #{zhengche}  order by shuaxin desc
+	</select>
+	<!--Page<company> findBycn(); &gt;大于 -->
+	<select id="findBycn" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		id,ctoname,xxaddress,lianxitel,tel,lianxiren,litpic,qianming,xiancn,xian1,content,
+		ywms,xianlustr,hylx,zhengche,ggw1
+		FROM
+		company where xian1=#{xian1} and zhengche=#{zhengche} 
+	</select>
+	<!-- 批量添加 Integer addPathers(List<company> pa); -->
+	<insert id="addPathers" parameterType="java.util.List">
+		insert into company
+		(id,ctoname,xxaddress,lianxitel,tel,lianxiren,litpic,qianming,xiancn,xian1,content,
+		ywms,xianlustr,hylx,zhengche
+
+		)
+		values
+		<foreach collection="list" item="company" index="index"
+			separator=",">
+			(
+			#{company.id}, #{company.ctoname},#{company.xxaddress},
+			#{company.lianxitel},#{company.tel},#{company.lianxiren},#{company.litpic},
+			#{company.qianming},#{company.xiancn},#{company.xian1},#{company.content},
+			#{company.ywms}, #{company.xianlustr}
+			, #{company.hylx}, #{company.zhengche}
+
+			)
+		</foreach>
+	</insert>
+	<!-- 批量修改	Integer updateBatch(@Param("list") List<company> list); -->
+	<update id="updateBatch" parameterType="list">
+            update company
+            <trim prefix="set" suffixOverrides=",">
+             <trim prefix="sheng1 =case" suffix="end,">
+                 <foreach collection="list" item="i" index="index">
+                         <if test="i.sheng1!=null">
+                          when id=#{i.id} then #{i.sheng1}
+                         </if>
+                 </foreach>
+              </trim>
+             </trim>
+            where
+            <foreach collection="list" separator="or" item="i" index="index" >
+              id=#{i.id}
+          </foreach>
+</update>
+	<!-- 批量修改	Integer updateBatch1(@Param("list") List<company> list); -->
+	<update id="updateBatch1" parameterType="list">
+            update userinfo
+            <trim prefix="set" suffixOverrides=",">
+             <trim prefix="mobile =case" suffix="end,">
+                 <foreach collection="list" item="i" index="index">
+                         <if test="i.tel!=null">
+                          when companyid=#{i.id} then #{i.tel}
+                         </if>
+                 </foreach>
+              </trim>
+             </trim>
+            where
+            <foreach collection="list" separator="or" item="i" index="index" >
+              companyid=#{i.id}
+          </foreach>
+</update>
+<update id="updateBatch2"  parameterType="java.util.List">  
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+        update userinfo
+        <set>
+            mobile=${item.tel}
+        </set>
+        where companyid = ${item.id}
+    </foreach>      
+</update>
+	<!--List<Companier> findAll(); -->
+<!-- 	<select id="findAll" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		id,sheng1
+		FROM
+		ctouser where hylx=0 
+	</select> -->
+	<select id="findAll" resultType="com.wuliu.fa.entity.company">
+		SELECT
+		id,tel
+		FROM
+		company 
+	</select>
+	<!-- <update id="updateBatch"  parameterType="java.util.List">  
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+        update course
+        <set>
+            name=${item.name}
+        </set>
+        where id = ${item.id}
+    </foreach>      
+</update> -->
+</mapper>
+
+
+
+
+

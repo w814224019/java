@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="common_resource">    
+<link rel="stylesheet" href="./css/repe.css">
+ <div class="wrapper">
+        <div class="head">
+            <div class="headLeft"></div>
+            <div class="toggle"><span th:text="${shname==null?sta.xname:shname}+'站'"></span>[切换分站]</div>
+                <div id="toggleCity" style="display:none">
+                
+                <ul>
+                    <li><a href="">主站</a></li>
+                    
+                </ul>
+
+            </div>
+            <div class="headRight">
+              <div class="contact">
+                  <div >
+                    <div class="iconfont fl" > &#xe6b0;</div>
+                    <p>全国客服热线</p>
+                    <p>4000056114</p>
+                  </div>
+                   <!-- <div class="imgContact">
+                    <img src="./img/qqtop.png" alt="">
+                    <img src="./img/qqtop.png" alt="">
+                   </div> -->
+              </div>
+            </div>
+                   <div class="headCenter">
+                <div>
+                    <ul>
+                        <li><a href="javascript:void(0)">专线 </a></li>
+                        <li><a href="javascript:void(0)">公司 </a></li>
+                        <li><a th:href="${yuming}+'/dajian/'+${sta.id}+'/1/1088.html'">价格 </a></li>
+                        <li><a th:href="${yuming}+'/dajian/'+${sta.id}+'/1/1089.html'">时间 </a></li>
+                    </ul>
+                </div>
+              
+                <form onsubmit="return zx()" name="form1" class="input" >
+                    <div class="inp_border" >
+                        <input type="text" class="inp_zx_cfd" name="city" id="cfd" th:value="${sta.xname}" style="color:#FD2109; font-size:24px;"/>
+                    </div>
+                    <span>---></span>
+                    <div class="inp_border">
+                        <input type="text" class="inp_zx_ddd"  autocomplete="off" placeholder="" name="city3" id="ddd" value="" style="color:#FD2109; font-size:24px;"/>
+                    </div>
+                    <div class="btn_bor" style="width:50px"><input name="cfdid" id="cfdid" type="hidden" th:value="${sta.id}"  /><input name="dddid" id="dddid" type="hidden" value="" /><input name="l" id="l" type="hidden" value="" /><input name="fw" id="fw" type="hidden" value="" /><input type="button" onclick="zx()" value="查询" style="width:50px;height: 35px;
+                        margin-left: 4px;"/></div>
+                </form>
+
+
+
+
+
+                <div class="input1" style="display: none;">
+                <input th:value=${xian1==null?sta.id:xian1} type="hidden"   id="xian1" >
+                 <input value='1092' type="hidden"   id="gs" >
+                  <input type="text"  id="come" placeholder="请输入公司名字"/><div><a onclick="serch()"  style="color:white;cursor:pointer">搜索</a></div>
+                 </div>
+
+            </div>
+        </div>
+    </div>
+        <div class="Nav">
+            <div class="NavTop">
+                <ul>
+                    <li><a href="/">首页:</a></li>
+                    <li><a th:if="${end}" th:href="${yuming}+'/complist/'+${sta.id}+'/1/'+${end.id}+'/1092.html'">电话</a>
+                    <a th:unless="${end}"  th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1092.html'">电话</a></li>
+                     <li><a th:if="${end}" th:href="${yuming}+'/complist/'+${sta.id}+'/1/'+${end.id}+'/'+${gs.id}+'.html'">零担</a>
+                    <a th:unless="${end}"  th:href="${yuming}+'/lingdan/'+${xian1==null?sta.id:xian1}+'/1/1.html'">零担</a></li>
+                    
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/483.html'">整车</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/485.html'">同城运输</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/486.html'">大件运输</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/487.html'">轿车运输</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1000.html'">冷链</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1001.html'">危险品运输</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1002.html'">长途搬家</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1003.html'">货运代理</a></li>
+                    
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1005.html'">吊车搬运</a></li>
+                    <li><a href="javascript:void(0)" id="nanshou">更多</a></li>
+                </ul>
+                
+            </div>
+            <div class="yunshuhidden" style="display: none;">
+                <ul  >
+                <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1004.html'">落地配</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1081.html'">回程车</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1082.html'">铁运</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1085.html'">空运</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1086.html'">水运</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1083.html'">冷藏</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1084.html'">进出口报关</a></li>
+                    <li><a th:href="${yuming}+'/dajian/'+${xian1==null?sta.id:xian1}+'/1/1087.html'">物件设备</a></li>
+                </ul>
+            </div>
+            
+            <div class="Navbotton">
+              
+                  <ul>
+                    <li><a href="javascript:void(0)"> &nbsp; 分站：</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/266.html'">北京</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/2385.html'">上海</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/36411.html'">广东</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36412.html'">浙江</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/36403.html'">江苏</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/685.html'">天津</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/1443.html'">重庆</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/36407.html'">山西</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36409.html'">山东</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/2397.html'">河南</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36419.html'">四川</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36406.html'">湖北</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/36415.html'">福建</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36421.html'">陕西</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36420.html'">云南</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/3083.html'">广西</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36413.html'">安徽</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36416.html'">湖南</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36405.html'">河北</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36417.html'">海南</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36408.html'">西藏</a></li>
+                    <li><a href="javascript:void(0)" id="morecity">更多</a></li>
+                </ul>
+            </div>
+            <div class="overhidden" style="display: none;">
+                <ul >
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36427.html'">黑龙江</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36426.html'">内蒙古</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36418.html'">贵州</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36404.html'">吉林</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36422.html'">甘肃</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/2039.html'">青海</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36423.html'">江西</a></li>
+                    <li><a target="_blank" th:href="${yuming}+'/fenzhan/36425.html'">新疆</a></li>
+                    <li><a target="_blank"  th:href="${yuming}+'/fenzhan/36410.html'">辽宁</a></li>
+                </ul>
+            </div>
+        </div>
+
+<script src="http://ip.ws.126.net/ipquery"></script> 
+<script src="./js/citys.js"></script>  
+<script src="./js/head.js"></script>
+</div>
+</html>

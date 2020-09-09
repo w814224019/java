@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+
+.hello{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(244, 244, 244);
+}
+
+.firm{
+    color: rgb(67, 67, 67); font-family: 寰蒋闆呴粦; font-size: 14px;
+}
+.firmMessage{
+    height: 100%;
+}
+.firmMessage ul li{
+    float: left;
+    margin-left: 15px;
+    color: rgb(67, 67, 67); font-family: 寰蒋闆呴粦; font-size: 12px;
+}
+.firmMessage ul li a{
+    color: rgb(67, 67, 67); font-family: 寰蒋闆呴粦; font-size: 12px;
+}
+.firmMessage ul li a:hover{
+    color: #47cdff;
+}
+.hede{
+    height: 119px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow:hidden;
+}
+.hede .name{
+    height: 119px;
+    width: 400px;
+    box-sizing: border-box;
+    /* border: 1px solid pink; */
+}
+.hede .name h1{
+    margin-top: 15px;
+    font-size: 31px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+.hede .name h3{
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font: 12px/140% Arial,"瀹嬩綋",Helvetica, sans-serif,Verdana;
+    color: #5a5a5a;
+    font-size: 16px;
+}
+.hede .tel{
+    height: 119px;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    padding-top: 15px;
+}
+.hede .tel span{
+    text-transform: uppercase;
+    color: rgb(102, 102, 102);
+    font-family: 寰蒋闆呴粦;
+}
+.hede .tel p{
+    font-size: 30px;
+    color: rgb(0, 84, 157);
+    font-family: Tahoma;
+}
+
+
+.hede .jieshao{
+    margin: 0 auto;
+    width: 460px;
+    height: 119px;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    overflow: auto;
+    /* clear: both; */
+}
+.hede .jieshao h3{
+    margin-top: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.hede .jieshao h3 span:nth-child(1){
+    color: #5a5a5a;
+}
+.hede .jieshao h3 span:nth-child(2){
+    color: #00549d;
+}
+.hede .jieshao h4{
+    margin-top: 15px;
+    font-size: 24px;
+    color: red;
+}
+
+
+.Nav{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 84, 157);
+}
+.Nav ul li{
+    float: left;
+    line-height: 40px;
+    padding: 0 30px;
+}
+.Nav ul li:hover{
+    background-color: #004581;
+    font-weight: 500;
+}
+.Nav ul li a{
+    color: white;
+    display: block;
+}
+/* .carousel{
+    width: 100%;
+    height: 400px;
+    border: 1px solid red;
+} */
+
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* background-color: violet; */
+    cursor: pointer;
+    
+}
+.carousel ul{
+    width: 100%;
+    height: 100%;
+}
+.carousel ul li{
+    position: absolute;
+    /* transition: all 1.5s; */
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.active{
+   display: block;
+}
+.carousel ul li img{
+    width: 100%;
+    height: 500px;
+}
+.carousel .num{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel .num span{
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+    height: 20px;
+    background-color: #069;
+}
+
+
+/* 椤圭洰灞曠ず鐨� 杩樻湁灏忓鑸� */
+.conten{
+    width: 100%;
+    /* height: 6000px; */
+    background-color:  rgb(246, 246, 246);
+    padding-top: 50px;
+    padding-bottom:80px;
+}
+
+.fuwu{
+    height: 42px;
+    font-size: 30px;
+    line-height: 42px;
+    color: #00549D;
+    text-align: center;
+}
+.fuwu span{
+    font-size: 14px;
+    line-height: 42px;
+    color: #999999;
+}
+
+.item{
+    margin-top: 40px;
+    width: 100%;
+    height: 600px;
+    display:flex;
+}
+.item .itemNav{
+    width: 220px;
+    margin-right: 20px;
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(0, 84, 157);
+    border: 1px solid rgba(0,84,157,1);
+}
+
+.item .itemNav dt{
+    width: 100%;
+    height: 50px;
+    color: #fff ;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    background-color: rgba(0,84,157,1);
+}
+.item .itemNav dd{
+    margin-top: 15px;
+    line-height: 20px;
+    height: 20px;
+    text-indent: 2em;
+    /* border: 1px solid red; */
+}
+.item .itemNav dd a{
+    display: block;
+    color: #333333;
+
+    line-height: 20px;
+}
+.item .itemNav dd a:hover{
+    color:#00549D;
+    line-height: 18px;
+}
+ .item .itemTel{
+    margin-top:40px;
+ }
+ .item .itemTel p{
+     color: red;
+     text-align: center;
+ }
+
+ .item .itemTel .itemTEL{
+    color: red;
+    font-size: 24px;
+ }
+
+
+
+
+.item .itemLook{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-color: rgb(221, 221, 221);
+    padding: 40px;
+}
+
+
+.item .itemLook .zhanshi{
+    height: 42px;
+    font-size: 30px;
+    line-height: 42px;
+    color: #00549D;
+    text-align: center;
+}
+.item .itemLook .itemitem{
+    margin-top: 40px;
+    width: 100%;
+    height: 430px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+.item .itemLook .itemitem .itemOEN{
+    width: 295px;
+    height: 50%;
+    /* border: 1px solid red; */
+}
+.item .itemLook .itemitem .itemOEN div{
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid green; */
+}
+.item .itemLook .itemitem .itemOEN div img{
+    width: 100%;
+    height: 100%;
+}
+.item .itemLook .itemitem .itemOEN p{
+    text-align: center;
+    height: 15%;
+    line-height: 31px;
+}
+
+/* 涓嬮潰鐨勮疆鎾浘 */
+.chelun{
+    height: 303px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+.chelun .chezhan{
+    height: 42px;
+    font-size: 30px;
+    line-height: 42px;
+    color: #00549D;
+    text-align: center;
+}
+
+
+.chelun .tupian{
+    margin-top: 10px;
+    overflow: hidden;
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+}
+.chelun .tupian ul{
+    height: 180px;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.chelun .tupian ul li{
+    /* float: left; */
+    margin-right: 10px;
+    width: 230px;
+    height: 100%;
+}
+.chelun .tupian ul li p{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    clear: both;
+}
+.chelun .tupian ul li img{
+    width: 230px;
+    height: 230px;
+    float: left;
+}
+
+
+
+/* 涓嬮潰鐨勫ぇ鍥� */
+.bigOne{
+    /* height: 500px; */
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 40px 0;
+}
+.bigOne h2,h3,h4{
+    text-align: center;
+}
+.bigOne h2{
+    font-size: 32px;
+    color: rgb(0, 84, 157);
+}
+.bigOne h3{
+    font-size: 24px;
+    color: rgb(67, 67, 67);
+    margin: 10px 0;
+}
+.bigOne h4{
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+}
+.bigOne .chetuzi{
+    height: 350px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+.bigOne .chetuzi .chetuziLeft,.chetuziRight{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid forestgreen; */
+}
+.bigOne .chetuzi .chetuziLeft img{
+    width: 100%;
+    height: 100%;
+}
+.bigOne .chetuzi .chetuziRight{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding: 0 40px;
+
+}
+.bigOne .chetuzi .chetuziRight>div{
+    margin-bottom: 30px;
+    color: #5a5a5a;
+}
+
+.bigOne .chetuzi  .chetuziRight .kk{
+        display: flex;
+        height: 100px;
+        width: 100%;
+}
+.bigOne .chetuzi  .chetuziRight .kk div:nth-child(1){
+    width: 18%;
+    /* border: 1px solid red; */
+}
+.bigOne .chetuzi  .chetuziRight .kk div:nth-child(1) img{
+    width: 100%;
+    height: 100%;
+}
+.bigOne .chetuzi  .chetuziRight .kk div:nth-child(2){
+    width: 82%;
+}
+.bigOne .chetuzi  .chetuziRight .kk div:nth-child(2) h4{
+    font-size: 35px;
+    color: #000000;
+    text-align: left;
+    text-indent: 1em;
+}
+.bigOne .chetuzi  .chetuziRight .kk div:nth-child(2) h5{
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    text-indent: 1em;
+}
+
+.bigOne .chetuzi .chetuziRight>div>a{
+    display: block;
+    width: 120px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(255,153,0);
+    color: white;
+}
+
+.hover div{
+    height: 160px;
+    text-align: center;
+    line-height: 60px;
+}
+.hover div img{
+    margin-top: 5px;
+}
+.hover div img:hover{
+    margin-top: 0;
+}
+.hover p{
+    text-align: center;
+    color: white;
+}
+
+
+/* 榧犳爣绉讳笂鏄剧ず鏂囧瓧 */
+.yishang{
+    height: 565px;
+    background-color: rgb(255, 255, 255);
+}
+.yishang .yishangItem{
+    text-align: center;
+    font-size: 30px;
+    color: #00549D;
+    margin-top: 40px;
+}
+.yishang .yishangP{
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.yishang .yishangFlex{
+    display: flex;
+    height: 250px;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.yishang .yishangFlex>div{
+    width: 32%;
+    height: 100%;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.yishang .yishangFlex>div img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.yishang .yishangFlex>div div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.8s;
+    z-index: 1;
+    cursor: pointer;
+}
+.yishang .yishangFlex>div a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.yishang .yishangFlex>div div P{
+    font-size:32px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+.yishang .yishangFlex>div div:hover{
+    opacity: 0.7;
+
+}

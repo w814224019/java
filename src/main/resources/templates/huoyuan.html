@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base th:href="${yuming}">
+    
+    <title>货源信息</title>
+    <link rel="stylesheet" href="./css/more.css">
+</head>
+<body>
+  <div  th:replace="header :: common_resource"></div>
+
+  <div class = "wrapper">
+    <!-- 零担物流专线 的更多 -->
+    <div class="more">
+        <div class="moreLeft">
+          <dl>
+            <dt>
+              <div class="dt-name"><h1>郑州货源</h1>  <span><!-- <a href=""> 店铺排行版</a> --></span></div>
+              <div class="dt-default"> <a href=""> 默认样式</a> <a href="" class="iconfont">&#xe601;只看认证</a></div>
+            </dt>
+             <dd th:each="item:${huolist}">
+            <div class="moreLogo"><img src="./img/more.jpg" alt=""></div>
+            <div class="moreContent">
+                <div class="title-big">	<a target="_blank" th:href="${yuming}+'/huoinfo/'+${sta.id}+'/'+${item.id}+'.html'" th:text="${item.fhaddress}+'到'+${item.shaddress}+${item.goodsname}+'货源'"> 绍兴诸暨市到宝鸡陈仓区5.856吨钢材货源</a></div>
+                <div class="title-small" >运输类型：零担专线</div>
+                <div class="location-name" th:text="'车辆需求：'+${item.chang}+'米'+${item.chetype}"> 车辆需求：3.9-5米 高栏车</div>
+                <div class="Tab">
+                    <!-- <span>空车配货</span>
+                    <span>大件运输</span>
+                     <span>会员6年</span> -->
+                     <p th:text="'发布时间为:'+${#dates.format(item.time,'yyyy-MM-dd HH:mm:ss')}">发布时间为:2020-08-13 &nbsp;&nbsp;&nbsp; 状态：未发货</p>
+                    
+                  </div>
+            </div>
+            <div class="moreTel"> 
+              <div><a href="javascripr:(0)" th:tel="${item.fhphone}">联系货主</a> </div>  
+            </div>
+           </dd>
+               
+          
+          </dl>
+
+                <div class="pageFenye">
+            <span><a th:href="'huoyuan/'+${sta.id}+'/'+${pageNum-1}+'.html'">上一页</a></span>
+            <ul>
+                <li th:class="${pageNum==1}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/1.html'">1</a></li>
+                <li th:class="${pageNum==2}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/2.html'">2</a></li>
+                <li th:class="${pageNum==3}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/3.html'">3</a></li>
+                <li th:class="${pageNum==4}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/4.html'">4</a></li>
+                <li th:class="${pageNum==5}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/5.html'">5</a></li>
+                <li th:class="${pageNum==6}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/6.html'">6</a></li>
+                <li th:class="${pageNum==7}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/7.html'">7</a></li>
+                <li th:class="${pageNum==8}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/8.html'">8</a></li>
+                <li th:class="${pageNum==9}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/9.html'">9</a></li>
+                <li th:class="${pageNum==10}?'action':'' "><a th:href="'huoyuan/'+${sta.id}+'/10.html'">10</a></li>
+            </ul>
+            <span><a th:href="'huoyuan/'+${sta.id}+'/'+${pageNum+1}+'.html'">下一页</a></span>
+          </div>
+
+        </div>
+      
+        <div class="moreRight">
+
+          <dl>
+            <dt>热门搜索</dt>
+           <dd th:each="item:${xianguan}"><a target="_blank" th:href="${yuming}+'/complist/'+${item.cfd}+'/1/'+${item.ddd}+'/483.html'" th:text="${item.chufadi}+'到'+${item.daodadi}+'物流专线'" >北京到上海物流专线</a></dd>
+          </dl>
+
+          <!-- <dl>
+            <dt>热门搜索</dt>
+            <dd><a href="">北京到上海物流专线</a></dd>
+          </dl>
+
+          <dl>
+            <dt>周边专线</dt>
+          </dl> -->
+        </div>
+
+    </div>
+
+
+  </div>
+
+
+   <div  th:replace="footer :: common_resource"></div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ip.ws.126.net/ipquery"></script> 
+<script src="./js/qrcode.js"></script>
+<script src="./js/huoyuan.js"></script> 
+<script>
+
+
+
+
+</script>
+</html>

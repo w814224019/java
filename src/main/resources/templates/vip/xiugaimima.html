@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚时物流网修改密码</title>
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/xiugaimima.css">
+</head>
+<body>
+   
+    <div style="display: flex;height: 100vh;">
+    <input id="username" type="hidden" th:value="${u.name}" />
+        <div class="leftNav">
+            <div class="logo">这是个logo</div>
+            <div class="guanli">企业信息管理</div>
+            <dl>
+                <dt>基本信息管理</dt>
+                <dd><a href="#">修改密码</a></dd>
+               <dd><a href="vipPage/vipdingdanPage">货物订单</a></dd>
+                <!-- <dd>企业简介</dd>
+                <dd>企业文化</dd>
+                <dd>部门电话</dd>
+                <dd>运营网点</dd>
+                <dd>线路及运价</dd>
+                <dd>发布信息</dd>
+                <dd>发布车源货源</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd>
+                <dd>企业基本资料</dd> -->
+            </dl>
+        </div>
+
+       
+        <div class="wrapper">
+            <div class="absolute">
+                <div class="navtel">
+                    <span style="float: right; margin-right: 200px;margin-top: 10px;font-size: 14px;color: white;">帮助热线：0371-67856114    在线QQ：48012625</span>
+                    <ul>    
+                        <li>刷新首页</li>
+                        <li>我的网站</li>
+                        <li>进入聚时物流网</li>
+                        <li>安全退出</li>
+                    </ul>
+                </div>
+                <div class="vipmess">
+                     <p> 用户名: <span th:text="${u.name}">zzjiali </span>     客户编号: <span th:text="${company.id}">181</span>  会员类型：<span >诚信通会员 </span></p>
+                </div>
+            </div>
+            
+           
+            <div class="vipContent">
+                <p>修改密码</p>
+                <table border="1" > 
+                    <tr>
+                        <td rowspan="3" width=130>1</td>
+                        <td class="now">请输入新密码:</td>
+                        <td  ><input type="text"> <span>长度为6-20字符</span> </td>
+                    </tr>
+                    <tr>
+                        <td class="now">请再次输入新密码:</td>
+                        <td><input type="text"> <span>应于上面相同</span> </td>
+                    </tr>
+                    <tr>
+                        <td class="now"></td>
+                         <td>
+                              <button>确认修改</button>
+                         </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script>
+var inputs = document.getElementsByClassName("vipContent")[0].getElementsByTagName("input");
+var btn = document.getElementsByClassName("vipContent")[0].getElementsByTagName("button")[0] ;
+var username=$("#username").val();
+console.log(username)
+    btn.onclick  = function(){
+        if(inputs[0].value===inputs[1].value){
+            $.ajax({
+            async:false,
+            url:"/setpassword", 
+            data:{
+              "username":username,
+              "password":inputs[1].value
+            },
+            type:"POST",
+            dataType:"json",
+            success:function(data){
+                    alert("修改成功");
+                    console.log(data)
+            }
+            })
+
+            console.log('修改成功');
+        }else{
+            alert("两次密码不一致");
+        }
+
+
+
+
+    }
+
+
+
+
+</script>
+</html>

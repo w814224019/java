@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+         <meta name="Keywords" th:content="${company.ctoname}" />	
+<meta name="description" th:content="${company.ctoname}">
+     <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/lianxiwomen.css">
+    <link rel="stylesheet" href="../css/repe.css">
+</head>
+<body>
+    <!-- 版心问候语 -->
+    <div class="hello">
+        <div class="wrapper">
+            <div class=" fl firm">
+                欢迎光临<span th:text="${company.ctoname}">广州市恒昱物流有限公司</span>官方网站！ 
+            </div>
+            <div class="fr firmMessage">
+                <ul> 
+                   <!--  <li><a href="">设为首页</a></li>
+                    <li><a href="">加入收藏</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">关于我们</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- hede内容 -->
+   <div class="hede">
+        <div class="wrapper">
+            <div class="fl name">
+                <h1><span th:text="${company.ctoname}">广州市恒昱物流有限公司</span></h1>
+               <!--  <h3><span>GUANGZHOU HENG YU LOGISTICS CO., LTD</span></h3> -->
+            </div>
+            <div class="fr tel">
+               <span>全国服务热线：</span>
+                 <P th:text="${company.tel}">020-61928652 </P>
+                <P th:text="${company.lianxitel}">131 6880 9828</P>
+                       
+            </div>
+            <div class="jieshao">
+                <h3><span>一站式供应链服务平台</span> <span>可信赖的物流方案专家</span> </h3>
+                <h4>信誉保证，尊客爱货、安全快捷</h4>
+            </div>
+        </div>
+   </div>
+
+   
+   <!-- 导航内容 -->
+   <div class="Nav">
+        <div class="wrapper">
+            <ul>
+                 <li><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></li>
+                <!-- <li><a href="">车辆展示</a></li> -->
+                <li><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></li>
+                <li><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></li>
+                <li><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></li>
+            </ul>
+        </div>
+   </div>
+
+   <!-- 轮播图 -->
+   <div class="carousel">
+        <ul>
+            <li style="display: block;"><img src="http://pmo619b53.pic47.websiteonline.cn/upload/ad_eklu.jpg" alt="56114物流公司"></li>
+        </ul>
+   </div>
+
+   <div style="background-color: rgb(246, 246, 246);height: 50px;">
+        <div class="wrapper">
+            <div style="height: 50px;background-color: rgba(0,84,157,1);width: 181.8px;text-align: center;font-size: 20px;line-height: 50px;color: white;float: left;">
+                SERVICE
+            </div>
+            <div style="margin-left: 30px;float: left;line-height: 50px; font-size: 14px;">
+               <a href="index.html"  style="color: black;">网站首页</a> ∷ <a href="#" style="color: black;">联系我们</a> 
+            </div>
+        </div>
+   </div>
+   <!-- 下面的主题内容 -->
+   <div class="conten">
+    <div class="wrapper">
+        <div class="item">
+            <div class="itemNav">
+                <dl>
+                    <dt>服务项目</dt>
+                                     <dd><a th:href="${yuming}+'/gonsimoban/'+${company.id}+'.html'">网站首页</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/yiwufanwei/'+${company.id}+'.html'">轿车托运</a></dd>
+                    <!-- <dd><a href="">车辆展示</a></dd> -->
+                    <dd><a target="_blank" th:href="${yuming}+'/gongluyunshu/'+${company.id}+'.html'">公路运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/dajianyunshu/'+${company.id}+'.html'" >大件运输</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/huichengyunshu/'+${company.id}+'.html'">回程车运输</a></dd>
+                    <dd><a target="_blank"th:href="${yuming}+'/guanyuwomen/'+${company.id}+'.html'" >关于我们</a></dd>
+                    <dd><a target="_blank" th:href="${yuming}+'/lianxiwomen/'+${company.id}+'.html'">联系我们</a></dd>
+                </dl>
+                <div class="itemTel">
+                    <p>全国24小时服务热线：</p>
+                    <br>
+                    <div class="itemTEL">
+                        <P th:text="${company.lianxitel}">131 6880 9828</P>
+                        <br>
+                        <P th:text="${company.tel}">020-61928652 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="itemLook">
+                
+                <div class="call">
+                    <dl>
+                       <dt th:text="${company.ctoname}">广州市恒昱物流有限公司</dt>
+                        <dd th:text="'联系人：'+${company.lianxiren}">联系人：关先生</dd>
+                        <dd th:text="'电话：'+${company.lianxitel}">电话：131 6880 9828</dd>
+                        <dd th:text="'地址：'+${company.xxaddress}">地址：广州市白云区沙太北路丰和物流园南场B1109档-1116档</dd>
+                       <!--  <dd>邮箱：554137986@qq.com</dd> -->
+                    </dl>
+                    <div>
+                        <img src="http://pmo619b53.pic47.websiteonline.cn/upload/cdxy.png" alt="">
+                        <p>微信扫一扫</p>
+                    </div>
+                </div>
+              　　
+
+            </div>
+        </div>
+       
+    </div>
+   </div>
+
+
+</div>
+
+<div  th:replace="footer :: common_resource"></div>
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

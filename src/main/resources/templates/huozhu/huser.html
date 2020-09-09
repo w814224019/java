@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <base th:href="${yuming}">
+    <link rel="stylesheet" href="./css/moban.css">
+    <link rel="stylesheet" href="./css/huoser.css">
+</head>
+<body>
+    <div class="heade">
+        <div class="wra  clear">
+            <div class="logo fl">
+                <a href="">
+                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3323791702,320789907&fm=26&gp=0.jpg" alt="">
+                </a>
+            </div>
+            <div class="login fr">
+                <p>
+                    <text th:text="${u.name}">15238484509_U7P97</text>
+                    <a href="">用户中心</a> |
+                    <a href="logout">退出</a>
+                </p>
+            </div>
+            <nav >
+                <ul>
+                    <li><a href="">聚时物流网</a></li>
+                    <li><a href="">服务公示</a></li>
+                    <li><a href="">货车货物定位</a></li>
+                    <li><a href="">物流咨询</a></li>
+                    <li><a href="">客户心声</a></li>
+                    <li><a href="">物流营销</a></li>
+                    <li><a href="./wuliuquan.html">物流圈</a></li>
+                    <li><a href="">金币商城</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content wra clear">
+        <div class="nav fl">
+            <ul>
+                <li>
+                    <p>个人中心</p>
+                    <dl>
+                        <dt>帐户设置</dt>
+                        <dd><a href="./index.html" class="action"> 基本资料</a></dd>
+                        <dd><a href="./zhanghaoanquan.html"> 账号安全</a></dd>
+                        <dt>资产管理</dt>
+                        <dd><a href="./jinbiguanli.html"> 金币管理</a></dd>
+                        <dd><a href="./zhongjiangguanli.html"> 中奖管理</a></dd>
+                        <dd><a href="./caiwuguanli.html"> 财务管理</a></dd>
+                        <dt>站内通知</dt>
+                        <dd><a href="./"> 我的站内信</a></dd>
+                        <dt>我的邀请</dt>
+                        <dd><a href="./"> 我的邀请</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <p>订单管理</p>
+                    <dl style="display: none;">
+                        <dd><a href="huser/wodedingdan"> 我的订单</a></dd>
+              <!--           <dd><a href="./wodepingjia.html"> 我的评价</a></dd>
+                        <dd><a href="./wodetousu.html"> 我的投诉</a></dd>
+                        <dd><a href="./wuliuquan.html"> 物流网</a></dd>
+                        <dd><a href="./changyonghuowu.html"> 常用货物</a></dd> -->
+                    </dl>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <!-- 右边的内容 -->
+        <div class="center fr" >
+            <div class="userinfo">
+                <div>
+                    <div class="fl user">
+                     <img src="http://www.56cheng.com/Public/images/default_avatar_128_128.jpg" alt="">
+                    </div>
+                    <div class="fr Info">
+                        <p th:text="${u.name}">15238484509_U7P97</p>
+                        <!-- <strong>您目前是货主用户，如果您是物流用户，请认证申请：</strong>
+                        <a href="">认证物流企业</a> -->
+                    </div>
+                </div>
+                <div class="">
+                    <div class="fl">
+                        <strong class="strong">帐户余额</strong>
+                        <a href="" class="a">0.00元</a>
+                    </div>
+                    <div class="fr weizhi ">
+                        <a href="">充值</a>
+                        <a href="">提现</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="fl">
+                        <strong class="strong">金币数量</strong>
+                        <a href="" class="a">5</a>
+                    </div>
+                    <div class="fr weizhi ">
+                        <a href="">充值</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 前面都是相同的  下面都不同  以上都引入moban.css-->
+            <!-- 关于下面的css 引入自己的特有css -->
+            <div class="location">
+               <p>
+                个人信息>资产管理><span>基本资料 （请完善您的信息）</span>
+               </p>
+            </div>
+             <div class="box">
+                <div class="action"><a href="./index.html">基本资料</a> </div>
+                <div><a href="./indexShiming.html">实名认证</a> </div>
+                <div><a href="">帐户绑定</a> </div>
+             </div>   
+             <div class="jibenxinxi">
+                <dl>
+                    <dd class="clear">
+                        <span class="fl">展示名称:</span>
+                        <span class="fr">15238484509_U7P97</span>
+                    </dd>
+                    <dd class="clear">
+                        <span class="fl">头像:</span>
+                        <span class="fr"><img src="http://www.56cheng.com/Public/images/default_avatar_128_128.jpg" alt=""></span>
+                    </dd>
+                    <dd class="clear">
+                        <span class="fl">单位名称:</span>
+                        <span class="fr">15238484509_U7P97888888888888888888888</span>
+                    </dd>
+                    <dd class="clear">
+                        <span class="fl">所在地区:</span>
+                        <span class="fr">1888888888</span>
+                    </dd>
+                    <dd class="clear">
+                        <span class="fl">详细地址:</span>
+                        <span class="fr">1523888888888888888888</span>
+                    </dd>
+                  <div>编辑信息</div>
+                </dl>
+
+             </div>
+        </div>
+    </div>
+    <script src="./js/huser.js"></script>
+</body>
+</html>

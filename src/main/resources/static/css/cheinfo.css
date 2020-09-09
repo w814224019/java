@@ -1,0 +1,94 @@
+ .bxo{
+        width: 100%;
+        display: flex;
+        /* flex-wrap:nowrap */
+      }
+      .bxo::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .box .tableLeft{
+        width: 980px;
+        float: left;
+        /* border: 1px solid red; */
+        margin: 0 20px 0 0 ;
+        box-sizing: border-box;
+        height: 500px;
+      }
+      .box .Rightmessage{
+        overflow: auto;
+        width: 200px;
+        height: 500px;
+        box-sizing: border-box;
+        /* border: 1px solid green; */
+      }
+      .Rightmessage{
+    width:200px;
+    /* height: 500px; */
+    /* border: 1px solid green; */
+    background-color: white;
+}
+  .Rightmessage p{
+    height: 30px;
+    line-height: 30px;
+    padding-left:8px ;
+    border-bottom:  1px solid #cdcdcd;
+}
+ .Rightmessage ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    list-style: none;
+    align-items: flex-start;
+    padding: 10px 0 10px 20px;
+    justify-content: flex-start;
+    border-bottom: 1px dotted #cdcdcd;
+}
+ .Rightmessage ul li{
+    color: #878787;
+    padding-top: 5px;
+}
+ .Rightmessage ul li a{
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+      table{
+        margin: 0 auto 0;
+        background-color: white;
+      }
+      table th{
+      height: 36px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold
+      
+      
+      }
+      table td{
+        font-size: 14px;
+        color: #666;
+        text-align: left;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 1px solid #e4e4e4;;
+        height: 36px;
+        padding: 0 15px;
+        width: 278px;
+      }
+      table .tabColor{
+        width: 100;
+        background: #f3f3f3;
+        text-align: right;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 1px solid #e4e4e4;;
+        border-right: 1px solid #e4e4e4;
+        width: 100px;
+      }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>货源发布</title>
+    <link rel="stylesheet" href="./css/fabuxinxi.css">
+      <link rel="stylesheet" href="./css/repe.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+<div class="wrapper" style="margin-top: 70px;">
+    <div class="header">
+        <!-- <img src="http://www.chinawutong.com/img/top_03.gif" alt=""> -->
+        <span>货源发布</span>
+        <p><a href="/" style="color:black;padding-right:15px;">首页</a><a target="_blank" th:href="'/huoyuan/'+${xian1}+'/1.html'" style="color:black;padding-right:15px;">货源列表</a> 如发布遇到问题，请拨打客服热线： <em>156-388-56114</em>   
+        </p>
+        
+    </div>
+    <form >
+        <label for="chufa">
+        <input th:value="${xian1}" type="hidden"   id="xian1" >
+          <span>出发地:</span>
+          <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off"  name="gongiscity" id="ddd"  placeholder="请选择发货地" th:value="${fhaddress}"  />
+         <!--   <input type="text" th:value="${fhaddress}" placeholder="请输入发货地" id="chufa" name="chufa" required> -->
+        </label>
+        <label for="shouhuo">
+            <span>收货地:</span><input type="text" th:value="${shaddress}" placeholder="请输入收货地" id="shouhuo" name="shouhuo" required>
+        </label>
+        <label for="fahuoren">
+            <span>发货人:</span><input type="text" placeholder="请输入发货人" id="fahuoren" name="fahuoren" required>
+        </label>
+     <!--    <label for="shouhouren">
+          <span>收货人:</span><input type="text" placeholder="请输入收货人的名称" id="shouhouren" name="shouhouren" required>
+        </label> -->
+        <label for="fahourenTel">
+           <span>发货人手机:</span><input type="text" placeholder="请输入手机号" id="fahourenTel" name="fahourenTel" required>
+        </label>
+      <!--   <label for="shouhuorenTel">
+            <span>收货人手机:</span><input type="text" placeholder="请输入手机号" id="shouhuorenTel" name="shouhuorenTel" required>
+         </label> -->
+         <label for="huoName">
+            <span>货物名称:</span><input type="text" th:value="${goodname}" placeholder="请输入货物名称" id="huoName" name="huoName" required>
+         </label>
+         <label for="shouhouren">
+          <span>车辆类型需求:</span>
+          <select name="type"  id="type">
+                 <option value ="小型货车">小型货车</option>
+                 <option value ="中型货车">中型货车</option>
+                 <option value="大型货车">大型货车</option>
+                 <option value="平板车">平板车</option>
+            </select><br>
+         <!--  <input type="text" placeholder="请输入车辆类型" id="shouhouren" name="shouhouren" required> -->
+        </label>
+        <label for="huoWeight">
+            <span>货物重量:</span><input type="text" placeholder="请输入货物重量" id="huoWeight" name="huoWeight" required>
+         </label>
+        <label for="shouhuorenTel">
+            <span>车长需求:</span>
+            <!-- <input type="text" placeholder="请输入车长" id="shouhuorenTel" name="shouhuorenTel" required> -->
+            <select name="chang" id="chang">
+                 <option value ="5.6米">5.6米</option>
+                 <option value ="7.8米">7.8米</option>
+                 <option value="13.6米">13.6米</option>
+                 <option value="4.6米">4.6米</option>
+            </select><br>
+         </label>
+         
+         <label for="huoVolume">
+            <span>货物体积:</span><input type="text" placeholder="请输入货物体积" id="huoVolume" name="huoVolume" required>
+         </label>
+         <label for="">
+            <span></span><input type="hidden" placeholder="请输入收货地" name="null">
+         </label>
+         <div>
+            <input type="button" value="提交" onclick="addfOrder()">
+         </div>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div style="margin-top:193px;"></div>
+<div  th:replace="footer :: common_resource"></div>
+
+</body>
+<script src="./js/huoyuan.js"></script> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+ 
+   
+
+  </script>
+</html>

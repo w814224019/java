@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.areaMapper">
+	<!--List<area> findByshengxi(@Param("shengxid")Integer shengxid,@Param("js")Integer js);	-->
+	<select id="findByshengxi" resultType="com.wuliu.fa.entity.area">
+	SELECT 
+       id,xname 
+     FROM 
+	xian  where shengxid=#{shengxid} and js=#{js} ORDER BY orders 
+	</select>
+	<!--			List<area> findByxiao(Integer xiaoxian);-->
+	<select id="findByxiao" resultType="com.wuliu.fa.entity.area">
+	SELECT 
+       id,xname 
+     FROM 
+	xian  where xiaoxian=#{xiaoxian} and js=#{js}
+	</select>
+
+	<!--			area findByid(Integer id);-->
+	<select id="findByid" resultType="com.wuliu.fa.entity.area">
+	SELECT 
+       id,xname,xiaoxian,shiid,shengxid
+     FROM 
+	xian  where id=#{id}
+	</select>
+<!--	List<area> findxia(Integer id); ID as ID,xname,xiaoxian,cname,shiid,shiname,shengname,sheng,shengxid,pyjc,quanming,js-->
+	<select id="findxia" resultType="com.wuliu.fa.entity.area">
+	SELECT 
+     id,xname
+      FROM 
+	xian where xiaoxian=#{xiaoxian}
+	</select>
+	<!--		List<area> finddijishi(Integer sheng);-->
+	<select id="finddijishi" resultType="com.wuliu.fa.entity.area">
+	SELECT 
+       id,xname 
+     FROM 
+	xian where shengxid=(select shengxid from xian where id=#{id})and js=#{js} ORDER BY orders
+	</select>
+
+</mapper>
+
+
+
+
+

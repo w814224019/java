@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+
+    <link rel="stylesheet" href="./css/zhucet.css">
+    <link rel="stylesheet" type="text/css" href="http://static.56114.net.cn/templets/default/css/zx180621.css?v=202006162" />
+</head>
+<body>
+    
+
+<div class="wrapper">
+    <!-- 最上面的内容 -->
+    <div class="top white">
+        <div style="  width: 350px;height: 75px; ">
+            <img src="https://cdn.kuaidi100.com/images/index/index_print_v4.png" alt="">
+             <span>会员注册</span>
+        </div>
+        
+      <div>
+          <ul>
+              <li><a href="">返回首页</a> | <a href="">客服中心</a> </li>
+              <li>如注册遇到问题，请拨打客服热线： <em class="red">400-00-56114</em>   
+            </li>
+          </ul>
+      </div>
+    </div>
+    <!-- 选择类型 -->
+    <div  class="type">
+        <!-- ① 选择会员类型②  ②填写帐户信息-->
+        <div class="one">
+            <span  onclick="window.history.back()" style="cursor: pointer;">①选择会员类型</span>
+            <span class="action">②填写帐户信息</span>
+            <span class="red fr"> * 表示必填项！</span>
+        </div>
+        <!-- 选择种类 -->
+        <div class="tow white">
+            <p><span class="red">*</span> 感谢您注册会员， 请您准确填写注册信息。如需改变注册会员类型，请点击 <a  href="javascript:void(window.history.back());" class="red" >上一步</a>  选择会员类型！</p>
+            <p><span class="red">*</span>若您长时间收取不到验证信息，请拨打客服电话400-010-5656协助完成身份验证。</p> 
+            <p><span class="red">*</span>提醒：物流公司必须提供真实网点信息和具有物流公司的相关资质</p>
+           <strong>填写您的帐户信息</strong>
+           
+           <table border="0" style="border-collapse:collapse;" id="table">
+                <tbody>
+                        <tr>
+                            <td class="w400"><span class="red">*</span>会员登录名：</td>
+                            <td class=""><input type="text" name="Vipname" id="hello"><em id="hello1"style="color:red;font-style:normal;display:none;" >用户名已存在</em>
+                            <em id="hello2"style="color:red;font-style:normal;display:none;" >用户名为空</em></td>
+                        </tr>
+                        <tr>
+                            <td class="w400"><span class="red">*</span>输入登录密码：</td>
+                            <td class=""><input type="password"  name="password"></td>
+                        </tr>
+                        <tr>
+                            <td class="w400"><span class="red">*</span>确认登录密码：</td>
+                            <td class=""><input type="password" name="password"></td>
+                        </tr>
+                        <tr th:if="${type==1||type==4||type==5||type==6||type==7||type==8}">
+                            <td class="w400"><span class="red">*</span>注册人姓名：</td>
+                            <td class=""><input type="text" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td class="w400"><span class="red">*</span>注册人手机：</td>
+                            <td class=""><input type="text" name="tel"></td>
+                        </tr>
+                        <tr th:if="${type==1||type==4||type==5||type==6||type==7||type==8}">
+                            <td class="w400" ><span class="red">*</span>公司名称：</td>
+                            <td class=""  ><input type="text"  id="gongsiName"></td>
+                        </tr>
+                         <tr th:if="${type==9}">
+                             <td class="w400" ><span class="red">*</span>园区名称：</td>
+                            <td class=""  ><input type="text" id="gongsiName"></td>
+                        </tr>
+                         <tr th:if="${type==10}">
+                              <td class="w400" ><span class="red">*</span>停车场名称：</td>
+                            <td class=""  ><input type="text" id="gongsiName"></td>
+                        </tr>
+                        <tr>
+                            <td class="w400" th:if="${type==1||type==4||type==5||type==6||type==7||type==8}"><span class="red">*</span>公司所在地：</td>
+                            <td class="w400" th:if="${type==2}"><span class="red">*</span>车辆所属地：</td>
+                             <td class="w400" th:if="${type==3}"><span class="red">*</span>公司/个人所在地：</td>
+                             <td class="w400" th:if="${type==9}"><span class="red">*</span>园区所在地：</td>
+                              <td class="w400" th:if="${type==10}"><span class="red">*</span>停车场所在地：</td>
+                             <td class=""> <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off" placeholder="" name="gongiscity" id="ddd" value="" /></td>
+                        </tr>
+                       <!-- 7 <tr>
+                            <td class="w400">车辆所属地：</td>
+                           <td class=""> <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off" placeholder="" name="gongiscity" id="ddd" value="" /></td>
+                        </tr> -->
+                       <!-- 8 <tr>
+                            <td class="w400">公司/个人所在地：</td>
+                            <td class=""> <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off" placeholder="" name="gongiscity" id="ddd" value="" /></td>
+                        </tr> -->
+                      <!--   <tr>
+                            <td class="w400">园区名称：</td>
+                            <td class=""><input type="text" name="gongsiName"></td>
+                        </tr> -->
+                        <!--10 <tr>
+                            <td class="w400">园区所在地：</td>
+                           <td class=""> <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off" placeholder="" name="gongiscity" id="ddd" value="" /></td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td class="w400">停车场名称：</td>
+                            <td class=""><input type="text" name="gongsiName"></td>
+                        </tr> -->
+                        <!--12 <tr>
+                            <td class="w400">停车场所在地：</td>
+                            <td class=""> <input name="dddid" id="dddid" type="hidden" value="" /><input type="text" class="inp_zx_ddd" autocomplete="off" placeholder="" name="gongiscity" id="ddd" value="" /></td>
+                        </tr> -->
+                        <tr>
+                            <td class="w400"><span class="red">*</span>手机验证码：</td>
+                            <td class=""><input type="text" name="shoujiyanzhengm"> <span id="duanxi" class=""> 获取短信验证码</span> </td>
+                        </tr>
+                </tbody>
+           </table>
+           <div id="submit">注册</div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+ <div class="theme-popover-mask"></div>
+<div id="WTMap_Main" >
+<div id="china_map">
+<a class="c-close">×</a>
+<img  src="http://static.56114.net.cn/images/map.png"style="position: absolute; width: 660px; height: 460px;left: 100px;top: 0px;z-index:9999;display:none;" />
+<span class="c-span">一、国内线路：</span>
+
+<div class="search_citylist"></div>
+<div class="china-mapbox"> 
+
+</div>
+</div>
+<div class="theme-popover">
+  <div class="theme-poptit">
+		<a href="javascript:;" title="关闭" class="close" style="z-index: 9999999999;">×</a>
+		<h3 style="float: left;">请选择具体城市</h3>
+        <div class="prince-a" ></div>
+	</div>
+	<div class="theme-bottom">
+	<div class="province-mapbox clearfix">
+    <div class="province-mapboxs clearfix">
+    <p class="warning">浏览器版本太低，请更换浏览器，显示地图</p>
+	<div id="province_maps" class="clearfix">
+
+</div>
+</div>
+</div>
+	<div class="theme-popbod dform" style=" position:relative">
+        <div id="shi"></div>
+        <div id="zhen"></div>
+		<div style="clear: both;"></div>
+	</div>
+	</div>
+</div>
+</div>
+	
+
+<!-- 多条广告如下脚本只需引入一次 -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/xianzhenjson.js"></script>
+<script src="./js/ditu.js"></script>
+<script src="./js/provincemap.js"></script>
+<script src="./js/guojijson.js"></script>
+<script src="./js/cityjson.js"></script>
+</body>
+<script>
+    // 找到hello 判断是否用户名存在
+    var yonghuming='';
+    var hello = document.getElementById("hello");
+    var hello1 = document.getElementById("hello1")
+     var hello2 = document.getElementById("hello2")
+        hello.onblur = function(){
+            let self = this
+             yonghuming=self.value;
+            console.log(self.value)
+            if(self.value==''){
+            	hello2.style.display = "inline-block"
+            }else{
+            	hello2.style.display = "none"
+            $.ajax({
+                    async:false,
+                    url:"/nameis", 
+                    data:{
+                    "name":self.value
+                    },
+                    type:"GeT",
+                    dataType:"json",
+                    success:function(data){
+                        if(data.state == 402){
+                            hello1.style.display = "inline-block"
+                        }else{
+                            hello1.style.display = "none"
+                        }
+                    }
+                })
+            }
+        }
+
+
+
+
+    // 为点击谁做出判断显示出应有的内容   主要是 下面 id判断
+    var id = parseInt(window.location.search.split("type=")[1]) 
+    console.log(id)
+/*     var  trs = document.getElementById("table").getElementsByTagName("tr");
+    var arrs1 = [0,1,2,3,4,5,6,7];
+    var arrs2 = [0,1,2,4,6,7];
+    var arrs3 = [0,1,2,4,6,7];
+    var arrs4 = [0,1,2,3,4,5,6,7];
+    var arrs5 = [0,1,2,3,4,5,6,7];
+    var arrs6 = [0,1,2,3,4,5,6,7];
+    var arrs7 = [0,1,2,3,4,5,6,7];
+    var arrs8 = [0,1,2,3,4,5,6,7];
+    var arrs9 = [0,1,2,3,4,5,6,7];
+    var arrs10 = [0,1,2,3,4,5,6,7];
+    var allArr = [arrs1,arrs2,arrs3,arrs4,arrs5,arrs6,arrs7,arrs8,arrs9,arrs10];
+    let  arrs = [];
+    chuanrushuzu(allArr[id-1])
+    function chuanrushuzu(data){
+        arrs = [];
+        for(let i = 0;i<trs.length;i++){
+        arrs.push(trs[data[i]])
+        trs[i].style.display = "none"
+    }
+    let b =  arrs.filter(function(item){
+            return  item;
+        })
+      for(let i=0;i<b.length;i++){
+          b[i].style.display = "block"
+      }  
+    } */
+   
+    // 为获取验证码做出判断 还有密码是否一致
+    var mima = document.getElementsByName("password");
+    var tel = document.getElementsByName("tel")[0];
+    var duanxi = document.getElementById("duanxi");
+    var submit = document.getElementById("submit");
+    submit.onclick = function(){
+    	if(yonghuming==''){
+    		hello2.style.display = "inline-block"
+        }else{
+        	hello2.style.display = "none"
+        }
+    }
+    
+    
+    var shoujiyanzhengm = document.getElementsByName("shoujiyanzhengm")[0];
+    var panduan = true;
+        duanxi.onclick=function(){
+                // 判断密码是否相同
+                if(mima[0].value==""||mima[1].value==""){
+                    alert("密码为空")
+                    return
+                }else if(mima[0].value===mima[1].value){
+                    console.log("一样")
+                }else{
+                    alert("两次密码不一致")
+                    return
+                }
+                //  判断手机号是否正确
+                let reg = /^1[3456789]\d{9}$/;
+                if(!reg.test(tel.value)){
+                    alert("手机格式不对")
+                    return
+              }
+                if(panduan){
+                    panduan = false;
+                    this.classList.add( "class","ban")
+                    daojiashi(this);//留下多有才可以再次验证
+                    qingqiuYAN(tel.value)                //请求验证码
+                }
+        }
+
+              // 判断多少秒可以再次验证
+              function daojiashi(oneself){
+                            let timer= null;
+                            let num = 60;
+                            timer =setInterval(function(){
+                                oneself.innerHTML = num--+"可以再次发送";
+                                if(!num){
+                                clearInterval(timer)
+                                oneself.classList.remove("ban");
+                                oneself.innerHTML="获取短信验证码";
+                                panduan = true
+                                }
+                            },1000)
+                        }
+              //请求验证码
+              function  qingqiuYAN(tel){
+                $.ajax({
+                    async:false,
+                    url:"/smsXxs", 
+                    data:{
+                    "phone":tel
+                    },
+                    type:"POST",
+                    dataType:"json",
+                    success:function(data){
+                            // console.log(data.data.verifyCode) 这是验证码
+                            let data1 = data.data.verifyCode
+                            submit.onclick = function(){
+                                zhucezhaohao(data1)
+                            }
+                    }
+                })
+              }      
+
+        
+             
+           function zhucezhaohao(yanzheng){ 
+                 console.log(shoujiyanzhengm.value) 
+                 console.log(yanzheng)
+                var name=$("#hello").val();
+                let username = $("#name").val();
+              let password = document.getElementsByName("password")[0].value;
+              let mobile = document.getElementsByName("tel")[0].value;
+              var company=$("#gongsiName").val();
+             // let company = document.getElementsByName("gongsiName")[0].value;
+              let gongiscity = document.getElementsByName("gongiscity")[0].value;
+              var xian1=$("#dddid").val();
+
+           //    let cheCity = document.getElementsByName("cheCity")[0].value;
+             // let userCity = document.getElementsByName("userCity")[0].value;
+            //   let city = document.getElementsByName("gongiscity")[0].value;
+                console.log(name)
+                console.log(username)
+                console.log(password)
+                console.log(mobile)
+                console.log(company)
+                 if(shoujiyanzhengm.value ===yanzheng){  //判断验证码是否正确
+
+                    console.log("请求接口注册")
+                    // 请求接口注册
+                   $.ajax({
+                    async:false,
+                    url:"/useregister", 
+                    data:{
+                    "name":name,
+                    "username":username,
+                    "password":password,
+                    "mobile":mobile,
+                    "company":company,
+                    "city":gongiscity,
+                    "type":id,
+                    "xian1":xian1,
+                    },
+                    type:"POST",
+                    dataType:"json",
+                    success:function(data){
+                        console.log(data)
+                        alert("注册成功")
+                        if(id==3||id==2){
+                     	   location.href='/huser';
+                     }else{
+                     	 location.href='/vipPage';
+                     	}
+                        
+                    }
+                }) 
+
+
+
+
+
+
+
+
+                 }else{
+                     alert("验证码错误")
+                }
+
+           }
+
+
+</script>
+
+</html>

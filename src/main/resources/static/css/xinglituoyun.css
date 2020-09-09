@@ -1,0 +1,75 @@
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.wrapper>h1{
+    font-size: 20px;
+}
+.wrapper .BOXBOX{
+    margin-top: 15px;
+    display: flex;
+}
+.wrapper .boxXLTY{
+    width:1000px;
+    height: 800px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+.wrapper .boxXLTY dl{
+    display: flex;
+    margin-bottom: 8px;
+}
+.wrapper .boxXLTY dl a:hover{
+    color: #0099e9;
+}
+.wrapper .boxXLTY dt{
+    width: 16%;
+    font-size: 12px;
+}
+.wrapper .boxXLTY dt a{
+    display: block;
+    overflow: hidden;
+    color: #333333;
+}
+.wrapper .boxXLTY dd{
+    width: 21%;
+    font-size: 12px;
+}
+.wrapper .boxXLTY dd a{
+    overflow: hidden;
+    color: #333333;
+}
+
+
+.wrapper  .boxAD{
+    width:200px;
+    /* height: 500px; */
+    /* border: 1px solid green; */
+    background-color: white;
+}
+.wrapper  .boxAD p{
+    height: 30px;
+    line-height: 30px;
+    padding-left:8px ;
+    border-bottom:  1px solid #cdcdcd;
+}
+.wrapper .boxAD ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  
+    align-items: flex-start;
+    padding: 10px 0 10px 20px;
+    justify-content: flex-start;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.wrapper .boxAD ul li{
+    color: #878787;
+    padding-top: 5px;
+}
+.wrapper .boxAD ul li a{
+    color: #333;
+}

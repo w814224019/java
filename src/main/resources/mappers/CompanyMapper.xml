@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.wuliu.fa.mapper.CompanyMapper">
+	<!--List<Companier> findAll();-->
+	<select id="findAll" resultType="com.wuliu.fa.entity.Companier">
+	SELECT 
+      *FROM 
+	company1_copy1 where isDel=0 order by vipClass limit 0,10
+	</select>
+</mapper>
+
+
+
+
+
