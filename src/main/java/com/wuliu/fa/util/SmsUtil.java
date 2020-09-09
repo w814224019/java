@@ -16,9 +16,7 @@ public class SmsUtil {
     /**
      * 产品域名,开发者无需替换
      */
-    static final String domain = "dysmsapi.aliyuncs.com";
-    static final String accessKeyId = "LTAI4FoLshpEyL9XJrdACs71";//你的accessKeyId,参考本文档步骤2
-    static final String accessKeySecret = "EpsCSjZND1LJX5JmSwICpwAbE9E8RS";//你的accessKeySecret，参考本文档步骤2
+   
 
     public static SendSmsResponse sendSms(String phone , String code) throws Exception {
         //可自助调整超时时间
