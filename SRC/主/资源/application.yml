@@ -27,8 +27,8 @@ spring:
     datasource:
         name: root
         url: jdbc:mysql://mysql57.rdsmkvatvnjvq7t.rds.bj.baidubce.com:3306/new?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-        username: ps_207
-        password: WsUoEtTqfO2XF19pveKE
+        username: root
+        password: root
         # druid
 #        type: com.alibaba.druid.pool.DruidDataSource
        
