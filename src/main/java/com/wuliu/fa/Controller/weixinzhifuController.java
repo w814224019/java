@@ -81,8 +81,7 @@ public class weixinzhifuController extends BaseController{
 
 		//创建一个map集合的请求参数
 		Map<String,String> requestDataMap=new HashMap<>();
-		requestDataMap.put("appid","wx59a2a284d7b2b976");
-		requestDataMap.put("mch_id","1230932602");
+		
 		requestDataMap.put("nonce_str", WXPayUtil.generateNonceStr());
 		requestDataMap.put("body",body);
 		requestDataMap.put("out_trade_no",out_trade_no);
@@ -99,7 +98,7 @@ public class weixinzhifuController extends BaseController{
 		requestDataMap.put("trade_type","NATIVE");
 		
 		//生成签名值
-		String signature = WXPayUtil.generateSignature(requestDataMap, "925c061e870a60c169589ac9813b2039");
+		
 		requestDataMap.put("sign",signature);
 
 
