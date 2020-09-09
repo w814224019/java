@@ -14,7 +14,7 @@ public class SmsUtil {
      */
     static final String product = "Dysmsapi";
     /**
-     * 产品域名,开发者无需替换
+     * 产品域名,开发者无需替
      */
    
 
